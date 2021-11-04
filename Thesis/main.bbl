@@ -1,0 +1,127 @@
+\begin{thebibliography}{10}
+
+\bibitem{trabelsi2018deep}
+C.~Trabelsi, O.~Bilaniuk, Y.~Zhang, D.~Serdyuk, S.~Subramanian, J.~F. Santos,
+  S.~Mehri, N.~Rostamzadeh, Y.~Bengio, and C.~J. Pal, ``Deep complex
+  networks.'' \url{https://arxiv.org/abs/1705.09792}, 2018.
+
+\bibitem{Messerschmitt_stationary_points}
+D.~G. Messerschmitt, ``Stationary points of a real-valued function of a complex
+  variable,'' Tech. Rep. UCB/EECS-2006-93, EECS Department, University of
+  California, Berkeley, Jun 2006.
+
+\bibitem{Hualiang_nonlinear}
+H.~Li and T.~Adali, ``Complex-valued adaptive signal processing using nonlinear
+  functions,'' {\em EURASIP J. Adv. Sig. Proc.}, vol.~2008, 12 2008.
+
+\bibitem{Dramsch_seismic}
+J.~S. Dramsch, M.~Lüthje, and A.~N. Christensen, ``Complex-valued neural
+  networks for machine learning on non-stationary physical data,'' vol.~146,
+  p.~104643, Jan 2021.
+
+\bibitem{stein_complex_analysis}
+R.~S. Elias M.~Stein, {\em Complex analysis Vol.2.}
+\newblock Princeton lectures in analysis 2, Princeton University Press, 2003.
+
+\bibitem{kreutzdelgado2009complex}
+K.~Kreutz-Delgado, ``The complex gradient operator and the cr-calculus.''
+  \url{https://arxiv.org/abs/0906.4835}, 2009.
+
+\bibitem{Nitta_complexBP}
+T.~Nitta, ``An extension of the back-propagation algorithm to complex
+  numbers,'' {\em Neural Networks vol. 10 iss. 8}, vol.~10, nov 1997.
+
+\bibitem{Virtue:EECS-2019-126}
+P.~Virtue, {\em Complex-valued Deep Learning with Applications to Magnetic
+  Resonance Image Synthesis}.
+\newblock PhD thesis, EECS Department, University of California, Berkeley, Aug
+  2019.
+
+\bibitem{hirose_cvnn}
+{\em Complex-Valued Neural Networks: Advances and Applications}.
+\newblock Wiley-IEEE Press, 2013.
+
+\bibitem{amin_wirtinger}
+F.~Amin, M.~Amin, A.~Y.~H. Al~Nuaimi, and K.~Murase, ``Wirtinger calculus based
+  gradient descent and levenberg-marquardt learning algorithms in
+  complex-valued neural networks,'' vol.~7062, pp.~550--559, 11 2011.
+
+\bibitem{xavier_init}
+X.~Glorot and Y.~Bengio, ``Understanding the difficulty of training deep
+  feedforward neural networks,'' {\em Journal of Machine Learning Research -
+  Proceedings Track}, vol.~9, pp.~249--256, 01 2010.
+
+\bibitem{he2015delving}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Delving deep into rectifiers: Surpassing
+  human-level performance on imagenet classification,'' 2015.
+
+\bibitem{cogswell2016reducing}
+M.~Cogswell, F.~Ahmed, R.~Girshick, L.~Zitnick, and D.~Batra, ``Reducing
+  overfitting in deep networks by decorrelating representations,'' 2016.
+
+\bibitem{ziller2021complexvalued}
+A.~Ziller, D.~Usynin, M.~Knolle, K.~Hammernik, D.~Rueckert, and G.~Kaissis,
+  ``Complex-valued deep learning with differential privacy.''
+  \url{https://arxiv.org/abs/2110.03478}, 2021.
+
+\bibitem{article}
+M.~Ragab, Z.~Chen, M.~Wu, H.~Li, C.-K. Kwoh, R.~Yan, and X.~li, ``Adversarial
+  multiple-target domain adaptation for fault classification,'' {\em IEEE
+  Transactions on Instrumentation and Measurement}, vol.~PP, pp.~1--1, 07 2020.
+
+\bibitem{4682548}
+E.~Ollila, ``On the circularity of a complex random variable,'' {\em IEEE
+  Signal Processing Letters}, vol.~15, pp.~841--844, 2008.
+
+\bibitem{virtue2017better}
+P.~Virtue, S.~X. Yu, and M.~Lustig, ``Better than real: Complex-valued neural
+  nets for mri fingerprinting.'' \url{https://arxiv.org/abs/1707.00070}, 2017.
+
+\bibitem{guberman2016complex}
+N.~Guberman, ``On complex valued convolutional neural networks.''
+  \url{https://arxiv.org/abs/1602.09046}, 2016.
+
+\bibitem{GARDNER2021116245}
+P.~Gardner, L.~Bull, N.~Dervilis, and K.~Worden, ``Overcoming the problem of
+  repair in structural health monitoring: Metric-informed transfer learning,''
+  {\em Journal of Sound and Vibration}, vol.~510, p.~116245, 2021.
+
+\bibitem{ajakan2015domainadversarial}
+H.~Ajakan, P.~Germain, H.~Larochelle, F.~Laviolette, and M.~Marchand,
+  ``Domain-adversarial neural networks.''
+  \url{https://arxiv.org/abs/1412.4446}, 2015.
+
+\bibitem{ganin2016domainadversarial}
+Y.~Ganin, E.~Ustinova, H.~Ajakan, P.~Germain, H.~Larochelle, F.~Laviolette,
+  M.~Marchand, and V.~Lempitsky, ``Domain-adversarial training of neural
+  networks.'' \url{https://arxiv.org/abs/1505.07818}, 2016.
+
+\bibitem{reichert2014neuronal}
+D.~P. Reichert and T.~Serre, ``Neuronal synchrony in complex-valued deep
+  networks.'' \url{https://arxiv.org/abs/1312.6115}, 2014.
+
+\bibitem{scardapane2018complexvalued}
+S.~Scardapane, S.~V. Vaerenbergh, A.~Hussain, and A.~Uncini, ``Complex-valued
+  neural networks with non-parametric activation functions.''
+  \url{https://arxiv.org/abs/1802.08026}, 2018.
+
+\bibitem{barrachina2021complexvalued}
+J.~A. Barrachina, C.~Ren, C.~Morisseau, G.~Vieillard, and J.-P. Ovarlez,
+  ``Complex-valued vs. real-valued neural networks for classification
+  perspectives: An example on non-circular data.''
+  \url{https://arxiv.org/abs/2009.08340v2}, 2021.
+
+\bibitem{shen2018wasserstein}
+J.~Shen, Y.~Qu, W.~Zhang, and Y.~Yu, ``Wasserstein distance guided
+  representation learning for domain adaptation.''
+  \url{https://arxiv.org/abs/1707.01217}, 2018.
+
+\bibitem{schlomer_nico_2021_5636188}
+N.~Schlömer, ``cplot: Plot complex functions,'' Nov. 2021.
+\newblock If you use this software, please cite it as below.
+
+\bibitem{Farris_visual_complex_analysis}
+T.~Farris, Frank A.;~Needham, ``Visual complex analysis.,'' {\em American
+  Mathematical Monthly vol. 105 iss. 6}, vol.~105, jun 1998.
+
+\end{thebibliography}

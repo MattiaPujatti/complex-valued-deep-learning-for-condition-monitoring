@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}	
+
+\begin{document}
+
+\chapter{Introduction}
+
+\section{Intro}
+\begin{itemize}
+	\item At present, the vast majority of deep learning architectures are based on real-valued operations and representations. However, recent works and fundamental theoretical analyses suggest that complex numbers can have richer expressiveness: many deterministic wave signals, such as seismic, electrical, or vibrational, contain information in their phase, which risks being lost when studied using a real-valued model.
+	\item most methods nowadays work like: drop phase info, take modulus or 2 independent channels, ignoring inherent relationships among them
+	\item complex-valued deep learning grew very slowly during the years, due to a long list of factors that we will list during the thesis. there are inherently complex data (e.g. MRI signals) and also real data can be "moved" to the complex space (e.g. via Fourier transform)
+\end{itemize}
+\section{Previous work}
+\begin{itemize}
+	\item \cite{Dramsch_seismic}: Modern networks apply real-valued transformations on the
+	data. Particularly, convolutions in convolutional neural networks discard phase
+	information entirely. Many deterministic signals, such as seismic data or electrical
+	signals, contain significant information in the phase of the signal. We explore
+	complex-valued deep convolutional networks to leverage non-linear feature maps. While it has been shown that
+	phase content can be restored in deep neural networks, we show how including
+	phase information in feature maps improves both training and inference from
+	deterministic physical data. Furthermore, we show that the reduction of parameters
+	in a complex network outperforms larger real-valued networks.
+\end{itemize}
+
+\section{Neuronal Synchrony}
+\section{Thesis Organization}
+
+
+\end{document}

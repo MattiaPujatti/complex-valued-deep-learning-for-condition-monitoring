@@ -1,0 +1,59 @@
+
+\ProvidesPackage{preamble}
+
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{indentfirst}
+\usepackage{subfigure}
+\usepackage[small]{caption}
+\usepackage{eucal}
+\usepackage{eso-pic}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{afterpage}
+\usepackage{parskip}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}  
+\usepackage[english]{babel}   
+\usepackage{setspace}
+\pagestyle{fancy} 
+
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{enumitem}
+
+
+% Remove spacing in itemize environments
+\setlist[itemize]{noitemsep, topsep=-5pt}
+
+% Expecation value
+\newcommand{\Ev}[1]{\mathds{E}\left[#1\right]}
+% Covariance
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+
+
+% Command for a shorter overline (useful when calling \bar between brackets)
+\newcommand{\overbar}[1]{\mkern 7mu\overline{\mkern-7mu#1\mkern-7mu}\mkern 7mu}
+
+% JAX
+\newcommand{\JAX}{\texttt{JAX}}
+
+% Mathematical environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem{observation}{Observation}[section]
+

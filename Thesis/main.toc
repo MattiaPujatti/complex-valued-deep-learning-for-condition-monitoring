@@ -1,0 +1,25 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{vii}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Intro}{vii}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Previous work}{vii}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Neuronal Synchrony}{vii}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Thesis Organization}{vii}{section.1.4}%
+\contentsline {part}{I\hspace {1em}Complex-Valued Deep Learning}{ix}{part.1}%
+\contentsline {chapter}{\numberline {2}Complex Analysis}{xi}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Complex Numbers}{xi}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Complex Differentiability}{xiii}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Other theorems}{xiii}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Circularity}{xiv}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Why not to prefer real-valued network with two channels?}{xv}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Extent}{xvii}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Problems in the extent}{xvii}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Complex Backpropagation}{xix}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Steepest Complex Gradient Descent}{xx}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Backpropagation with a Real-valued Loss}{xx}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Re-definition of the main neural network layers}{xxi}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxiv}{section.3.4}%
+\contentsline {section}{\numberline {3.5}JAX Implementation}{xxiv}{section.3.5}%
+\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xxvii}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xxvii}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xxviii}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xxix}{section.A.3}%

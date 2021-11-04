@@ -1,0 +1,196 @@
+\documentclass[../main.tex]{subfiles}	
+
+
+
+\begin{document}
+	
+\chapter{Extent}
+From Wirtinger calculus backpropagation to specific software implementation challenges, in this chapter are described the fundamental details of
+complex-valued neural network components and how they are related to existing real-valued network implementations. We will show how existing layers and functionalities can be extended to work also with a complex-valued input and which of them needs to be completely redefined.\\
+We address the problem of re-adapting the training process building a complex backpropagation algorithm on top of many prior works, that allows for an optimization when the loss function is real-valued, thanks to Wirtinger calculus.\\
+Furthermore, we will discuss in details the problem of building complex-valued activation functions, that was one of the main obstacles in the development of deep learning in this direction.\\
+In the end, we will provide a brief presentation of the high level library, built on top of \JAX, that we have realized in order simplify the setup and train of those kind of networks. Nowadays, in fact, the internet is full of deep learning libraries implementing basically every kind of known model, with different optimization, parallelization, etc. However, for some reason, many of them still does not provide support to complex data types: a huge obstacle in the growth of complex-valued deep learning.
+
+
+\section{Problems in the extent}
+\label{sec:problems_extent}
+
+Considering just their fundamental structure, complex-valued neural networks work exactly like their real counterpart, and are again constituted by neurons connected among each other (figure \ref{fig:cmplx_neuron}): the only difference is that now those neurons are complex-valued. 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.25]{pictures/complex_neuron}
+	\caption{Fundamental unit (neuron) of a complex-valued neural network.}
+	\label{fig:cmplx_neuron}
+\end{figure}
+
+Each neuron receives a weighted input signal $\vb{z}$, that this time is complex valued (as the weights $\vb{w_i}$); this signal in summed up and added to a bias $\vb{b}$ and then passed through an activation function $f:\mathds{C}\to\mathds{C}$, that most of the times is non-linear. If we denote with the subscript $l$ the forward pass of a neuron in the $\ell$-th layer, then the output can be expressed with the following formula:
+\[ \vb{y}_\ell = f_\ell\left(\sum_{i=1}^{N}\vb{w_i}z_i + \vb{b}_\ell\right) \]
+where $N$ are the neurons in layer $\ell$, $M$ the neurons in layer $(\ell-1)$, $\vb{z_{\ell-1}}\in\mathds{C}^M$ was the output of the previous layer, $\vb{w}_\ell\in\mathds{C}^{N\times M}$ and $\vb{b}_\ell\in\mathds{C}^N$ are the learnable parameters of this level, $f_\ell$ the activation function and $\vb{y}_\ell\in\mathds{C}^N$ the effective output.\\
+However, when considering a possible extension from $\mathds{R}$ to $\mathds{C}$, we need to take into account a few inconveniences, since we look for a coherent and rigorous framework. 
+
+\subsection*{Max operator undefined}
+As explained also in the introductory mathematical section, $\mathds{C}$ is not an ordered field, in the sense that we cannot define a comparison relation among complex numbers that makes everybody agree. In principle you can define one, like the lexycographical ordering, that compares first the real part and only after the imaginary, or relying on establishing this relation among the magnitudes of those numbers. The latter is actually the preferred approach. This brief overview is important, since many non-linear functions in deep learning, like \texttt{ReLU} and \texttt{Max-Pooling} necessitate of a \textit{maximum} operation in order to fulfill their purpose of increasing numerical stability and dimensionality reduction, respectively.
+
+\subsection*{Unstable Activations}
+As we will see in a dedicated section, the problem of defining stable and coherent activation functions is one of the main issues that limited the development of complex-valued deep learning during the years. Complex functions, in fact, necessitate of further limitations to be suitable as activations: because of the Liouville's theorem \ref{th:Liouville}, for example, they can't be limited, and neither grow too slow, otherwise their derivative would always vanish during the backpropagation. So, simply re-adapting existing activations to support complex-valued inputs, maybe redefining ambiguous operations like \texttt{max}, is not enough, especially because you need care about the eventual loss of complex correlations if the activation applied independently on the real and imaginary components.
+
+\subsection*{Lost Probabilistic Interpretation}
+One nice property of real-valued neural network classifiers is the probabilistic interpretation that we can associate to its final layer, mainly due to the normalization in the range $[0,1]$ provided by sigmoid/softmax activation functions. But now, the final output of the network will be a set of complex numbers, that we cannot interpret anymore as a probability distribution over a set of probabilistic outcomes. This nice property can be partially recovered if we add a \textit{magnitude} layer just before the last activation: in this way we drop all the phase information but we move back to a real-valued problem. Anyway, it always depends on the final objective of the model.
+
+\subsection*{Optimization of a Complex-Valued Output}
+Another problem related to having a complex-valued output, beside its interpretation, is the loss associated. If you have a complex final loss, how can you effectively minimize it? In the first chapter we have defined the minimum of a function defined in $\mathds{C}$ as the point $z_0\in\mathds{C}$ in which its modulus is minimized. But this definition, provided by the author of that complex analysis book, is referred to a total ordering in which we refer first to the magnitudes, and so also this is just a convention. Notice that, at the end, minimizing the modulus of a complex loss is equivalent to defining a real-valued loss, i.e. $\mathscr{L}:\mathds{C}\to\mathds{R}$, and minimizing it. And that's exactly what we are going to do when setup a backpropagation.\\
+
+After all this steps, it is clear that we cannot simply reuse deep learning architectures designed for real values without first understanding the complex mathematics in neural networks forward and backward.
+
+\section{Complex Backpropagation}
+\label{sec:cmplx_backpropagation}
+
+As anticipated in the introductory section, the interest of researchers in this complex-valued deep learning area started arising many years ago; in fact, the first trial to setup a complex backpropagation algorithm even dates back to 1991 \cite{Nitta_complexBP}. According to the author, not only its algorithm turns out to have an higher convergence speed (and the same generalization performances) with respect to its real counterpart, but also that is able to learn an entire class of transformations (e.g. rotations, similarities, parallel displacements, etc.) that the real method cannot. However, having read the work of Nitta \cite{Nitta_complexBP}, I feel it is better to remark a couple of things, mainly because many years have passed from its publication. First of all, the author used a suboptimal setup:
+\begin{itemize}
+	\item[-] the network followed one of the "conventional" approaches that we are proving to be unefficient, i.e. treating real and imaginary parts of the data as independent random variables;
+	\item[-] he computed the derivatives $\partial f/\partial x$ and $\partial f/\partial y$, instead of relying on Wirtinger calculus \ref{eq:CR_derivs}; even if this is a working alternative to ours, we will see that it is suboptimal;
+	\item[-] he relied on "bad" activation functions, since, as told by he himself, many times the algorithm failed to converge.
+\end{itemize}
+I decided to report his work because it was still one of the first and working attempts to develop a complex backpropagation algorithm, but also because of the purely theoretical analysis realized on the transformation that a complex network can learn. Nitta, managed to teach its networks several transformations in $\mathds{R}^2$, like rotations, reductions and parallel displacements, that the corresponding real-valued model didn't	make. He understood first that this was possible thanks to the higher degrees of freedom offered by complex multiplication (discussed in section \ref{subsec:cmplx_multiplication}). But what I believe it is even more interesting, is the relation that Nitta have found among complex-valued networks and the \textbf{Identity theorem} \ref{th:identity}:\\ 
+\textit{``We believethat Complex-BP networks satisfy the Identity Theorem, that is, Complex-BP networks can approximate complexfunctions just by training them only over a part of thedomain of the complex functions."}\\
+This means that exploiting holomorphic functions when building a complex-valued network can sometimes impact on its generalization capabilities (since its shape will be rigidly determined by its characteristics on a small local region of its domain) \cite{hirose_cvnn}. Unfortunately, no additional work have been realized on this statement during the years, but I think it is an aspect deserving further attention.\\
+In section \ref{sec:cmplx_differentiability} we have discussed about complex differentiability, and we also said that holomorphicity is not a property assured for most functions, and even simple ones, like the square modulus, can be not differentiable in the complex sense. In our architectures we have mainly two sources of \textit{nonholomorphicity}: the loss and the activations. For reasons that will be clearer later on, boundedness and analiticity cannot be achieved simultaneously in the complex domain, and the first feature is often preferred \cite{amin_wirtinger}.\\
+An elegant approach that can save computational labor is the usage of Wirtinger calculus to setup optimization problems, solvable via gradient descent, for functions that are not holomorphic but at least differentiable with respect to their real and imaginary components.\\
+Also for neural network functions we have a similar problem: requiring them to have complex differentiable properties can be quite limiting, and we should again rely on $\mathds{CR}$-calculus. To complicate matters, the chain rule requires now to compute two terms rather than one (both the $\mathds{R}$-derivative and the conjugate $\mathds{R}$-derivative), causing more than $4x$ calculations during the backward pass.\\
+"Fortunately", we can significantly reduce both memory and computation time during complex backpropagation by assuming that our final network loss function is \textit{real-valued}. This is a strong but valid assumption since, as already discussed in section \ref{sec:cmplx_numbers}, minimizing a complex-valued function is an \textbf{ambiguous} operation. Also, minimizing the modulus of a complex loss, as suggested by the magnitude ordering introduced, in the end is exactly like optimizing a real-valued function.\\
+But why does it turn out to be more efficient? 
+
+\subsection{Steepest Complex Gradient Descent}
+\label{sec:steepest_cmplx_gradient_descent}
+In the previous sections we have widely discussed about the fact that complex-valued functions cannot be minimized, and so we ended up with the conclusion that we must use a real-valued loss in order to formulate the training process of a complex model as an optimization problem, in continuation to what happens inside real models.\\
+Let's then consider a function $f(z):\mathds{C}\to\mathds{R}$: if we decide to proceed with a gradient descent algorithm, which direction are we supposed to take since there are two different derivatives that one can compute ($\partial/\partial z$ and $\partial/\partial \bar{z}$)?\\
+It can be proved (\cite{amin_wirtinger, Hualiang_nonlinear} and appendix \ref{app:cmplx_optim}) that the direction of the \textit{steepest gradient descent} is the \textbf{complex cogradient}, $\vb{\nabla_{\bar{z}}}f$. So, given a function $f$ that depends on a complex random variable $z\in\mathds{C}$, the update rule that minimizes it is:
+\begin{equation}
+	\vb{z} \leftarrow \vb{z} - \alpha\vb{\nabla_{\bar{z}}}f
+	\label{eq:cmplx_gradient_descent}
+\end{equation}
+where $\alpha\in\mathds{R}$ is the learning rate.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{example-image-a}
+	\caption{Complex Gradient Descent.}
+	\label{fig:cmplx_gradient_descent}
+\end{figure}
+
+In order to provide also a visual representation, in figure \ref{fig:cmplx_gradient_descent} we have considered a simple, non holomorphic, real-valued function like $f(z) = z\bar{z} = \norm{z}^2$, that has a unique global minimum at $z=0+0j$. We have then applied the gradient descent and ascent rules in both directions of the gradient, $\vb{\nabla_z}f$, and the cogradient $\vb{\nabla_{\bar{z}}}f$, in order to verify what said above. In the plot we clearly see that the only direction that approaches the true minimum (starting from a random point in the dominium of $f$) is exactly the one determined by the complex cogradient, while the complex gradient moves in a completely wrong direction. Also considering the ascent rules we observe that the steepest direction maximizing $f$ is again the one determined by the cogradient.\\
+
+\subsection{Backpropagation with a Real-valued Loss}
+
+With the real-valued loss assumption (proposed in \ref{sec:cmplx_backpropagation}) and the update rule \ref{eq:cmplx_gradient_descent}, complex backpropagation turns out to be quite efficient and not so computationally expensive as we thought in section \ref{sec:cmplx_backpropagation}. The situation can be summarized with table \ref{tab:comparison_backpropagation} and figure \ref{fig:visual_cmplx_backpropagation}.
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c c c}
+		\toprule
+		\textbf{Standard Real Calculus} & \textbf{Complex Calculus} & \textbf{Complex Calculus, assuming real-valued loss}\\
+		\midrule
+		Input to layer $\ell +1$:\\
+		$\pdv{f_L}{x_\ell}$ & $\pdv{f_L}{z_\ell}$ and $\pdv{f_L}{\bar{z}_\ell}$ & $\pdv{f_L}{\bar{z}_\ell}$\\
+		\midrule
+		Output from layer $\ell$:\\
+		$\pdv{f_L}{x_{\ell-1}} = \pdv{f_L}{x_\ell}\pdv{f_\ell}{x_{\ell-1}}$ & $\pdv{f_L}{z_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{z_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{\bar{z}_{\ell-1}}\right)}$\\
+		& $\pdv{f_L}{\bar{z}_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{\bar{z}_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{z_{\ell-1}}\right)}$ & $\pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{z_{\ell-1}}\right)}$ \\
+		\bottomrule
+	\end{tabular}
+	\caption{Comparison of backpropagation calculus. (source: \cite{Virtue:EECS-2019-126})}
+	\label{tab:comparison_backpropagation}
+\end{table}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=1.]{pictures/pass_cmplx_layer}
+	\caption{Forward and backward pass through a complex layer. (source \cite{Virtue:EECS-2019-126})}
+	\label{fig:visual_cmplx_backpropagation}
+\end{figure}
+
+Now the algorithm needs to pass only one of the two $\mathds{CR}$ derivatives back to the earlier layers, even tho, because of the chain rule \ref{eq:CR_derivs_chain_rule}, it must compute both of them, at least for the final layer. In figure \ref{fig:visual_cmplx_backpropagation} it is effectively illustrated how input and derivatives flow through the layers during the forward and backward pass, respectively.\\
+Given the steepest complex gradient descent rule \ref{eq:cmplx_gradient_descent}, we can then write down the equivalent expression for our network function depending on a set of parameters $\vb{w}$:
+\[ \vb{w}_n \leftarrow \vb{w}_n - \alpha\pdv{f}{\bar{\vb{w}}_n} \]
+
+\section{Re-definition of the main neural network layers}
+
+We have started writing down this chapter with the purpose of building a working and coherent framework for complex-valued machine learning. And we also 
+In section \ref{sec:problems_extent} we have analyzed the main obstacles that we encounter during this extension, while in \ref{sec:cmplx_backpropagation} we 
+
+\subsection*{Fully-Connected Layers}
+For the fundamental layers of a neural network the extension is quite trivial. Consider a layer with $K$ complex-valued units, a weight vector $\vb{w}\in\mathds{C}^K$ and a bias term $\beta\in\mathds{C}$; then, the response to a certain input vector $\vb{z}\in\mathds{C}^N$ (given also the activation function $f$) is:
+\[ \vb{y} = f(\vb{z}, \left\{\vb{w},\beta\right\}) = f\left(\sum_k z_kw_k + \beta\right) = f\left(\vb{z}^T\vb{w} + \beta\right) \]
+
+So it is just like the real case, with the only difference that now the multiplication is in $\mathds{C}$ and not in $\mathds{R}$, with all the consequences already discussed in \ref{subsec:cmplx_multiplication}.\\
+What we should care about is, instead, the initial values of the networks' parameters. Proper initialization can, in principle, help reducing the risk of vanishing or exploding gradients. Conventionally, researchers follow the approaches proposed by Glorot \cite{xavier_init} or by He \cite{he2015delving} (the latter designed specifically for \texttt{ReLU} activations), with the final objective of ensuring that the variance of input, output and their gradients are the same. According to these two methods, weights should be initialized with a normal distribution (or truncated-normal) with zero mean and standard deviation that depends on the number of units in that specific layer. Thanks to Trabelsi \cite{trabelsi2018deep} (derivation in appendix \ref{app:weight_init}) we could provide two equivalent procedures, but in the complex domain.\\
+To put in place them, we need first to consider the weights in polar form, i.e. $\norm{\vb{w}}e^{i\theta}$, and then:
+\begin{itemize}
+	\item random sampling the magnitude according to a \textbf{Rayleigh distribution} with parameter $\sigma= 1 / \sqrt{n_{in} + n_{out}}$ (\texttt{Complex Xavier} initialization) or $\sigma= 1 / \sqrt{n_{in}}$ (\texttt{Complex He} initialization);
+	\item random sampling the phases according to a \textbf{uniform distribution} in $[-\pi,\pi`]$.
+\end{itemize}
+The biases $\beta$, instead, can all be initialized simply to 0, or uniformly in a small interval $[-\varepsilon, \varepsilon]$.
+
+\subsection*{Convolutional Layers}
+In order to perform the equivalent of a traditional real-valued 2D convolution in the complex domain, we convolve a complex filter matrix $\vb{W} = \vb{A}+i\vb{B}$ by a complex vector $\vb{h} = \vb{x}+i\vb{y}$, where $\vb{A}, \vb{B}$ are real matrices and $\vb{x}, \vb{y}$ are real vectors, since we are simulating complex arithmetic using real-valued entries. As the convolution operator is distributive, we have:
+\begin{equation}
+	\vb{W} * \vb{h} = \left(\vb{A}*\vb{x}-\vb{B}*\vb{y}\right) + i\left(\vb{B}*\vb{x}+\vb{A}*\vb{y}\right)
+	\label{eq:cmplx_convolution}
+\end{equation}
+This is a very nice behavior, since the a complex convolution can be decomposed into two real-valued independent operations. And this means that we can exploit already existing algorithms (like this one, from Gauss \footnote{As explained in this brief \href{https://en.wikipedia.org/wiki/Multiplication\_algorithm\#Complex\_multiplication\_algorithm}{Wikipedia section}, we can reduce the cost of complex multiplication, in some cases.}) to perform efficiently this (already expensive) computation.\\
+Notice also that complex convolutional layers' weights basically, can learn to rotate the phase of desirable data toward the positive real axis; in fact, if we rewrite \ref{eq:cmplx_convolution} in a matrix form:
+\[ \mqty[\real(\vb{W}*\vb{h}) \\ \imaginary(\vb{W}*\vb{h})] = \mqty[\vb{A} & -\vb{B}\\ \vb{B} & \vb{A}] * \mqty[\vb{x} \\ \vb{y}]	 \]
+In figure \ref{fig:cmplx_convolution} we can observe a visual representation of the complex convolution proposed by \cite{trabelsi2018deep}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=1.75]{pictures/complex_convolution}
+	\caption{Implementation details of the Complex Convolution (by \cite{trabelsi2018deep}).}
+	\label{fig:cmplx_convolution}
+\end{figure}
+
+In principle, however, even tho complex convolution should have the same computational cost as its real-valued counterpart, in practice it is four times more expensive, just because complex multiplication in the worst case requires four products and two additions.
+
+\subsection*{Pooling Layers}
+The pooling operation involves sliding a n-dimensional filter over each channel of the feature map and summarizing the features lying within the region covered by the filter. Pooling layers are essentially dimensionality reduction levels inside the network, with the purpose of making the model more robust to positional variations in the input. \\
+There are mainly two kinds of pooling operations that we want to extend to the complex domain:
+\begin{itemize}
+	\item \texttt{Average Pooling}: replaces the elements in the filtered region of the feature map with their mean. The average of a set of complex number is a well defined operation and so no further work is needed in this case.
+	\item \texttt{Max Pooling}: replaces the elements in the filtered region of the feature map with their maximum. In this case, instead, we have that the maximum operation is ambiguous in $\mathds{C}$, and so we must establish an ordering to re-define this layer. Our choice that was to setup the max pooling operation to return the complex number with the highest magnitude, inside the region covered by the filter. Namely:
+	\[ \text{MaxPool}(\left\{z_k\right\}) = z_n \qquad\text{where}\; n = \underset{k}{argmax}\;\norm{z_k} \] 
+	This choice is not unique, since, as repeated several times, there are more than one total ordering for $\mathds{C}$.
+\end{itemize}
+
+\subsection*{Normalization Layers}
+Normalization layers are usually inserted inside the architecture of a neural network with the purpose of improving the stability of the network optimization, especially in cases of an high depth, and for a better control of the gradients. In this case the extension not so straightforward, since you need to re-define several statistical objects.\\
+In standard \texttt{Batch-Normalization} we train two internal parameters, a scale and an offset, such that each batch of data has zero mean and standard deviation one. This approach, however, is valid only for real data, since it does not guarantee equal variance for both the real and imaginary components, with a resulting distribution turning out to be non-circular. Following the method proposed by \cite{trabelsi2018deep}, the idea is to normalize data to obtain a standard complex normal distribution (basically the one in figure \ref{}), achieved by multiplying the zero-centered data ($\vb{z}-\Ev{\vb{z}}$) by the inverse square root of their $2x2$ covariance matrix $\vb{V}$ \footnote{The existence of the inverse matrix is guaranteed by the positive (semi-) definiteness of $\vb{V}$. Eventually, you can enforce this condition by adding a small quantity $+\varepsilon\mathds{I}$ to the matrix (Tikhonov regularization).}:
+\begin{equation}
+\tilde{\vb{z}} = \left(\vb{V}\right)^{-\frac{1}{2}}\left(\vb{z}-\Ev{\vb{z}}\right) \qquad\text{where}\quad \vb{V} =  \mqty(\Cov(\Re{\vb{z}}, \Re{\vb{z}}) & \Cov(\Re{\vb{z}}, \Im{\vb{z}}) \\ \Cov(\Im{\vb{z}}, \Re{\vb{z}}) & \Cov(\Im{\vb{z}}, \Im{\vb{z}}))
+\label{eq:cmplx_batchnorm}
+\end{equation}
+From a practical point of view, the implementation is the same of the real case. You have again two trainable parameters: $\beta\in\mathds{C}$, i.e. the complex mean, and $\gamma\in\mathds{C}^2$, the complex-valued positive-defined covariance matrix. The \texttt{complex batchnorm} operation is then defined as
+\[ BN(\vb{z}) = \gamma\vb{z} + \beta \]
+We need, however, to be careful when relying on batchnormalization. This procedure allows, in fact, to avoid co-adaptation between real and imaginary parts of data, effectively reducing the risk of overfitting. But there is a cost to this, since you are basically decorrelating your complex data, partially losing the advantage over two-channels networks \cite{cogswell2016reducing}.\\
+For this reason, we sometimes prefer to rely on other kind of normalization layers that, instead, allows to preserve complex data correlations.\\
+In simple \texttt{Complex Normalization} we scales a complex scalar input $\vb{z}$ such that its magnitude is set to one, while the phase remains unchanged. In practice we project $\vb{z}$ onto the unit circle. The forward pass is then
+\[ \hat{\vb{z}} = e^{i\angle \vb{z}} = \frac{\vb{z}}{\norm{\vb{z}}} = \frac{\vb{z}}{(\vb{z}\bar{\vb{z}})^{1/2}} \]
+
+\subsection*{Other Layers}
+There are many layers that do not need any further re-definition to work also in the complex domain: \texttt{Dropout}, Pad or Attention layer, for example. There are also many other structures that should be re-derived (e.g Recurrent layers, LSTM, etc.), but that were out of our scope and so we haven't examined. This should be interpreted just as a starting point in the development of an higher level complex-valued deep learning framework.
+
+\section{Complex-Valued Activation Functions}
+One of the main issues encountered in the last 30 years in the developing a complex-valued deep learning framework was exactly the definition of reliable activation functions. The extension from the real-valued domain is everything but easy: during the years, tons of complex-valued non-linear functions have been proposed and tested, but the limitations imposed by the Liouville's theorem \ref{th:Liouville}, together with the fact that many operations (like \textit{max}) are undefined, was a huge obstacle. Additionally, with complex-valued outputs, we have lost the probabilistic interpretations that functions
+like \texttt{sigmoid} and \texttt{softmax} use to provide.\\
+We have to say that most of the candidate functions that have been proposed are based, however, on the simple decomposition of the input into real and imaginary part, that are then sent to a real non-linear activation. But, as discussed also in the previous chapter, this approach should be abandoned, since you risk losing the complex correlations stored in those variables.\\
+In this section, we will explore a few complex-valued activations proposed during the years: first with the ones that are direct extensions of their real counterparts, and then with more "abstract" candidates, that have more reasons to live and work in the complex domain.\\
+
+The most straightforward complex-valued non-linear function that we can think about is definitely the \textbf{complex sigmoid}, that is nothing but the same real-valued sigmoid extended to $\mathds{C}$.
+\[ \sigma_\mathds{C}(z) = \frac{1}{1+e^{-z}} \]
+
+\section{JAX Implementation}
+
+% specify also complex data types
+
+
+\end{document}

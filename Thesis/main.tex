@@ -1,0 +1,55 @@
+% ___________________________________________________
+\documentclass[a4paper,11pt]{book}
+% ___________________________________________________
+
+\usepackage{preamble}
+
+
+
+\begin{document}
+
+% Frontespizio
+\subfile{chapters/Title_page_Double_department_Master_Physics}
+%------------------------------------------------
+
+% Table of contents
+\tableofcontents
+
+% Abstract
+\subfile{chapters/abstract}
+%-------------------------------------------
+
+% Introduction
+\subfile{chapters/introduction}
+-----
+
+\part{Complex-Valued Deep Learning}
+
+% section 1 - complex-valued deep learning
+\subfile{chapters/complex_analysis}
+\subfile{chapters/extent}
+%------------------------------------------------
+
+
+%------------------------------------------------
+%\subfile{sections/theory.tex}
+%------------------------------------------------
+%\subfile{sections/code_development.tex}
+%------------------------------------------------
+%\subfile{sections/results.tex}
+%------------------------------------------------
+%\subfile{sections/self_evaluation.tex}
+%------------------------------------------------
+
+% bibliography
+\newpage
+\nocite{*}
+\bibliography{bibliography}
+\bibliographystyle{ieeetr}
+
+\newpage
+\appendix
+\subfile{chapters/appendix}
+
+
+\end{document}
