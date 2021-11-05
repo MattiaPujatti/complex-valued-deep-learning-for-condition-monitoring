@@ -12,6 +12,11 @@ import warnings
 from complex_nn.initializers import CmplxRndUniform, CmplxTruncatedNormal
 
 
+
+
+##################### LINEAR LAYERS ##################################################
+
+
 class Cmplx_Linear(hk.Module):
   """Linear module."""
 
@@ -72,6 +77,9 @@ class Cmplx_Linear(hk.Module):
 
 
 
+############# DROPOUT ####################################################################
+
+
 
 class Dropout(hk.Module):
   """Basic implementation of a Dropout layer."""
@@ -103,31 +111,9 @@ class Dropout(hk.Module):
 
 
 
-def to_dimension_numbers(
-    num_spatial_dims: int,
-    channels_last: bool,
-    transpose: bool,
-) -> lax.ConvDimensionNumbers:
-  """Create a `lax.ConvDimensionNumbers` for the given inputs."""
-  num_dims = num_spatial_dims + 2
-
-  if channels_last:
-    spatial_dims = tuple(range(1, num_dims - 1))
-    image_dn = (0, num_dims - 1) + spatial_dims
-  else:
-    spatial_dims = tuple(range(2, num_dims))
-    image_dn = (0, 1) + spatial_dims
-
-  if transpose:
-    kernel_dn = (num_dims - 2, num_dims - 1) + tuple(range(num_dims - 2))
-  else:
-    kernel_dn = (num_dims - 1, num_dims - 2) + tuple(range(num_dims - 2))
-
-  return lax.ConvDimensionNumbers(lhs_spec=image_dn, rhs_spec=kernel_dn,
-                                  out_spec=image_dn)
 
 
-  
+##################### CONVOLUTIONAL LAYERS ###########################################
 
 
 class Cmplx_ConvND(hk.Module):
@@ -381,6 +367,29 @@ def _infer_shape(
     return tuple(size)
 
 
+def to_dimension_numbers(
+    num_spatial_dims: int,
+    channels_last: bool,
+    transpose: bool,
+) -> lax.ConvDimensionNumbers:
+  """Create a `lax.ConvDimensionNumbers` for the given inputs."""
+  num_dims = num_spatial_dims + 2
+
+  if channels_last:
+    spatial_dims = tuple(range(1, num_dims - 1))
+    image_dn = (0, num_dims - 1) + spatial_dims
+  else:
+    spatial_dims = tuple(range(2, num_dims))
+    image_dn = (0, 1) + spatial_dims
+
+  if transpose:
+    kernel_dn = (num_dims - 2, num_dims - 1) + tuple(range(num_dims - 2))
+  else:
+    kernel_dn = (num_dims - 1, num_dims - 2) + tuple(range(num_dims - 2))
+
+  return lax.ConvDimensionNumbers(lhs_spec=image_dn, rhs_spec=kernel_dn,
+                                  out_spec=image_dn)
+
   
 
 
@@ -438,9 +447,7 @@ def cmplx_max_pool(
 
 
 
-
-  
-
+################ POOLING LAYERS #######################################################
 
 
 class MaxMagnitude_Pooling(hk.Module):
@@ -480,4 +487,32 @@ class MaxMagnitude_Pooling(hk.Module):
 
   
 
+################## NORMALIZATION LAYERS ####################################################
 
+
+class Cmplx_Normalization(hk.Module):
+  """Basic implementation of a Complex normalization layer, that normalize all the input data
+  to a unitary magnitude, leaving the phase untouched."""
+
+  def __init__(
+      self,
+      name: Optional[str] = None,
+  ):
+    """Constructs the Cmplx_Normalization module.
+    Args:
+      name: Name of the module.
+    """
+    super().__init__(name=name)
+    
+  def __call__(
+      self,
+      x: jnp.ndarray,
+  ) -> jnp.ndarray:
+    """Implementation of a complex normalization."""
+
+    norm = jnp.absolute( x.flatten() )
+
+    return x / norm
+    
+
+  
