@@ -183,22 +183,49 @@ In simple \texttt{Complex Normalization} we scales a complex scalar input $\vb{z
 There are many layers that do not need any further re-definition to work also in the complex domain: \texttt{Dropout}, Pad or Attention layer, for example. There are also many other structures that should be re-derived (e.g Recurrent layers, LSTM, etc.), but that were out of our scope and so we haven't examined. This should be interpreted just as a starting point in the development of an higher level complex-valued deep learning framework.
 
 \section{Complex-Valued Activation Functions}
-One of the main issues encountered in the last 30 years in the developing of a complex-valued deep learning framework was exactly the definition of reliable activation functions. The extension from the real-valued domain is everything but easy: during the years, tons of complex-valued non-linear functions have been proposed and tested, but the limitations imposed by the Liouville's theorem \ref{th:Liouville}, together with the fact that many operations (like \textit{max}) are undefined, was a huge obstacle. Additionally, with complex-valued outputs, we have lost the probabilistic interpretations that functions like \texttt{sigmoid} and \texttt{softmax} used to provide.\\
-We have to say that most of the candidate functions that have been proposed, have been developed in a split fashion, i.e. by considering the real and imaginary parts of the activation separately. But, as discussed also in the previous chapter, this approach should be abandoned, since you risk losing the complex correlations stored in those variables.\\
-In this section, we will explore a few complex-valued activations proposed during the years: first with the ones that are direct extensions of their real counterparts, and then with more "abstract" candidates, that have more reasons to live and work in the complex domain.\\
+One of the main issues encountered in the last 30 years in the developing of a complex-valued deep learning framework was exactly the definition of reliable activation functions. The extension from the real-valued domain turned out to be quite challenging: because of the Liouville's theorem \ref{th:Liouville}, in fact, stating that the only complex-valued functions that are bounded and analytic everywhere are constants, one have necessarily to choose between boundedness and analyticity, in the design of those activations. Furthermore, before the introduction of ReLU, almost all the activation functions known in the real case were bounded. And for the same ReLU the extent was not trivial, since operations like \textit{max} are not defined in the complex domain, Additionally, with complex-valued outputs, we have lost the probabilistic interpretations that functions like \texttt{sigmoid} and \texttt{softmax} used to provide.\\
+We have to say, however, that most of the candidate functions that have been proposed, have been developed in a split fashion, i.e. by considering the real and imaginary parts of the activation separately. But, as discussed also in the previous chapter, this approach should be abandoned, since you risk losing the complex correlations stored in those variables.\\
+In this section, we will explore a few complex-valued activations proposed during the years: first with the ones that are direct extensions of their real counterparts, and then with more "abstract" candidates, that have more reasons to live and work in the complex domain.
 
-\subsection*{Complex Sigmoid}
-The most straightforward complex-valued non-linear function that we can think about is definitely the \textbf{complex sigmoid}, that is nothing but the same real-valued sigmoid extended to $\mathds{C}$.
-\[ \sigma_\mathds{C}(z) = \frac{1}{1+e^{-z}} \]
-Problem: the sigmoid function diverges periodically on the imaginary axis of the complex plane. The instability can be .. limiting the domain of the input values. However, it does not seem a good approach to begin with.\\
+\subsection*{Extent from the real case}
+The first class of viable approaches consists into barely extending real-valued activations in the complex domain, like the \texttt{sigmoid} and the \texttt{hypoerbolic tangent}:
+\[ \sigma_\mathds{C}(z) = \frac{1}{1+e^{-z}}  \qquad\qquad \tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} \]
+These functions are fully-complex, and also analytic and bounded almost everywhere, at the cost of introducing a set of singular points: both function, in fact, seems to diverge periodically in the imaginary axis of the complex plane. Limiting and scaling carefully the input values seems to help avoiding then those singularities and so partially containing the instability. However, I believe that there are simpler and more efficient alternatives.
 
 \subsection*{Separable Activations}
-As already explained, the main tendency in the development of complex-valued activation functions was basically getting back the "old" designs for real-valued models and using them independently on the real and imaginary components of the input.
-
+As already explained, the main tendency in the development of complex-valued activation functions was basically getting back the "old" designs for real-valued models and using them independently on the real and imaginary components of the input.\\
+This can be done easily with both the sigmoid and the hyperbolic tangent, mapping real and imaginary parts among input and output as they were independent channels:
+\[ f(\vb{z}) = g\left(\Re(\vb{z})\right) + ig\left(\Im(\vb{z})\right), \qquad\text{where}\quad g(x) = \frac{1}{1+e^{-x}} \quad\text{or}\quad g(x)=\tanh(x) \]
+Notice that this approach maps the phase of the signal into $[0,2\pi]$, since the function $g$ returns always a positive value.\\
+There are also interesting variations to the separable sigmoid, properly designed to work using a complex-valued network on real-valued data. But, for this reason, they are functions with values in $\mathds{R}$ and not in $\mathds{C}$, and so we won't go through them in this work.\\
+After the advent of the ReLU activation functions, two designs where developed in this fashion, the \texttt{$\mathds{C}$ReLU} and the \texttt{$z$ReLU}:
+\[ \mathds{C}ReLU(z) = ReLU(\Re(z)) + iReLU(\Im(z)) \qquad\qquad zReLU = \begin{cases} z\quad \text{if } z\in[0,\pi/2] \\ 0\quad\text{otherwise} \end{cases} \]
+These functions also share the nice property of being holomorphic in some regions of the complex plane: \texttt{$\mathds{C}$ReLU} in the first and third quadrants, while \texttt{$z$ReLU} everywhere but the set of points $\left\{\Re(z)>0,\, \Im(z)=0\right\} \cup \left\{\Re(z)=0,\, \Im(z)>0\right\}$.
 
 \subsection*{Phase-preserving Activations}
+Phase-preserving complex-valued activations are those functions that usually act only on the magnitude of input data, preserving the pre-activated phase during the forward pass. Those are usually non-holomorphic, but at least bounded in the magnitude. They are all based on the intuition that, altering the phase could severely impact the complex representation.\\
+The first proposal is the so called \texttt{siglog} activation function:
+It is called in this way because it is equivalent to applying the sigmoid to the log of the input magnitude and restoring the phase:
+\[ siglog(z) = g\left(\log\norm{z}\right)e^{-i\angle z}= \frac{z}{1+\norm{z}}, \qquad\text{where}\quad g(x) = \frac{1}{1+e^{-x}} \]
+Unlike the sigmoid and its separable version, the siglog projects the magnitude of the input from the interval $[0, \infty)$ to $[0,1)$. The authors of this proposal suggested also the addition of a couple of parameters to adjust the \textit{scale}, $r$, and the \textit{steepness}, $c$, of the function:
+\[ siglog(z; r,c) = \frac{z}{c + \frac{1}{r}\norm{z}} \]
+The main problem with \textit{siglog} is that the function has a nonzero gradient in the neighborhood of the origin of the complex plane, which can lead to gradient descent optimization algorithmsto continuously stepping past the origin rather then approaching the point and staying here.\\
+For this reason, an alternative version have been proposed, this time with a better gradient behavior (approaching zero as the input approaches zero), that goes under the name of \texttt{iGaussian}.
+\[ iGauss(z;\sigma^2)=g(z;\sigma^2)n(z) \qquad\text{where}\quad g(z;\sigma^2)=1-e^{-\frac{z\bar{z}}{2\sigma^2}},\quad n(z) = \frac{z}{\norm{z}} \]
+This activation is basically an inverted gaussian (and this is the reason for which it is more smooth around the origin) and so depends only on one parameter, i.e. its standard deviation $\sigma$.\\
+The last activation that we want to consider for this class is another variation of the rectified linear unit, this time called \texttt{modReLU}:
+\[ modReLU(z) = ReLU(\norm{z} + b)e^{i\theta_z} = \begin{cases} \left(\norm{z}+b\right)\frac{z}{\norm{z}}\quad\text{if }\norm{z}+b\ge 0 \\ 0\qquad\qquad\qquad\text{otherwise} \end{cases} \]
+where $z\in\mathds{C}$, $\theta_z$ is the phase of $z$, and $b\in\mathds{R}$ is a learnable parameter. The idea of this activation is to create a "dead zone" of radius $b$ around the origin, where the neuron will be inactive, while it will be active outside. We decided to consider this function, even if apparently was designed for Recurrent neural networks.
 
 \subsection*{Complex Cardioid}
+Even if the \texttt{iGaussian} has nice gradients properties around the origin in the complex plane, the same cannot be said when in input are given large values: in that situation there is high risk of vanishing gradients, the same that have historically hindered the performances of sigmoid-like activations.\\
+Because of this, recently a new complex activation function have been proposed: the \texttt{Complex Cardioid} \cite{Virtue:EECS-2019-126}. The cardioid acts as an extension of the ReLU function to the complex domain, rescaling from one to zero all the values with non-zero imaginary component, based on how much the same input is rotated in phase with respect to the real axis. Also, the cardioid is sensitive to the input phase, rather than the modulus: the output magnitude is, in fact, attenuated based on the input phase, while the output phase remains equal to the original one.\\
+The analytical expression for this activation function is:
+\[ cardioid(z) = \frac{1}{2}\left(1 + \cos(\angle z)\right)z \]
+Another very nice property is that when the inputs are restricted to real values, this function becomes simply the ReLU activation.\\
+We will see, in our applications, that the cardioid effectively allows complex networks to converge in a fast and also stable way.
+
+\subsection*{A brief recap}
 
 \begin{table}[!ht]
 \centering
