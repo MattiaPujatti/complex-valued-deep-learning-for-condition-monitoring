@@ -3,6 +3,7 @@
 import haiku as hk
 import jax
 import jax.numpy as jnp
+import numpy as np
 from typing import Any, Sequence
 
 
@@ -47,3 +48,56 @@ class CmplxTruncatedNormal(hk.initializers.Initializer):
         unscaled_r = jax.random.truncated_normal(hk.next_rng_key(), self.lower, self.upper, shape, dtype='float64')
         unscaled_c = jax.random.truncated_normal(hk.next_rng_key(), self.lower, self.upper, shape, dtype='float64')
         return jax.lax.complex(s * unscaled_r + m, s * unscaled_c + m)
+
+
+class Cmplx_Xavier_Init(hk.initializers.Initializer):
+    """Initialize complex magnitude according to the complex variant to the Glorot initialization
+    proposed by Trabelsi (https://arxiv.org/abs/1705.09792). The magnitudes are sampled according to 
+    Rayleigh distribution with scale parameter sigma=1/sqrt(n_in + n_out), while the phases are 
+    uniform in [-pi, pi]."""
+
+    def __init__(self, input_units: int, output_units: int):
+        """ Constructs a :class:`Cmplx_Xavier_Init` initializer.
+
+        Args:
+           input_units: size of the input to the layer.
+           output_units: number of neurons in the layer.
+        """
+        self.n_in = input_units
+        self.n_out = output_units
+
+    def __call__(self, shape: Sequence[int], dtype: Any) -> jnp.ndarray:
+
+        # Jax does not support yet Rayleigh distribution
+        sigma = 1 / np.sqrt(self.n_in + self.n_out)
+        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape) )
+
+        phases = jax.random.uniform(hk.next_rng_key(), shape, dtype='float64', minval=-np.pi, maxval=np.pi)
+
+        return magnitudes * jnp.exp( 1.j * phases )
+
+
+
+class Cmplx_He_Init(hk.initializers.Initializer):
+    """Initialize complex magnitude according to the complex variant to the He initialization
+    proposed by Trabelsi (https://arxiv.org/abs/1705.09792). The magnitudes are sampled according to 
+    Rayleigh distribution with scale parameter sigma=1/sqrt(n_in), while the phases are 
+    uniform in [-pi, pi]."""
+
+    def __init__(self, input_units: int):
+        """ Constructs a :class:`Cmplx_He_Init` initializer.
+
+        Args:
+           input_units: size of the input to the layer.
+        """
+        self.n_in = input_units
+
+    def __call__(self, shape: Sequence[int], dtype: Any) -> jnp.ndarray:
+
+        # Jax does not support yet Rayleigh distribution
+        sigma = 1 / np.sqrt(self.n_in)
+        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape) )
+
+        phases = jax.random.uniform(hk.next_rng_key(), shape, dtype='float64', minval=-np.pi, maxval=np.pi)
+
+        return magnitudes * jnp.exp( 1.j * phases )
