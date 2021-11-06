@@ -59,9 +59,9 @@ def categorical_accuracy(network,
 
 
 
-@partial(jit, static_argnums=(0,6,))
-def crossentropy_loss(network,
-                      params: hk.Params,
+@partial(jit, static_argnums=(1,6,))
+def crossentropy_loss(params: hk.Params,
+                      network,
                       inputs: jnp.array,
                       targets: jnp.array,
                       rng_key: Optional[jax.random.PRNGKey] =None,
