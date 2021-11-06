@@ -199,7 +199,7 @@ This can be done easily with both the sigmoid and the hyperbolic tangent, mappin
 Notice that this approach maps the phase of the signal into $[0,2\pi]$, since the function $g$ returns always a positive value.\\
 There are also interesting variations to the separable sigmoid, properly designed to work using a complex-valued network on real-valued data. But, for this reason, they are functions with values in $\mathds{R}$ and not in $\mathds{C}$, and so we won't go through them in this work.\\
 After the advent of the ReLU activation functions, two designs where developed in this fashion, the \texttt{$\mathds{C}$ReLU} and the \texttt{$z$ReLU}:
-\[ \mathds{C}ReLU(z) = ReLU(\Re(z)) + iReLU(\Im(z)) \qquad\qquad zReLU = \begin{cases} z\quad \text{if } z\in[0,\pi/2] \\ 0\quad\text{otherwise} \end{cases} \]
+\[ \mathds{C}ReLU(z) = ReLU(\Re(z)) + iReLU(\Im(z)) \qquad\qquad zReLU = \begin{cases} z\quad \text{if } \theta_z\in[0,\pi/2] \\ 0\quad\text{otherwise} \end{cases} \]
 These functions also share the nice property of being holomorphic in some regions of the complex plane: \texttt{$\mathds{C}$ReLU} in the first and third quadrants, while \texttt{$z$ReLU} everywhere but the set of points $\left\{\Re(z)>0,\, \Im(z)=0\right\} \cup \left\{\Re(z)=0,\, \Im(z)>0\right\}$.
 
 \subsection*{Phase-preserving Activations}
@@ -209,7 +209,8 @@ It is called in this way because it is equivalent to applying the sigmoid to the
 \[ siglog(z) = g\left(\log\norm{z}\right)e^{-i\angle z}= \frac{z}{1+\norm{z}}, \qquad\text{where}\quad g(x) = \frac{1}{1+e^{-x}} \]
 Unlike the sigmoid and its separable version, the siglog projects the magnitude of the input from the interval $[0, \infty)$ to $[0,1)$. The authors of this proposal suggested also the addition of a couple of parameters to adjust the \textit{scale}, $r$, and the \textit{steepness}, $c$, of the function:
 \[ siglog(z; r,c) = \frac{z}{c + \frac{1}{r}\norm{z}} \]
-The main problem with \textit{siglog} is that the function has a nonzero gradient in the neighborhood of the origin of the complex plane, which can lead to gradient descent optimization algorithmsto continuously stepping past the origin rather then approaching the point and staying here.\\
+The main problem with \textit{siglog} is that the function has a nonzero gradient in the neighborhood of the origin of the complex plane, which can lead to gradient descent optimization algorithms
+to continuously stepping past the origin rather then approaching the point and staying here.\\
 For this reason, an alternative version have been proposed, this time with a better gradient behavior (approaching zero as the input approaches zero), that goes under the name of \texttt{iGaussian}.
 \[ iGauss(z;\sigma^2)=g(z;\sigma^2)n(z) \qquad\text{where}\quad g(z;\sigma^2)=1-e^{-\frac{z\bar{z}}{2\sigma^2}},\quad n(z) = \frac{z}{\norm{z}} \]
 This activation is basically an inverted gaussian (and this is the reason for which it is more smooth around the origin) and so depends only on one parameter, i.e. its standard deviation $\sigma$.\\
@@ -233,12 +234,20 @@ We will see, in our applications, that the cardioid effectively allows complex n
 \toprule
 \textbf{Activation} & \textbf{Analytic Form} & \textbf{Reference}\\
 \midrule
-Sigmoid \\
-Separable Sigmoid\\
-Siglog\\
-
+Sigmoid & $\sigma(z)$ & // \\
+Hyperbolic Tangent & $\tanh(z)$ & // \\
+Split-Sigmoid & $\sigma(\Re(z)) + i\sigma(\Im(z))$ & \cite{Nitta_complexBP}\\
+Split-Tanh & $\tanh(\Re(z)) + i\tanh(\Im(z))$ & \cite{Nitta_complexBP}\\
+$\mathds{C}$ReLU & $ReLU(\Re(z)) + iReLU(\Im(z))$ & \cite{trabelsi2018deep} \\
+$z$ReLU & $z\;\text{if } z\in[0,\pi/2],\quad0\quad\text{otherwise}$ & \cite{guberman2016complex} \\
+Siglog & $\sigma(\log\norm{z})e^{-i\theta_z}$ & \cite{Koutsougeras_siglog} \\
+iGauss & $\left(1-e^{-\frac{z\bar{z}}{2\sigma^2}}\right)\frac{z}{\norm{z}}$ & \cite{Virtue:EECS-2019-126}\\
+modReLU & $ReLU(\norm{z} + b)e^{i\theta_z}$ & \cite{DBLP:journals/corr/ArjovskySB15} \\
+Cardioid & $\frac{1}{2}\left(1 + \cos(\angle z)\right)z$ & \cite{Virtue:EECS-2019-126}\\
 \bottomrule
 \end{tabular}
+\caption{Recal of the most popular complex-valued activation functions.}
+\label{tab:cmplx_activations}
 \end{table}
 
 \section{JAX Implementation}

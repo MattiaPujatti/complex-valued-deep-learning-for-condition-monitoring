@@ -3,12 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
----line 149 of file main.aux
+---line 133 of file main.aux
  : \citation{MESSERSCHMITT_STATIONARY_POINTS
  :                                          }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 152 of file main.aux
+---line 136 of file main.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
@@ -37,47 +37,46 @@ I was expecting a `,' or a `}'---line 254 of file bibliography.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty journal in Dramsch_seismic
-Warning--empty author and editor in hirose_cvnn
 Warning--empty booktitle in amin_wirtinger
-You've used 27 entries,
+You've used 29 entries,
             1876 wiz_defined-function locations,
-            634 strings with 8893 characters,
-and the built_in function-call counts, 5250 in all, are:
-= -- 444
-> -- 305
+            649 strings with 9273 characters,
+and the built_in function-call counts, 5755 in all, are:
+= -- 493
+> -- 327
 < -- 1
-+ -- 114
-- -- 87
-* -- 368
-:= -- 806
-add.period$ -- 31
-call.type$ -- 27
-change.case$ -- 24
++ -- 122
+- -- 93
+* -- 402
+:= -- 884
+add.period$ -- 33
+call.type$ -- 29
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 218
-empty$ -- 522
-format.name$ -- 87
-if$ -- 1259
+cite$ -- 31
+duplicate$ -- 243
+empty$ -- 569
+format.name$ -- 93
+if$ -- 1383
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 12
-newline$ -- 88
-num.names$ -- 26
-pop$ -- 125
+int.to.str$ -- 29
+missing$ -- 15
+newline$ -- 94
+num.names$ -- 29
+pop$ -- 129
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 161
+skip$ -- 177
 stack$ -- 0
-substring$ -- 120
-swap$ -- 63
+substring$ -- 148
+swap$ -- 73
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 36
-width$ -- 29
-write$ -- 235
+warning$ -- 2
+while$ -- 41
+width$ -- 31
+write$ -- 256
 (There were 7 error messages)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  5 NOV 2021 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  6 NOV 2021 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,6 +899,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+LaTeX Warning: Citation `Nitta_complexBP' on page 10 undefined on input line 23
+9.
+
+
+LaTeX Warning: Citation `Nitta_complexBP' on page 10 undefined on input line 24
+0.
+
+
+LaTeX Warning: Citation `trabelsi2018deep' on page 10 undefined on input line 2
+41.
+
+
+LaTeX Warning: Citation `guberman2016complex' on page 10 undefined on input lin
+e 242.
+
+
+LaTeX Warning: Citation `Koutsougeras_siglog' on page 10 undefined on input lin
+e 243.
+
+
+LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 10 undefined on input li
+ne 244.
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/ArjovskySB15' on page 10 undefined 
+on input line 245.
+
+
+LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 10 undefined on input li
+ne 246.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -914,10 +946,10 @@ Package rerunfilecheck Info: File `extent.out' has not changed.
 (rerunfilecheck)             Checksum: 69418383BC20A3C5ADE2D66D57B72767;594.
  ) 
 Here is how much of TeX's memory you used:
- 13015 strings out of 479304
- 193731 string characters out of 5869780
- 549901 words of memory out of 5000000
- 29880 multiletter control sequences out of 15000+600000
+ 13019 strings out of 479304
+ 193829 string characters out of 5869780
+ 549997 words of memory out of 5000000
+ 29884 multiletter control sequences out of 15000+600000
  416756 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,16n,120p,978b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -945,7 +977,7 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfrm1095.pfb>
-Output written on extent.pdf (10 pages, 852441 bytes).
+Output written on extent.pdf (10 pages, 853390 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  216 compressed objects within 3 object streams

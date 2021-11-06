@@ -18,8 +18,8 @@
 \contentsline {subsection}{\numberline {3.2.2}Backpropagation with a Real-valued Loss}{xx}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Re-definition of the main neural network layers}{xxi}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxiv}{section.3.4}%
-\contentsline {section}{\numberline {3.5}JAX Implementation}{xxiv}{section.3.5}%
-\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xxvii}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xxvii}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xxviii}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xxix}{section.A.3}%
+\contentsline {section}{\numberline {3.5}JAX Implementation}{xxvi}{section.3.5}%
+\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xxix}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xxix}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xxx}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xxxi}{section.A.3}%
