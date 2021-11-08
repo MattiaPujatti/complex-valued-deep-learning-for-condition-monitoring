@@ -9,7 +9,7 @@ From Wirtinger calculus backpropagation to specific software implementation chal
 complex-valued neural network components and how they are related to existing real-valued network implementations. We will show how existing layers and functionalities can be extended to work also with a complex-valued input and which of them needs to be completely redefined.\\
 We address the problem of re-adapting the training process building a complex backpropagation algorithm on top of many prior works, that allows for an optimization when the loss function is real-valued, thanks to Wirtinger calculus.\\
 Furthermore, we will discuss in details the problem of building complex-valued activation functions, that was one of the main obstacles in the development of deep learning in this direction.\\
-In the end, we will provide a brief presentation of the high level library, built on top of \JAX, that we have realized in order simplify the setup and train of those kind of networks. Nowadays, in fact, the internet is full of deep learning libraries implementing basically every kind of known model, with different optimization, parallelization, etc. However, for some reason, many of them still does not provide support to complex data types: a huge obstacle in the growth of complex-valued deep learning.
+In the end, we will provide a brief presentation of the high level library, built on top of \JAX, that we have realized in order simplify the setup and train of those kind of networks. Nowadays, in fact, the internet is full of deep learning libraries implementing basically every kind of known model, with different optimizations, parallelizations, etc. However, for some reason, many of them still does not provide support to complex data types: a huge obstacle in the growth of complex-valued deep learning.
 
 
 \section{Problems in the extent}
@@ -24,16 +24,16 @@ Considering just their fundamental structure, complex-valued neural networks wor
 	\label{fig:cmplx_neuron}
 \end{figure}
 
-Each neuron receives a weighted input signal $\vb{z}$, that this time is complex valued (as the weights $\vb{w_i}$); this signal in summed up and added to a bias $\vb{b}$ and then passed through an activation function $f:\mathds{C}\to\mathds{C}$, that most of the times is non-linear. If we denote with the subscript $l$ the forward pass of a neuron in the $\ell$-th layer, then the output can be expressed with the following formula:
+Each neuron receives a weighted input signal $\vb{z}$, that this time is complex valued (as the weights $\vb{w_i}$); this signal in summed up and added to a bias $\vb{b}$, and then passed through an activation function $f:\mathds{C}\to\mathds{C}$, that most of the times is non-linear. If we denote with the subscript $\ell$ the forward pass of a neuron in the $\ell$-th layer, then the output can be expressed with the following formula:
 \[ \vb{y}_\ell = f_\ell\left(\sum_{i=1}^{N}\vb{w_i}z_i + \vb{b}_\ell\right) \]
 where $N$ are the neurons in layer $\ell$, $M$ the neurons in layer $(\ell-1)$, $\vb{z_{\ell-1}}\in\mathds{C}^M$ was the output of the previous layer, $\vb{w}_\ell\in\mathds{C}^{N\times M}$ and $\vb{b}_\ell\in\mathds{C}^N$ are the learnable parameters of this level, $f_\ell$ the activation function and $\vb{y}_\ell\in\mathds{C}^N$ the effective output.\\
 However, when considering a possible extension from $\mathds{R}$ to $\mathds{C}$, we need to take into account a few inconveniences, since we look for a coherent and rigorous framework. 
 
-\subsection*{Max operator undefined}
+\subsection*{Max operator is undefined}
 As explained also in the introductory mathematical section, $\mathds{C}$ is not an ordered field, in the sense that we cannot define a comparison relation among complex numbers that makes everybody agree. In principle you can define one, like the lexycographical ordering, that compares first the real part and only after the imaginary, or relying on establishing this relation among the magnitudes of those numbers. The latter is actually the preferred approach. This brief overview is important, since many non-linear functions in deep learning, like \texttt{ReLU} and \texttt{Max-Pooling} necessitate of a \textit{maximum} operation in order to fulfill their purpose of increasing numerical stability and dimensionality reduction, respectively.
 
 \subsection*{Unstable Activations}
-As we will see in a dedicated section, the problem of defining stable and coherent activation functions is one of the main issues that limited the development of complex-valued deep learning during the years. Complex functions, in fact, necessitate of further limitations to be suitable as activations: because of the Liouville's theorem \ref{th:Liouville}, for example, they can't be limited, and neither grow too slow, otherwise their derivative would always vanish during the backpropagation. So, simply re-adapting existing activations to support complex-valued inputs, maybe redefining ambiguous operations like \texttt{max}, is not enough, especially because you need care about the eventual loss of complex correlations if the activation applied independently on the real and imaginary components.
+As we will see in a dedicated section, the problem of defining stable and coherent activation functions is one of the main issues that limited the development of complex-valued deep learning during the years. Complex functions, in fact, necessitate of further limitations to be suitable as activations: because of the Liouville's theorem \ref{th:Liouville}, for example, they can't be limited, and neither grow too slow, otherwise their derivative would always vanish during the backpropagation. So, simply re-adapting existing activations to support complex-valued inputs, maybe redefining ambiguous operations like \texttt{max}, is not enough, especially because you need to care about the eventual loss of complex correlations if the activation is applied independently on the real and imaginary components.
 
 \subsection*{Lost Probabilistic Interpretation}
 One nice property of real-valued neural network classifiers is the probabilistic interpretation that we can associate to its final layer, mainly due to the normalization in the range $[0,1]$ provided by sigmoid/softmax activation functions. But now, the final output of the network will be a set of complex numbers, that we cannot interpret anymore as a probability distribution over a set of probabilistic outcomes. This nice property can be partially recovered if we add a \textit{magnitude} layer just before the last activation: in this way we drop all the phase information but we move back to a real-valued problem. Anyway, it always depends on the final objective of the model.
@@ -52,7 +52,7 @@ As anticipated in the introductory section, the interest of researchers in this 
 	\item[-] he computed the derivatives $\partial f/\partial x$ and $\partial f/\partial y$, instead of relying on Wirtinger calculus \ref{eq:CR_derivs}; even if this is a working alternative to ours, we will see that it is suboptimal;
 	\item[-] he relied on "bad" activation functions, since, as told by he himself, many times the algorithm failed to converge.
 \end{itemize}
-I decided to report his work because it was still one of the first and working attempts to develop a complex backpropagation algorithm, but also because of the purely theoretical analysis realized on the transformation that a complex network can learn. Nitta, managed to teach its networks several transformations in $\mathds{R}^2$, like rotations, reductions and parallel displacements, that the corresponding real-valued model didn't	make. He understood first that this was possible thanks to the higher degrees of freedom offered by complex multiplication (discussed in section \ref{subsec:cmplx_multiplication}). But what I believe it is even more interesting, is the relation that Nitta have found among complex-valued networks and the \textbf{Identity theorem} \ref{th:identity}:\\ 
+I decided to report his work because it was still one of the first and working attempts to develop a complex backpropagation algorithm, but also because of the purely theoretical analysis realized on the transformations that a complex network can learn. Nitta, managed to teach its networks several transformations in $\mathds{R}^2$, like rotations, reductions and parallel displacements, that the corresponding real-valued model didn't	make. He understood first that this was possible thanks to the higher degrees of freedom offered by complex multiplication (discussed in section \ref{subsec:cmplx_multiplication}). But what I believe it is even more interesting, is the relation that Nitta have found among complex-valued networks and the \textbf{Identity theorem} \ref{th:identity}:\\ 
 \textit{``We believe
 that Complex-BP networks satisfy the Identity Theorem, that is, Complex-BP networks can approximate complex
 functions just by training them only over a part of the
@@ -82,7 +82,7 @@ where $\alpha\in\mathds{R}$ is the learning rate.
 	\label{fig:cmplx_gradient_descent}
 \end{figure}
 
-In order to provide also a visual representation, in figure \ref{fig:cmplx_gradient_descent} we have considered a simple, non holomorphic, real-valued function like $f(z) = z\bar{z} = \norm{z}^2$, that has a unique global minimum at $z=0+0j$. We have then applied the gradient descent and ascent rules in both directions of the gradient, $\vb{\nabla_z}f$, and the cogradient $\vb{\nabla_{\bar{z}}}f$, in order to verify what said above. In the plot we clearly see that the only direction that approaches the true minimum (starting from a random point in the dominium of $f$) is exactly the one determined by the complex cogradient, while the complex gradient moves in a completely wrong direction. Also considering the ascent rules we observe that the steepest direction maximizing $f$ is again the one determined by the cogradient.\\
+In order to provide also a visual representation, in figure \ref{fig:cmplx_gradient_descent} we have considered a simple, non holomorphic, real-valued function like $f(z) = z\bar{z} = \norm{z}^2$, that has a unique global minimum at $z=0+0j$. We have then applied the gradient descent and ascent rules in both directions of the gradient, $\vb{\nabla_z}f$, and the cogradient $\vb{\nabla_{\bar{z}}}f$, in order to verify what said above. In the plot we clearly see that the only direction that approaches the true minimum (starting from a random point in the dominium of $f$) is exactly the one determined by the complex cogradient, while the complex gradient moves in a completely wrong direction. Also considering the ascent rules we observe that the steepest direction maximizing $f$ is again the one determined by the cogradient.
 
 \subsection{Backpropagation with a Real-valued Loss}
 
@@ -90,18 +90,18 @@ With the real-valued loss assumption (proposed in \ref{sec:cmplx_backpropagation
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{c c c}
+	\begin{tabularx}{\linewidth}{C{0.25\textwidth} C{0.3\textwidth} C{0.45\textwidth}}
 		\toprule
-		\textbf{Standard Real Calculus} & \textbf{Complex Calculus} & \textbf{Complex Calculus, assuming real-valued loss}\\
+		\textbf{Standard Real Calculus} & \textbf{Complex Calculus} & \textbf{Complex Calculus, \arraybackslash assuming real-valued loss}\\
 		\midrule
-		Input to layer $\ell +1$:\\
-		$\pdv{f_L}{x_\ell}$ & $\pdv{f_L}{z_\ell}$ and $\pdv{f_L}{\bar{z}_\ell}$ & $\pdv{f_L}{\bar{z}_\ell}$\\
+		Input to layer $\ell +1$:
+		\[ \pdv{f_L}{x_\ell} \] & \[\pdv{f_L}{z_\ell} \text{  and  } \pdv{f_L}{\bar{z}_\ell}\] & \[ \pdv{f_L}{\bar{z}_\ell}\] \\
 		\midrule
-		Output from layer $\ell$:\\
-		$\pdv{f_L}{x_{\ell-1}} = \pdv{f_L}{x_\ell}\pdv{f_\ell}{x_{\ell-1}}$ & $\pdv{f_L}{z_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{z_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{\bar{z}_{\ell-1}}\right)}$\\
-		& $\pdv{f_L}{\bar{z}_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{\bar{z}_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{z_{\ell-1}}\right)}$ & $\pdv{f_L}{\bar{z}_\ell}\bar{\left(\pdv{f_\ell}{z_{\ell-1}}\right)}$ \\
+		Output from layer $\ell$:
+		\[ \pdv{f_L}{x_{\ell-1}} = \pdv{f_L}{x_\ell}\pdv{f_\ell}{x_{\ell-1}}\] & \[ \pdv{f_L}{z_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{z_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\overbar{\left(\pdv{f_\ell}{\bar{z}_{\ell-1}}\right)}\] \\
+		& \[ \pdv{f_L}{\bar{z}_{\ell-1}} = \pdv{f_L}{z_\ell}\pdv{f_\ell}{\bar{z}_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\overbar{\left(\pdv{f_\ell}{z_{\ell-1}}\right)}\] & \[ \pdv{f_L}{\bar{z}_{\ell-1}} = \overbar{\left(\pdv{f_L}{\bar{z_\ell}}\right)}\pdv{f_\ell}{\bar{z}_{\ell-1}} + \pdv{f_L}{\bar{z}_\ell}\overbar{\pdv{f_\ell}{z_{\ell-1}}} \] \\
 		\bottomrule
-	\end{tabular}
+	\end{tabularx}
 	\caption{Comparison of backpropagation calculus. (source: \cite{Virtue:EECS-2019-126})}
 	\label{tab:comparison_backpropagation}
 \end{table}
@@ -252,7 +252,34 @@ Cardioid & $\frac{1}{2}\left(1 + \cos(\angle z)\right)z$ & \cite{Virtue:EECS-201
 
 \section{JAX Implementation}
 
-% specify also complex data types
+From a practical perspective, in order to setup and realized all the studies and analysis we are going to present, I had to realize a dedicated \texttt{Python} library.\\
+In the previous sections we have analyzed all the theoretical obstacles that researchers had to overcome in order to develop a working complex-valued deep learning framework. But, in reality, there are many drawbacks also at the implementation level: first of all the most popular hardware acceleration architectures, \texttt{CUDA} and \texttt{CuDNN} doesn't own a native support for complex-valued data types. And this is by itself a huge limitation, since we cannot train our networks efficiently, and we will have to rely on simple models with few parameters.\\
+Regarding existing deep learning libraries, like \texttt{Keras}, \texttt{TensorFlow} and \texttt{Pytorch}, we have to say that they provide a lot of interesting high-level architectures to setup deep learning algorithms, and also they "officially" support complex inputs. Even better, they support complex derivatives. But when you try to implement an effective complex-valued network, you understand how much are they far from an effective comprehensive support (just some known issues: \href{https://github.com/pytorch/pytorch/issues/33152}{1}, \href{https://github.com/tensorflow/tensorflow/issues/17097}{2}, \href{https://github.com/microsoft/tensorflow-directml/issues/32}{3}): regardless of the many errors you can get from structures that should work, from an accurate analysis of the source code of the main layers, you notice that many operations are ambiguous or at least not compatible with the reasoning we adopted to develop the layers extents in this chapter. We could have probably found a way to redefine or override those structures, but we felt that modifying a so large and complex library, without getting undesired side effects, would have been too much work.
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\includegraphics[width=0.5\textwidth]{pictures/JAX_logo.pdf}
+	\caption{JAX logo.}
+\end{wrapfigure}
+For this reason we had to rely on a more niche library, called \texttt{JAX}, and recently developed by \texttt{Google DeepMind}. JAX is \href{https://github.com/hips/autograd}{\textbf{Autograd}} and \href{https://www.tensorflow.org/xla}{\textbf{XLA}} (a domain-specific compiler for linear algebra designed for TensorFlow models), brought together for high-performance numerical computing and machine learning research. It provides composable transformations of Python and NumPy programs: differentiate, vectorize, parallelize, Just-In-Time compile to GPU/TPU, and more. The main advantages that we found using JAX were:
+\begin{itemize}
+	\item[-] it supports and optimize complex differentiation, for holomorphic and non functions;
+	\item[-] it is extremely optimized, with XLA + JIT that partially compensate the lack of native hardware acceleration;
+	\item[-] many complex operations/layers are already supported and well defined.
+\end{itemize}
+More specifically, for building our complex-valued neural networks we will rely on \texttt{dm-haiku}, another library built on top of JAX with the purpose of covering the same role that \href{https://github.com/deepmind/sonnet}{\texttt{Sonnet}} (widely used ad DeepMind) has for Tensorflow, and to simplify the approach of users that are familiar with object oriented programming.\\
+Since these are quite recent libraries, and also a definitive approach to complex-valued deep learning does not exists yet, I made a careful and complete analysis of the source code of Haiku and of the most important JAX functions. Thanks to this I effectively noticed that much work is still needed: even if in a small quantity respect to Tensorflow/Pytorch, also in this case many operations turns out to be ambiguous or bad-defined for complex-valued data types (e.g. the \texttt{square} or the \texttt{max} operators). Many of them are also completely undefined (e.g. initialization or, more in general, random complex distributions). We still decided to proceed with JAX mainly because of its flexibility, and many new functions/operations can be redefined without caring of implicit undesired side effects. This is possible also thanks to the design of the training loop, that is quite "explicit" and customizable.\\
+From a practical point of view, I had basically to realize small a `\texttt{complex\_nn}' library on top of Haiku, containing the definitions (and re-definitions) of all the necessary components of a complex-valued neural network:
+\begin{itemize}
+	\item \texttt{layers}: the adaptations derived before for linear, convolutional, pooling and normalization operations;
+	\item \texttt{activations}: all functions listed in table \ref{tab:cmplx_activations};
+	\item \texttt{initializers}: weights initializers following uniform or truncated random normal distributions, together with the modified approaches described above by Xavier and He;
+	\item \texttt{metrics}: categorical accuracy and categorical cross-entropy, useful for the successive classifiers designs; 
+	\item \texttt{optimizers}: a \textit{complex-Adam} algorithm;
+	\item a \texttt{classifier wrapper} with the purpose of collecting all the necessary functions to setup a training loop with JAX and Haiku;
+	\item for completeness, also some utility functions, mainly to realize plots or wrapping more complex structures. 
+\end{itemize}
+This code has been tested over several datasets. There are in fact a few \texttt{Jupyter Notebooks} providing a detailed explanation of analysis we are going to see, together with some basic setup of some learning procedures.\\
+All the implementation and complete analysis is actually available at my gitlab page \footnote{\href{https://gitlab.fbk.eu/mpujatti/complex-valued-deep-learning-for-condition-monitoring}{https://gitlab.fbk.eu/mpujatti/complex-valued-deep-learning-for-condition-monitoring}}.
 
 
 \end{document}
+ 
