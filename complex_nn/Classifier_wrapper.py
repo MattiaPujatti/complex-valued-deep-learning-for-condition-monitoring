@@ -333,7 +333,6 @@ class Haiku_Classifier:
         # yet supported, especially haiku trasnformed functions (see https://github.com/deepmind/dm-haiku/issues/59)
         # So we are allowed to save only a few parameters (mainly the network's parameters and states, the optimizer
         # state and the training history)
-        backup_dict = {k: self.__dict__[k]
         backup_dict = {'net_params': self.get_net_params(),
                        'net_state': self.get_net_state(),
                        'opt_state': self.get_opt_state(),
