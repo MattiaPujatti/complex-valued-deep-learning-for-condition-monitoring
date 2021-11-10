@@ -58,7 +58,7 @@ def modReLU(z, b=1.):
     return jax.nn.relu( jnp.absolute(z) + b ) * norm
 
 
-@custom_jvp
+#@custom_jvp
 def cardioid(z):
     """Implementation of the complex cardioid activation function:
        cardioid(z) = (1/2) * (1+cos(theta_z)) * z
@@ -66,4 +66,4 @@ def cardioid(z):
     return 0.5 * (1 + jnp.cos(jnp.angle(z))) * z
 
 # df / dz
-cardioid.defjvps(lambda g, ans, x: 0.5 + 0.5*jnp.cos(jnp.angle(x)) + 0.25j*jnp.sin(jnp.angle(x)))
+#cardioid.defjvps(lambda g, ans, x: 0.5 + 0.5*jnp.cos(jnp.angle(x)) + 0.25j*jnp.sin(jnp.angle(x)))

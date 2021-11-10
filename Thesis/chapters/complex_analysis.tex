@@ -118,18 +118,18 @@ We reported the identity theorem because, according to \cite{Nitta_complexBP}, t
 % ADD ALSO WHERE WE CHECKED AND USED CIRCULARITY IN PRACTICAL APPLICATIONS/TESTS
 
 An important characteristic of a complex random
-variable is the so-called circularity property, or lack of it. Circular random variables have, in fact, vanishing pseudo-variance, index that its real and imaginary parts are statistically uncorrelated. Under this perspective, a recent work have shown that, the circularity property of a dataset can significantly impact on the different performances obtained using a complex-valued model with respect to its real counterpart. At least in principle, in fact, complex-valued networks seems to benefit more of dataset presenting inherent correlations.\\
+variable is the so-called circularity property, or lack of it. Circular random variables have, in fact, vanishing pseudo-variance, index that its real and imaginary parts are statistically uncorrelated. Under this perspective, a recent work \ref{barrachina2021complexvalued} have shown that, the circularity property of a dataset can significantly impact on the different performances obtained using a complex-valued model with respect to its real counterpart. At least in principle, in fact, complex-valued networks seems to benefit more of dataset presenting inherent correlations.\\
 Let us denote the vector $\vb{u}\triangleq \left[X,Y\right]^T$ as the real vector built by stacking the real and imaginary parts of a complex random variable $Z = X+iY$. The probability density function of $Z$ can be identified with the pdf of $\vb{u}$. The \textit{variance} of $Z$ is defined by:
 \[ \sigma^2_Z \triangleq \Ev{\abs{Z-\Ev{Z}}^2} = \Ev{\abs{Z}^2} - \abs{\Ev{Z}}^2 = \sigma^2_X + \sigma^2_Y \]
 where $\sigma^2_X$ and $\sigma^2_Y$ are respectively the variance of $X$ and $Y$. However, this parameters does not bring any information about the \textit{covariance} of $Z$,
 \[ \sigma_{XY} \triangleq \Ev{\left(X-\Ev{X}\right)\left(Y-\Ev{Y}\right)} \]
- for which we need to rely on another statistical quantity defined for complex random variables, i.e. the \textit{pseudo-variance}:
+for which we need to rely on another statistical quantity defined for complex random variables, i.e. the \textit{pseudo-variance}:
 \[ \tau_Z\triangleq \Ev{\left(Z-\Ev{Z}\right)^2} = \sigma^2_{X} - \sigma^2_Y + 2i\sigma_{XY} \]
 Unlike the variance of $Z$, which is always real and positive, the pseudo-variance is in general complex.\\
 We define the \textbf{circular quotient} $\rho_Z$ as:
 \[ \rho_Z = \frac{\tau_Z}{\sigma^2_Z} \]
 Additionally, we can define also a \textit{correlation coefficient} among real and imaginary parts of $Z$:
-\[ \rho = \frac{\sigma_{XY}}{\sigma_X\sigma_Y} \]
+\[ \rho = \frac{\sigma_{XY}}{\sigma_X\sigma_Y} \]b
 
 In some papers, the circular quotient is defined as a covariance measure between $Z$ and $\bar{Z}$, so among a random variable and its complex conjugate, rather than considering real and imaginary parts. We believe that those formulations in the end are equivalent from a practical point of view and so they can be used interchangeably.\\
 Another interesting fact is that $\rho_Z$ possess an intuitive geometrical interpretation since the modulus and phase of its principal square-root are equal to the eccentricity and angle of orientation of the ellipse defined by the covariance matrix of the real and imaginary parts of $Z$.
