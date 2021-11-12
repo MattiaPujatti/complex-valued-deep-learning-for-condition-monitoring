@@ -27,7 +27,7 @@ def small_training_summary(history):
     ax[2].set_ylabel('Accuracy')
     ax[2].set_title('Model Accuracy')
 
-    b
+    
 
 
 def get_circularity_coeff(dataset, verbose=False):

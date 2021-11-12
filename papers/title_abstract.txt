@@ -1,0 +1,61 @@
+Title:
+
+A COMPLEX-VALUED DEEP LEARNING ANSATZ WITH APPLICATION TO VIBRATION SIGNAL CLASSIFICATION
+
+
+
+Abstract:
+
+
+At present, the vast majority of building blocks, techniques, and architectures for
+deep learning are based on real-valued operations and representations. However,
+recent work carried on by the most disparate areas and older fundamental theoretical 
+analysis suggests that complex numbers could have a richer representational capacity.
+Many deterministic signals in fact, such as seismic, electrical or vibrational signals, 
+contain significant information in the phase structure of the signal, that risk of being lost
+when studied usign a real-valued model.
+However, despite their attractive properties and potential, complex-valued deep neural 
+networks have been mostly marginalized due to the absence of the building blocks required 
+to design such models. 
+The lack of order over the complex field raises several difficulties both in the definition and in 
+the training of the network, for which we will propose and formalize a possible extent of
+the main operations implemented in real-valued machine learning.
+We will address also the problem of defining reasonable activation functions in the complex domain, satisfying all the 
+requirements of nonlinearity, flexibility and consistency. Limited literature exists, in fact, under this perspective, 
+with all the actual approaches generally developed in a split fashion, also because of the Liouville's theorem, that
+impose further limitations without counterparts in the real case.
+Finally, we will implement the develop ansatz over a multiclass classification problem over a dataset of
+vibration signals, provided by the group Bonfiglioli S.P.A., with the objective of building a prediction
+model able to proactively prevent failures that may occur in one of their engines.
+This will be possible also thanks to JAX, a recently developed library from Google DeepMind dedicated 
+to high-performance numerical computing and machine learning, that partially compensate the lack of support for complex numbers by 
+hardware acceleration. 
+
+
+
+
+ non endowed with sufficient degrees of freedom to adapt their shape given the
+training data. While this problem has received considerable attention in the real case, a very limited literature exists for CVNNs,
+where most activation functions are generally developed in a split fashion (i.e., by considering the real and imaginary parts
+of the activation separately) or with simple phase-amplitude techniques.
+
+...nonlinear activation function (AF) cannot be both analytic and bounded everywhere in the complex plane .
+
+In recent years CNNs have outperformed traditional
+approaches in many computer vision tasks such as object detection, image classification
+and face recognition. CNNs are vulnerable to overfitting, and a lot of research focuses
+on finding regularization methods to overcome it. One approach is designing task specific
+models based on prior knowledge. Several works have shown that properties of natural images can be easily captured using
+complex numbers. Motivated by these works, we present a variation of the CNN model with
+complex valued input and weights. We construct the complex model as a generalization of
+the real model. Lack of order over the complex field raises several difficulties both in the
+definition and in the training of the network. We address these issues and suggest possible
+solutions. ... although the complex model is hard to
+train, it is significantly less vulnerable to overfitting. We also demonstrate that the complex
+network detects meaningful phase structure in the data.
+
+While it has been shown that
+phase content can be restored in deep neural networks, we show how including
+phase information in feature maps improves both training and inference from
+deterministic physical data. Furthermore, we show that the reduction of parameters
+in a complex network outperforms larger real-valued networks.
