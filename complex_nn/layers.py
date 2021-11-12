@@ -11,7 +11,7 @@ from functools import partial
 from typing import Optional, Tuple, Union, Sequence
 import warnings
 
-from complex_nn.initializers import CmplxRndUniform, CmplxTruncatedNormal
+from complex_nn.initializers import CmplxRndUniform, CmplxTruncatedNormal, Cmplx_Xavier_Init, Cmplx_He_Init
 
 
 
@@ -34,9 +34,8 @@ class Cmplx_Linear(hk.Module):
     Args:
       output_size: Output dimensionality.
       with_bias: Whether to add a bias to the output.
-      w_init: Optional initializer for weights. By default, uses random values
-        from truncated normal, with stddev ``1 / sqrt(fan_in)``. See
-        https://arxiv.org/abs/1502.03167v3.
+      w_init: Optional initializer for weights. By default, uses complex variant
+              of Xavier initialization with the Rayleigh distribution.
       b_init: Optional initializer for bias. By default, uniform in [-0.001, 0.001].
       name: Name of the module.
     """
@@ -64,8 +63,7 @@ class Cmplx_Linear(hk.Module):
 
     w_init = self.w_init
     if w_init is None:
-      stddev = 1. / np.sqrt(self.input_size)
-      w_init = CmplxTruncatedNormal(mean=0., stddev=stddev)
+      w_init = Cmplx_Xavier_Init(input_size, output_size)
     w = hk.get_parameter("w", [input_size, output_size], dtype, init=w_init)
 
     out = jnp.dot(inputs, w, precision=precision)
@@ -543,9 +541,9 @@ class CmplxBatchNorm(hk.Module):
         self.create_scale = create_scale
         self.create_offset = create_offset
         self.eps = eps
-        self.scale_rr_init = partial(jnp.full, fill_value=scale_rr_init)
-        self.scale_ri_init = partial(jnp.full, fill_value=scale_ri_init)
-        self.scale_ii_init = partial(jnp.full, fill_value=scale_ii_init)
+        self.scale_rr_init = hk.initializers.Constant(scale_rr_init)
+        self.scale_ri_init = hk.initializers.Constant(scale_ri_init)
+        self.scale_ii_init = hk.initializers.Constant(scale_ii_init)
         self.offset_init = offset_init or jnp.zeros
         self.axis = axis
         self.channel_index = get_channel_index(data_format)
@@ -572,6 +570,7 @@ class CmplxBatchNorm(hk.Module):
                 "Cannot pass `offset` at call time if `create_offset=True`.")
 
         channel_index = self.channel_index
+        channels_first = False
         if channel_index == 1: channels_first = True
         if channel_index < 0:
             channel_index += inputs.ndim
@@ -609,8 +608,12 @@ class CmplxBatchNorm(hk.Module):
 
         else:
             mean = self.mean_ema.average
+
+            # Center the inputs
+            centered_inputs = inputs - mean
+            
             covariance_matrix = self.cov_ema.average
-            Var_Rez, Cov_ReIm, Cov_ImRe, Var_Im = covariance_matrix.reshape(4,-1)
+            Var_Rez, Cov_ReIm, Cov_ImRe, Var_Imz = covariance_matrix.reshape(4,-1)
 
         # Update the moving averages
         if is_training:
@@ -627,7 +630,7 @@ class CmplxBatchNorm(hk.Module):
         inverse_root_covmat = jnp.array([[Var_Imz + sqrt_det, - Cov_ReIm],
                                          [- Cov_ImRe, Var_Rez + sqrt_det]]).reshape(2,2,-1)   # shape = (2,2,C)
 
-        inverse_root_convmat /= denom        
+        inverse_root_covmat /= denom        
 
         
         # Normalize the input data
@@ -642,6 +645,7 @@ class CmplxBatchNorm(hk.Module):
         w_shape = Var_Rez.shape
         w_dtype = Var_Rez.dtype
         b_shape = [1 if i in axis else inputs.shape[i] for i in range(inputs.ndim)]
+
 
         if self.create_scale:
             scale_rr = hk.get_parameter("scale_rr", w_shape, w_dtype, self.scale_rr_init)

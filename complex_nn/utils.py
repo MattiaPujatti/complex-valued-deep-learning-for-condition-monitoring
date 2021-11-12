@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from tqdm.notebook import tqdm
 import seaborn as sns
 
 
@@ -25,3 +26,45 @@ def small_training_summary(history):
     ax[2].set_xlabel('Epoch')
     ax[2].set_ylabel('Accuracy')
     ax[2].set_title('Model Accuracy')
+
+    b
+
+
+def get_circularity_coeff(dataset, verbose=False):
+    
+    cov_mat = 0.
+    
+    # Compute the covariance matrix among real and imaginary parts
+    # of the whole dataset
+    
+    for i in tqdm(range(len(dataset)), leave=False):
+        cov_mat += np.cov(dataset[i][0].real.flatten(), dataset[i][0].imag.flatten()) 
+        
+    # The covariance matrix will have the following structure:  [[Sx**2, Sxy], [Sxy, Sy**2]]
+    cov_mat = cov_mat / len(dataset)
+
+    # Compute the variance of Z:   Sz**2 = E[ |Z - E[Z]|**2 ] = Sx**2 + Sy**2
+    Sx2 = cov_mat[0,0]
+    Sy2 = cov_mat[1,1]
+    Sz2 = cov_mat.trace() 
+    
+    # Get the covariance:   Sxy = E[(X-E[X])(Y-E[Y])]
+    Sxy = cov_mat[0,1]
+    
+    # Compute the pseudo-variance:   Tz = E[ (Z-E[Z])**2 ] = Sx**2 - Sy**2 + 2iSxy
+    Tz = Sx2 - Sy2 + 2.j*Sxy
+    
+    # Compute the circularity quotient:  rhoZ = Tz / Sz**2
+    rhoZ = Tz / Sz2
+    
+    # Compute the correlation coefficient:  rho = Sxy / SxSy
+    rho = Sxy / (np.sqrt(Sx2)*np.sqrt(Sy2))
+    
+    if verbose:
+        return cov_mat, Sz2, Tz, rhoZ, rho
+    else:
+        return rhoZ, rho
+
+
+
+

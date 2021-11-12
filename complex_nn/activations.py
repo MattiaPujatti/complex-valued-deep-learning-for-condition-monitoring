@@ -30,7 +30,7 @@ def CReLU(z):
 def zReLU(z):
     """Implementation of the zReLU activation function, i.e. a more restrictive separable ReLU.
     Source: [Guberman et al., `On complex valued convolutional neural networks`, (2016)]"""
-    on_condition = (jnp.angle(z) >= 0 and jnp.angle(z) <= jnp.pi/2.)
+    on_condition = ((jnp.angle(z) >= 0.) & (jnp.angle(z) <= jnp.pi/2.))
     return jnp.where(on_condition, z, 0.+0.j)
 
 def siglog(z, c=1., r=1.):

@@ -1,0 +1,11 @@
+write introduction
+write previous work
+write thesis organization
+
+in "complex analysis - circularity" add plot of circular vs non-circular functions
+in appendix check if proof is fine or prefer changing it
+
+in "extent" add images gradient descent
+add plot most important activation functions / diverging sigmoid / real restriction of cardioid to relu
+
+
