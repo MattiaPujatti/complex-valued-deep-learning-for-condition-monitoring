@@ -3,12 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
----line 165 of file main.aux
+---line 176 of file main.aux
  : \citation{MESSERSCHMITT_STATIONARY_POINTS
  :                                          }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 168 of file main.aux
+---line 179 of file main.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command

@@ -70,7 +70,7 @@ class Cmplx_Xavier_Init(hk.initializers.Initializer):
 
         # Jax does not support yet Rayleigh distribution
         sigma = 1 / np.sqrt(self.n_in + self.n_out)
-        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape) )
+        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape), dtype='float64')
 
         phases = jax.random.uniform(hk.next_rng_key(), shape, dtype='float64', minval=-np.pi, maxval=np.pi)
 
@@ -96,7 +96,7 @@ class Cmplx_He_Init(hk.initializers.Initializer):
 
         # Jax does not support yet Rayleigh distribution
         sigma = 1 / np.sqrt(self.n_in)
-        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape) )
+        magnitudes = jnp.array( np.random.rayleigh(scale=sigma, size=shape), dtype='float64' )
 
         phases = jax.random.uniform(hk.next_rng_key(), shape, dtype='float64', minval=-np.pi, maxval=np.pi)
 

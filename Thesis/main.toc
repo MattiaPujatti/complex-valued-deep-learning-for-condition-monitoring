@@ -19,7 +19,14 @@
 \contentsline {section}{\numberline {3.3}Re-definition of the main neural network layers}{xxi}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxiv}{section.3.4}%
 \contentsline {section}{\numberline {3.5}JAX Implementation}{xxvi}{section.3.5}%
-\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xxxi}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xxxi}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xxxii}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xxxiii}{section.A.3}%
+\contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxix}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Impact of the Circularity}{xxix}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Complex vs Real Models}{xxix}{section.4.2}%
+\contentsline {part}{II\hspace {1em}Condition Monitoring}{xxxi}{part.2}%
+\contentsline {chapter}{\numberline {5}Healty-Faulty Signal Classification}{xxxiii}{chapter.5}%
+\contentsline {section}{\numberline {5.1}}{xxxiii}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Datasets}{xxxiii}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xxxvii}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xxxvii}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xxxviii}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xxxix}{section.A.3}%

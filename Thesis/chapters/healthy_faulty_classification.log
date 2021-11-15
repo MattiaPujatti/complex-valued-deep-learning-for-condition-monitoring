@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  15 NOV 2021 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  16 NOV 2021 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**healthy_faulty_classification.tex
+(./healthy_faulty_classification.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `../main.tex'
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (../main.tex
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
@@ -23,9 +29,12 @@ File: bk11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (./preamble.sty
-Package: preamble 
+) (..//preamble.sty
 
+LaTeX Warning: You have requested package `..//preamble',
+               but the package provides `preamble'.
+
+Package: preamble 
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -509,10 +518,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-
-(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
-Package: import 2020/04/01  v 6.2
-))
+)
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip75
@@ -534,25 +540,26 @@ Package: wrapfig 2003/01/31  v 3.6
 \c@corollary=\count305
 \c@definition=\count306
 \c@observation=\count307
-) (./main.aux)
-\openout1 = `main.aux'.
+)))
+(./healthy_faulty_classification.aux)
+\openout1 = `healthy_faulty_classification.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -616,7 +623,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count314
-Package hyperref Info: Link coloring OFF on input line 9.
+Package hyperref Info: Link coloring OFF on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -629,511 +636,62 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 5.
+LaTeX Info: Redefining \pageref on input line 5.
+LaTeX Info: Redefining \nameref on input line 5.
 
-(./main.out) (./main.out)
+(./healthy_faulty_classification.out) (./healthy_faulty_classification.out)
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `healthy_faulty_classification.out'.
 
 
-(./chapters/Title_page_Double_department_Master_Physics.tex
-<chapters//../pictures/frontespizio/UNIPD.png, id=128, 1204.5pt x 1204.5pt>
-File: chapters//../pictures/frontespizio/UNIPD.png Graphic file (type png)
-<use chapters//../pictures/frontespizio/UNIPD.png>
-Package pdftex.def Info: chapters//../pictures/frontespizio/UNIPD.png  used on 
-input line 10.
-(pdftex.def)             Requested size: 156.5905pt x 156.5905pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+Chapter 1.
 
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+
+ []
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 25.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 26.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Font Info:    Trying to load font information for U+eus on input line 27.
 
- [1
 
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./chapters//../pictures/fr
-ontespizio/UNIPD.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[2]) (./main.toc
-Overfull \hbox (0.66916pt too wide) detected at line 15
- []\OT1/cmr/m/n/10.95 xvii
- []
-
-
-Overfull \hbox (3.40668pt too wide) detected at line 20
- []\OT1/cmr/m/n/10.95 xxiv
- []
-
-
-Overfull \hbox (3.40668pt too wide) detected at line 21
- []\OT1/cmr/m/n/10.95 xxvi
- []
-
-
-Overfull \hbox (3.40668pt too wide) detected at line 23
- []\OT1/cmr/m/n/10.95 xxix
- []
-
-
-Overfull \hbox (3.40668pt too wide) detected at line 24
- []\OT1/cmr/m/n/10.95 xxix
- []
-
-
-Overfull \hbox (9.49002pt too wide) detected at line 27
- []\OT1/cmr/m/n/10.95 xxxiii
- []
-
-
-Overfull \hbox (9.49002pt too wide) detected at line 28
- []\OT1/cmr/m/n/10.95 xxxiii
- []
-
-
-Overfull \hbox (12.22754pt too wide) detected at line 30
- []\OT1/cmr/m/n/10.95 xxxvii
- []
-
-
-Overfull \hbox (15.26921pt too wide) detected at line 31
- []\OT1/cmr/m/n/10.95 xxxviii
- []
-
-
-Overfull \hbox (9.18587pt too wide) detected at line 32
- []\OT1/cmr/m/n/10.95 xxxix
- []
-
-)
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
- (./chapters/abstract.tex [3
-
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[4
-
-]) (./chapters/introduction.tex [5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[6
-
-]
-Chapter 1.
-) [7]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8
-
-] [9] [10] (./chapters/complex_analysis.tex
-Chapter 2.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
-1.
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [11
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13]
-
-LaTeX Warning: Reference `barrachina2021complexvalued' on page xiv undefined on
- input line 121.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
-
- []
-
-<pictures/cmplx_multiplication.pdf, id=273, 470.83904pt x 205.31908pt>
-File: pictures/cmplx_multiplication.pdf Graphic file (type pdf)
-<use pictures/cmplx_multiplication.pdf>
-Package pdftex.def Info: pictures/cmplx_multiplication.pdf  used on input line 
-149.
-(pdftex.def)             Requested size: 483.69687pt x 210.93587pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[15 <./pictures/cmplx_multiplication.pdf>]
-<pictures/multiplication_dof.pdf, id=297, 470.04407pt x 192.59955pt>
-File: pictures/multiplication_dof.pdf Graphic file (type pdf)
-<use pictures/multiplication_dof.pdf>
-Package pdftex.def Info: pictures/multiplication_dof.pdf  used on input line 16
-7.
-(pdftex.def)             Requested size: 483.69687pt x 198.19754pt.
-) (./chapters/extent.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[16 <./pictures/multiplication_dof.pdf>]
-Chapter 3.
-<pictures/complex_neuron.pdf, id=316, 993.7125pt x 478.78876pt>
-File: pictures/complex_neuron.pdf Graphic file (type pdf)
-<use pictures/complex_neuron.pdf>
-Package pdftex.def Info: pictures/complex_neuron.pdf  used on input line 22.
-(pdftex.def)             Requested size: 248.4275pt x 119.69688pt.
-
-Underfull \vbox (badness 1448) has occurred while \output is active []
-
- [17
-
- <./pictures/complex_neuron.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[19]
-<example-image-a.pdf, id=359, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 80.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-
-Overfull \hbox (21.2961pt too wide) detected at line 104
-[] \OT1/cmr/m/n/10.95 = [][] + [][]
- []
-
-
-Overfull \hbox (21.2961pt too wide) detected at line 104
-[] \OT1/cmr/m/n/10.95 = [][] + [][]
- []
-
-
-Overfull \hbox (35.99998pt too wide) in alignment at lines 104--104
-[][][] 
- []
-
-<pictures/pass_cmplx_layer.pdf, id=368, 367.1316pt x 88.45848pt>
-File: pictures/pass_cmplx_layer.pdf Graphic file (type pdf)
-<use pictures/pass_cmplx_layer.pdf>
-Package pdftex.def Info: pictures/pass_cmplx_layer.pdf  used on input line 111.
-
-(pdftex.def)             Requested size: 367.13069pt x 88.45825pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[20 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image-a.pdf> <./pictur
-es/pass_cmplx_layer.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[21]
-<pictures/complex_convolution.pdf, id=414, 199.56155pt x 251.21053pt>
-File: pictures/complex_convolution.pdf Graphic file (type pdf)
-<use pictures/complex_convolution.pdf>
-Package pdftex.def Info: pictures/complex_convolution.pdf  used on input line 1
-51.
-(pdftex.def)             Requested size: 349.23183pt x 439.61732pt.
-
-
-LaTeX Warning: Reference `' on page xxii undefined on input line 170.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[23 <./pictures/complex_convolution.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[25]
-Overfull \hbox (2.51306pt too wide) in paragraph at lines 222--225
-\OT1/cmr/m/n/10.95 Because of this, re-cently a new com-plex ac-ti-va-tion func
--tion have been pro-posed: the \OT1/cmtt/m/n/10.95 Complex Cardioid
- []
-
-<pictures/JAX_logo.pdf, id=475, 639.38875pt x 406.51875pt>
-File: pictures/JAX_logo.pdf Graphic file (type pdf)
-<use pictures/JAX_logo.pdf>
-Package pdftex.def Info: pictures/JAX_logo.pdf  used on input line 259.
-(pdftex.def)             Requested size: 241.84843pt x 153.76538pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[26]
-Overfull \hbox (2.60356pt too wide) in paragraph at lines 266--267
-[]\OT1/cmr/m/n/10.95 many com-plex op-er-a-tions/lay-ers are al-ready
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[27 <./pictures/JAX_logo.pdf>]) (./chapters/complex_vs_real.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[28]
-Chapter 4.
-) [29
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[30
-
-] [31] [32] (./chapters/healty_faulty_classification.tex
-Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
-
- []
-
-) [33
-
-] (./main.bbl
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[34
-
-] [35])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[36] (./chapters/appendix.tex
-Appendix A.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--28
-
- []
-
-[37
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 36.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--58
-
- []
-
-
-LaTeX Warning: Citation `MESSERSCHMITT_STATIONARY_POINTS' on page xxxviii undef
-ined on input line 62.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 25.16252pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.16252pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
-
-[38]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 68.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-
-Overfull \hbox (11.55511pt too wide) in paragraph at lines 72--73
-[]\OT1/cmr/m/n/10.95 Let's start defin-ing the gra-di-ent vec-tor $\OMS/cmsy/m/
-n/10.95 r[] \OT1/cmr/m/n/10.95 = []$ for the vec-tor $\OT1/cmr/bx/n/10.95 z \OT
-1/cmr/m/n/10.95 = []$
- []
-
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 
-LaTeX Warning: Citation `HUALIANG_NONLINEAR' on page xxxix undefined on input l
-ine 52.
+LaTeX Warning: Reference `' on page 2 undefined on input line 29.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1143,50 +701,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[39] (./main.aux)
+[2] (./healthy_faulty_classification.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1D8B81F8258EF12CDE5B0A723D907F77;2224.
+Package rerunfilecheck Info: File `healthy_faulty_classification.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: B29D7EA13C599CB8689AF4A425A8F4DF;385.
  ) 
 Here is how much of TeX's memory you used:
- 13315 strings out of 479304
- 199049 string characters out of 5869780
- 554606 words of memory out of 5000000
- 30031 multiletter control sequences out of 15000+600000
- 418067 words of font info for 85 fonts, out of 8000000 for 9000
+ 12938 strings out of 479304
+ 192394 string characters out of 5869780
+ 542653 words of memory out of 5000000
+ 29852 multiletter control sequences out of 15000+600000
+ 412302 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,15n,103p,1245b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbxsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsro
-m10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1095.pfb>
-Output written on main.pdf (39 pages, 3877990 bytes).
+ 116i,11n,120p,842b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/euler/eusm10.pfb>
+Output written on healthy_faulty_classification.pdf (2 pages, 80566 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
- 619 compressed objects within 7 object streams
- 152 named destinations out of 1000 (max. 500000)
- 289 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
