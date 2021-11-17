@@ -335,7 +335,7 @@ class Haiku_Classifier:
         # state and the training history)
         backup_dict = {'net_params': self.get_net_params(),
                        'net_state': self.get_net_state(),
-                       'opt_state': self.get_opt_state(),
+                       'opt_state': optimizers.unpack_optimizer_state( self.get_opt_state() ),
                        'training_history': self.training_history}
 
         with open(file_path, "wb") as f:
@@ -365,7 +365,7 @@ class Haiku_Classifier:
 
         self.update_net_params( classifier_state['net_params'] )
         self.update_net_state( classifier_state['net_state'] )
-        self.update_opt_state( classifier_state['opt_state'] )     
+        self.update_opt_state( optimizers.pack_optimizer_state(classifier_state['opt_state']) )     
         self.training_history = classifier_state['training_history']
 
         # Network needs to be re-initialized

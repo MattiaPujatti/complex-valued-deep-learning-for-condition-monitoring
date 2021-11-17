@@ -3,12 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
----line 176 of file main.aux
+---line 187 of file main.aux
  : \citation{MESSERSCHMITT_STATIONARY_POINTS
  :                                          }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 179 of file main.aux
+---line 190 of file main.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
@@ -38,45 +38,45 @@ I was expecting a `,' or a `}'---line 254 of file bibliography.bib
 I'm skipping whatever remains of this entry
 Warning--empty journal in Dramsch_seismic
 Warning--empty booktitle in amin_wirtinger
-You've used 29 entries,
+You've used 30 entries,
             1876 wiz_defined-function locations,
-            649 strings with 9273 characters,
-and the built_in function-call counts, 5755 in all, are:
-= -- 493
-> -- 327
+            655 strings with 9422 characters,
+and the built_in function-call counts, 6110 in all, are:
+= -- 532
+> -- 335
 < -- 1
-+ -- 122
-- -- 93
-* -- 402
-:= -- 884
-add.period$ -- 33
-call.type$ -- 29
-change.case$ -- 26
++ -- 125
+- -- 95
+* -- 424
+:= -- 928
+add.period$ -- 34
+call.type$ -- 30
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 243
-empty$ -- 569
-format.name$ -- 93
-if$ -- 1383
+cite$ -- 32
+duplicate$ -- 262
+empty$ -- 602
+format.name$ -- 95
+if$ -- 1475
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 15
-newline$ -- 94
-num.names$ -- 29
-pop$ -- 129
+int.to.str$ -- 30
+missing$ -- 16
+newline$ -- 97
+num.names$ -- 30
+pop$ -- 131
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 177
+skip$ -- 195
 stack$ -- 0
-substring$ -- 148
-swap$ -- 73
+substring$ -- 184
+swap$ -- 84
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 41
-width$ -- 31
-write$ -- 256
+while$ -- 44
+width$ -- 32
+write$ -- 266
 (There were 7 error messages)

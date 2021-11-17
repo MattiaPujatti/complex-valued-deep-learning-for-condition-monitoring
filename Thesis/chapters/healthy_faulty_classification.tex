@@ -22,20 +22,41 @@ Tons of different "manual" analysis are possible for those kind of signals in th
 
 \section{State-of-the-Art}
 
-In chapter \ref{}, we were complaining about the fact that literature does not provide almost any kind of complex-valued datasets to effectively test the models we have developed. There, we were forced to "manually construct" our data, with simple distributions of points satisfying certain properties \ref{}, or clever modifications of existing real collections \ref{}. Relying on them could have been fine for that preliminary analysis, mainly focused on the convergence and the stability of the training process, rather then on the final performances. However, we believe that, in order to prove the efficacy of our method, we should stress our complex-valued architectures on more concrete and reliable datasets.\\
-But, is there the possibility of measuring some way physical quantities that are inherently complex-valued? From this point of view, the answer is yes, and we just need to think about magnetic momenta. The PHD thesis we have based our work on \ref{}, is constructed exactly on these kind of data: Magnetic Resonance Images contains, in fact, much information in their phase, that with a complex neural network the author managed to outperform many existing approaches that used to discard such information.\\
+In chapter \ref{}, we were complaining about the fact that literature does not provide almost any kind of complex-valued dataset to effectively test the models we have developed. There, we were forced to "manually construct" our data, with simple distributions of points satisfying certain properties \ref{}, or clever modifications of existing real collections \ref{}. Relying on them could have been fine for that preliminary analysis, mainly focused on the convergence and the stability of the training process, rather then on the final performances. However, we believe that, in order to prove the efficacy of our method, we should stress our complex-valued architectures on more concrete and reliable datasets.\\
+But, is there the possibility of measuring in some way physical quantities that are inherently complex-valued? From this point of view, the answer is yes, and we just need to think about magnetic momenta. The PHD thesis we have based our work on \ref{}, is constructed exactly on these kind of data: Magnetic Resonance Images contains, in fact, much information in their phase, that, with a complex neural network the author managed to outperform many existing approaches that used to discard such information.\\
 But we should not limit our horizons when we have a powerful instrument like the Fourier transform $\mathcal{F}$, that allow us to associate a complex-valued frequency domain representation to a function of time. In this new representation, the magnitude represents the amount of a certain frequency present in the original signal, while the argument is its phase offset with respect to the basic sinusoid. All of this means that, given any dataset composed of waves in the time domain, the same can be studied in the frequency domain exploiting the new power of complex-valued models, keeping all the physical information without need of expedients like before. Several papers have been published, suggesting complex-valued models to study electric, seismic \ref{} and vibrational signals in the complex domain. So, in principle, for any signal registered in the time domain, we can recover, and maybe exploit, the phase information thanks exactly to the Fourier transform.\\
-Studying the problem in the frequency domain is a quite common approach to signal processing, since many operations in the time domain have a complex counterpart that sometimes turns out to be easier to perform (eg. differentiation and convolution). Furthermore, also from a purely theoretical point of view, several concepts are easier to derive and understand with complex notations.\\
+Studying the problem in the frequency domain is a quite common approach to signal processing, since many operations in the time domain have a complex counterpart that sometimes turns out to be easier to perform (eg. differentiation and convolution). Furthermore, also from a purely theoretical point of view, several concepts are easier to derive and understand with complex notations.
 
+\subsection{Baseline Machine Learning}
 
+But how can we effectively distinguish among vibration signals? According to the traditional machine learning approach we should rely on some hand-crafted features extractable from the wave in the time domain; those features can then face a dimensionality reduction step (PCA, t-SNE, etc.) and then sent through baseline classifiers like Support Vector Machines or Multi-Layer Perceptrons. This was the fundamental strategy for years: in term of memory and time complexity it is very efficient, because each sample is reduced to a handful of meaningful values, but, in general, it lacks of generalization capabilities, since the high-level features to be used are chosen every time by an expert, depending on the situation, and also from the point of view of the accuracy reached, more modern technologies employing deep learning are already able to outperform it.
 
-% add related work?
-% signal example
-% feature-based vs feature extraction (mfcc) vs spectrograms
- 
+\subsection{Study in the frequency domain}
 
-
-
+However, even if condition monitoring is not one of the main tasks over which machine learning researchers focused mostly in the last years, several techniques and improvements could be recovered and re-adapted from the popular area of audio applications. In the end, in fact, sounds are vibrations of the air, and so their analysis can present interesting similarities with our problem.\\
+It is exactly from the widely developed theory of deep learning applied to audio processing, that we inherit techniques suitable to study a wave signal in the frequency domain. The computational instrument that allow us to do so is the \textbf{Short-Time Fourier Transform} (\textbf{STFT}). Discrete STFT is a method of partitioningcontinuous signals (in the time-dependent representation) over a long period into shorter segments (usually overlapped) at short time intervals, andapplying a Fourier transform to each of those segments. An additional step can be taken, at this point, deriving the power spectrum of the signal: taking the square modulus of the STFT we can construct a 2D sample, i.e. an image, representing the amplitude of the signal for a particular frequency at a particular time.\\
+In figure \ref{fig:example_stft} we took a random signal from the dataset we are going to study, and we applied the STFT: the leftmost picture represents the original wave, the central one is the result after the application of the transform (so the signal in the frequency domain), while the rightmost is its power spectrum. 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{example-image-b}
+	\caption{Example signal}
+	\label{fig:example_stft}	
+\end{figure}
+After the computation of the power spectrum for each vibration signal at this point, there are two directions that the researcher can decide to follow:
+\begin{itemize}
+	\item keeping the two-dimensional input and building a machine learning classifier able to work directly with the spectrograms (usually a Convolutional Neural Network);
+	% ADD SOURCE
+	\item taking a further step and extracting from the spectrogram the so called \textit{Mel Frequency Cepstral Coefficients} (MFCC): these coefficients, widely used in speech recognition tasks, permit an efficient compression of the "important information" carried by the signal, and can be simply given in input to an ordinary classifier.
+\end{itemize}
+Even if they were not properly designed for vibration analysis applied to condition monitoring, the usage of MFCCs can bring very good results together with an high efficiency in term of space and time complexity, because of the information compressed.\\
+In figure \ref{fig:summary_hf_classification_methods} are represented schematically the two main state-of-the-art approaches (high-level features extraction vs power spectrograms) for healthy-faulty vibration signal classification, that we just described.\\
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/summary_hf_classification_methods.pdf}
+	\caption{Class methods (source: \cite{deep_learning_vibration_gravity}).}
+	\label{fig:summary_hf_classification_methods}	
+\end{figure}
+In the successive analysis, we will propose an alternative to the approaches listed above, that is more suitable to complex-valued deep learning: the coefficients of a Fourier transform are, in fact, inherently complex, and so, instead of losing all the phase information taking the power spectrum (that is constituted only by their amplitudes), we stop one step before keeping the original complex-valued variables. In the end, deriving the complex spectrum is equivalent to computing a discrete Fourier transform over short overlapping windows of the signal.
 
 
 
@@ -99,6 +120,8 @@ Given the various general purposes for which this dataset was designed (i.e. con
 	\item \textit{speed varying condition} (increasing speed, decreasing speed, increasing then decreasing speed and decreasing then increasing speed).
 \end{itemize} 
 Therefore, there are 12 different cases for configuration, each of them constituted of 3 trials, to ensure the authenticity of the data, that explain the 36 subsets.
+
+\subsection{Baseline Classification Approach}
 
 
 	

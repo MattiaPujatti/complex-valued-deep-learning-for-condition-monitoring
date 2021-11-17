@@ -72,6 +72,11 @@ G.~Georgiou and C.~Koutsougeras, ``Complex domain backpropagation,'' {\em IEEE
 M.~Arjovsky, A.~Shah, and Y.~Bengio, ``Unitary evolution recurrent neural
   networks,'' {\em CoRR}, vol.~abs/1511.06464, 2015.
 
+\bibitem{mendeley_dataset}
+H.~Huang and N.~Baddour, ``Bearing vibration data collected under time-varying
+  rotational speed conditions,'' {\em Data in Brief}, vol.~21, pp.~1745--1749,
+  2018.
+
 \bibitem{ziller2021complexvalued}
 A.~Ziller, D.~Usynin, M.~Knolle, K.~Hammernik, D.~Rueckert, and G.~Kaissis,
   ``Complex-valued deep learning with differential privacy.''
