@@ -29,9 +29,10 @@
 \BOOKMARK [1][-]{section.5.2}{Bonfiglioli}{chapter.5}% 29
 \BOOKMARK [2][-]{subsection.5.2.1}{Simulation Environment}{section.5.2}% 30
 \BOOKMARK [2][-]{subsection.5.2.2}{Datasets}{section.5.2}% 31
-\BOOKMARK [1][-]{section.5.3}{Mendelay Data}{chapter.5}% 32
-\BOOKMARK [2][-]{subsection.5.3.1}{Dataset Structure}{section.5.3}% 33
-\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 34
-\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 35
-\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 36
-\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 37
+\BOOKMARK [2][-]{subsection.5.2.3}{Baseline Classification Approach}{section.5.2}% 32
+\BOOKMARK [1][-]{section.5.3}{Mendelay Data}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.3.1}{Dataset Structure}{section.5.3}% 34
+\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 35
+\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 36
+\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 38

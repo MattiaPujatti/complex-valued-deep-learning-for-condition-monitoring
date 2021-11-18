@@ -31,6 +31,12 @@ K.~Kreutz-Delgado, ``The complex gradient operator and the cr-calculus.''
 T.~Nitta, ``An extension of the back-propagation algorithm to complex
   numbers,'' {\em Neural Networks vol. 10 iss. 8}, vol.~10, nov 1997.
 
+\bibitem{barrachina2021complexvalued}
+J.~A. Barrachina, C.~Ren, C.~Morisseau, G.~Vieillard, and J.-P. Ovarlez,
+  ``Complex-valued vs. real-valued neural networks for classification
+  perspectives: An example on non-circular data.''
+  \url{https://arxiv.org/abs/2009.08340v2}, 2021.
+
 \bibitem{Virtue:EECS-2019-126}
 P.~Virtue, {\em Complex-valued Deep Learning with Applications to Magnetic
   Resonance Image Synthesis}.
@@ -71,6 +77,12 @@ G.~Georgiou and C.~Koutsougeras, ``Complex domain backpropagation,'' {\em IEEE
 \bibitem{DBLP:journals/corr/ArjovskySB15}
 M.~Arjovsky, A.~Shah, and Y.~Bengio, ``Unitary evolution recurrent neural
   networks,'' {\em CoRR}, vol.~abs/1511.06464, 2015.
+
+\bibitem{deep_learning_vibration_gravity}
+S.~Lee, H.~yu, H.~Yang, I.~Song, J.~Choi, J.~Yang, G.~Lim, K.-S. Kim, B.~Choi,
+  and J.~Kwon, ``A study on deep learning application of vibration data and
+  visualization of defects for predictive maintenance of gravity acceleration
+  equipment,'' {\em Applied Sciences}, vol.~11, p.~1564, 02 2021.
 
 \bibitem{mendeley_dataset}
 H.~Huang and N.~Baddour, ``Bearing vibration data collected under time-varying
@@ -118,12 +130,6 @@ D.~P. Reichert and T.~Serre, ``Neuronal synchrony in complex-valued deep
 S.~Scardapane, S.~V. Vaerenbergh, A.~Hussain, and A.~Uncini, ``Complex-valued
   neural networks with non-parametric activation functions.''
   \url{https://arxiv.org/abs/1802.08026}, 2018.
-
-\bibitem{barrachina2021complexvalued}
-J.~A. Barrachina, C.~Ren, C.~Morisseau, G.~Vieillard, and J.-P. Ovarlez,
-  ``Complex-valued vs. real-valued neural networks for classification
-  perspectives: An example on non-circular data.''
-  \url{https://arxiv.org/abs/2009.08340v2}, 2021.
 
 \bibitem{shen2018wasserstein}
 J.~Shen, Y.~Qu, W.~Zhang, and Y.~Yu, ``Wasserstein distance guided

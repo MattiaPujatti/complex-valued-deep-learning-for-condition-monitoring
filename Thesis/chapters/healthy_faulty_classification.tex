@@ -34,7 +34,9 @@ But how can we effectively distinguish among vibration signals? According to the
 \subsection{Study in the frequency domain}
 
 However, even if condition monitoring is not one of the main tasks over which machine learning researchers focused mostly in the last years, several techniques and improvements could be recovered and re-adapted from the popular area of audio applications. In the end, in fact, sounds are vibrations of the air, and so their analysis can present interesting similarities with our problem.\\
-It is exactly from the widely developed theory of deep learning applied to audio processing, that we inherit techniques suitable to study a wave signal in the frequency domain. The computational instrument that allow us to do so is the \textbf{Short-Time Fourier Transform} (\textbf{STFT}). Discrete STFT is a method of partitioningcontinuous signals (in the time-dependent representation) over a long period into shorter segments (usually overlapped) at short time intervals, andapplying a Fourier transform to each of those segments. An additional step can be taken, at this point, deriving the power spectrum of the signal: taking the square modulus of the STFT we can construct a 2D sample, i.e. an image, representing the amplitude of the signal for a particular frequency at a particular time.\\
+It is exactly from the widely developed theory of deep learning applied to audio processing, that we inherit techniques suitable to study a wave signal in the frequency domain. The computational instrument that allow us to do so is the \textbf{Short-Time Fourier Transform} (\textbf{STFT}). Discrete STFT is a method of partitioning
+continuous signals (in the time-dependent representation) over a long period into shorter segments (usually overlapped) at short time intervals, and
+applying a Fourier transform to each of those segments. An additional step can be taken, at this point, deriving the power spectrum of the signal: taking the square modulus of the STFT we can construct a 2D sample, i.e. an image, representing the amplitude of the signal for a particular frequency at a particular time.\\
 In figure \ref{fig:example_stft} we took a random signal from the dataset we are going to study, and we applied the STFT: the leftmost picture represents the original wave, the central one is the result after the application of the transform (so the signal in the frequency domain), while the rightmost is its power spectrum. 
 \begin{figure}[!ht]
 	\centering
@@ -53,50 +55,64 @@ In figure \ref{fig:summary_hf_classification_methods} are represented schematica
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/summary_hf_classification_methods.pdf}
-	\caption{Class methods (source: \cite{deep_learning_vibration_gravity}).}
+	\caption{State-of-the-art approaches for vibration data classification applied to predictive maintenance (source: \cite{deep_learning_vibration_gravity}).}
 	\label{fig:summary_hf_classification_methods}	
 \end{figure}
 In the successive analysis, we will propose an alternative to the approaches listed above, that is more suitable to complex-valued deep learning: the coefficients of a Fourier transform are, in fact, inherently complex, and so, instead of losing all the phase information taking the power spectrum (that is constituted only by their amplitudes), we stop one step before keeping the original complex-valued variables. In the end, deriving the complex spectrum is equivalent to computing a discrete Fourier transform over short overlapping windows of the signal.
 
-
-
 \section{Bonfiglioli}
 
 The main motivation of this thesis work was the development and testing of an unconventional deep learning approach, based on complex-valued neural networks, on a series of datasets provided to FBK by Bonfiglioli \ref{fig:bonfiglioli_logo}, a worldwide designer, manufacturer and distributor of a complete range of gearmotors, drive systems, planetary gearboxes and inverters.\\
-The company provided a large number of datasets collected from related experiments, 
-
-%\begin{wrapfigure}{r}{0.5\textwidth}
-%	\includegraphics[width=0.5\textwidth]{pictures/bonfiglioli_logo.pdf}
-%	\caption{Bonfiglioli logo.}
-%	\label{fig:bonfiglioli_logo}
-%\end{wrapfigure}
-
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\includegraphics[width=0.5\textwidth]{pictures/bonfiglioli_logo.pdf}
+	\caption{Bonfiglioli logo.}
+	\label{fig:bonfiglioli_logo}
+\end{wrapfigure}
+The company provided a large number of datasets collected from as many experiments, with the purpose of simulating artificially the most frequent faults, that usually occur over the bearings of different kind of engines.
 
 
 \subsection{Simulation Environment}
 
-Data have been collected at the Bonfiglioli headquarters of Rovereto (TN), with the experimental setup schematized in figure \ref{fig:bonfiglioli_scheme_workbench}.
+Data have been collected at the Bonfiglioli headquarters of Rovereto (TN), with the experimental setup schematized in figure \ref{fig:bonfiglioli_experimental_setup}.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.5]{example-image-a}
+	\includegraphics[width=\textwidth]{pictures/bonfiglioli_experimental_setup}
 	\caption{Schematic representation of the experimental workbench used by Bonfiglioli.}
-	\label{fig:bonfiglioli_scheme_workbench}	
+	\label{fig:bonfiglioli_experimental_setup}	
 \end{figure}
-The laboratory is constituted of four different workbenches in which different experiments can be conduced. In each workbench, a lab-scale rotating simulation equipment is 
+The laboratory is constituted of four different workbenches in which different experiments can be conduced. In each workbench, a lab-scale rotating simulation equipment is installed, constituted 
+
+In the experiments, faults were artificially simulated using mechanical tricks (e.g. unbalance is simulated attaching a small object to the shaft)
+
+data were collected through an accelerometer fixed over the bearing
++ other measurements
+
+% explain periodic working cycle of 120h
 
 
 \subsection{Datasets}
 
-In these last months, the Bonfiglioli laboratory have setup different experiments, in order to provide data relative to different kind of engines. For each of them
-
-Each data sample contains several entries, related to different variables measured during the process: beyond vibration signals collected through the accelerometers, Bonfiglioli decided to monitor also the temperature of the system, voltage and current flowing through it, together with the
-
+In these last months, the Bonfiglioli laboratory have setup different experiments, in order to provide data relative to different kind of engines and for different types of simulated faults. For each of those runs, containing 120 hours of measurements, a dataset in \texttt{.h5} format has been provided, with the values registered during a working cycle. Those datasets had an internal structure quite mazy, and so we had to rely on a custom library, provided by FBK researchers, to load and process the data. Each sample contains several entries, related to the different variables measured during the process: beyond vibration signals collected through the accelerometers, Bonfiglioli decided to monitor also the temperature of some components, voltage and current flowing through them, together with the phase information of the inverter. Additionally, for the experiments realized more recently, they used an additional component in their setup, a \textit{multiplier}, providing a second vibration signal.\\
 However, for what concern our work, we are interested only in vibration signals.
 
 
 In table \ref{} we leave a small summary containing the main technical details relative to each trial that we decided to use in our analysis. 
 
-Another interesting fact to specify is that for some of the experiment they used an additional component in their setup, a \textit{multiplier}, providing an additional vibration signal.
+Another interesting fact to specify is that 
+
+
+Sampling was performedbecause a vibration is a periodic signal in the time domain [43], and most fault signals haveperiodicity. Therefore, sampling is used to examine the consistency and continuity of eachcondition using the features calculated from the signals
+
+The signal segmentation for sampling was based on the rotational frequency of therotor. Generally, in rotating equipment, the rotational frequency is the most dominantcomponent, and the majority of fault components appear in the harmonic form of the
+rotational frequency.
+
+Then describe train-test split and number of signals of each type
+
+
+
+\subsection{Baseline Classification Approach}
+
+
 
 
 \section{Mendelay Data}
@@ -121,7 +137,7 @@ Given the various general purposes for which this dataset was designed (i.e. con
 \end{itemize} 
 Therefore, there are 12 different cases for configuration, each of them constituted of 3 trials, to ensure the authenticity of the data, that explain the 36 subsets.
 
-\subsection{Baseline Classification Approach}
+
 
 
 	
