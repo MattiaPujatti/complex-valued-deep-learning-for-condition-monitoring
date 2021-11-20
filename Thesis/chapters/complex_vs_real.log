@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 00:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -680,16 +680,18 @@ File: ..//pictures/circ_class_example.pdf Graphic file (type pdf)
 Package pdftex.def Info: ..//pictures/circ_class_example.pdf  used on input lin
 e 31.
 (pdftex.def)             Requested size: 483.69687pt x 187.6906pt.
-<example-image-c.pdf, id=37, 321.2pt x 240.9pt>
-File: example-image-c.pdf Graphic file (type pdf)
-<use example-image-c.pdf>
-Package pdftex.def Info: example-image-c.pdf  used on input line 48.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-<example-image-a.pdf, id=39, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 57.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<..//pictures/noncirc_results.pdf, id=37, 945.36328pt x 392.03116pt>
+File: ..//pictures/noncirc_results.pdf Graphic file (type pdf)
+<use ..//pictures/noncirc_results.pdf>
+Package pdftex.def Info: ..//pictures/noncirc_results.pdf  used on input line 4
+8.
+(pdftex.def)             Requested size: 483.69687pt x 200.58527pt.
+<..//pictures/noncirc_comparison_final.pdf, id=39, 1203.12523pt x 350.4783pt>
+File: ..//pictures/noncirc_comparison_final.pdf Graphic file (type pdf)
+<use ..//pictures/noncirc_comparison_final.pdf>
+Package pdftex.def Info: ..//pictures/noncirc_comparison_final.pdf  used on inp
+ut line 57.
+(pdftex.def)             Requested size: 483.69687pt x 140.90544pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -700,6 +702,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2 <..//pictures/circ_class_example.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -708,7 +713,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[3 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image-c.pdf>]
+[3 <..//pictures/noncirc_results.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -717,8 +722,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image-a.pdf>]
-(./complex_vs_real.aux)
+[4 <..//pictures/noncirc_comparison_final.pdf>] (./complex_vs_real.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -727,8 +731,8 @@ Package rerunfilecheck Info: File `complex_vs_real.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  12965 strings out of 479304
- 192870 string characters out of 5869780
- 548887 words of memory out of 5000000
+ 193087 string characters out of 5869780
+ 549107 words of memory out of 5000000
  29873 multiletter control sequences out of 15000+600000
  412211 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -743,16 +747,17 @@ ic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.
-pfb>
-Output written on complex_vs_real.pdf (4 pages, 322173 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm1095.pfb>
+Output written on complex_vs_real.pdf (4 pages, 454538 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 189 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
  14 named destinations out of 1000 (max. 500000)
  40 words of extra memory for PDF output out of 10000 (max. 10000000)
 

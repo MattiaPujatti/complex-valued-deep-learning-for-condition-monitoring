@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {3.5}JAX Implementation}{xxviii}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxi}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Impact of the Circularity}{xxxi}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Complex vs Real Models}{xxxiii}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Complex vs Real Models}{xxxiv}{section.4.2}%
 \contentsline {part}{II\hspace {1em}Condition Monitoring}{xxxv}{part.2}%
 \contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xxxvii}{chapter.5}%
 \contentsline {section}{\numberline {5.1}State-of-the-Art}{xxxviii}{section.5.1}%

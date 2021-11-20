@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  18 NOV 2021 23:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,6 +536,11 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
 )
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks37
+\minrowclearance=\skip76
+)
 \c@theorem=\count304
 \c@corollary=\count305
 \c@definition=\count306
@@ -602,12 +607,12 @@ LaTeX Font Info:    ... okay on input line 5.
 \scratchbox=\box58
 \nofMPsegments=\count309
 \nofMParguments=\count310
-\everyMPshowfont=\toks37
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count311
 \MPscratchDim=\dimen259
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks38
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -711,12 +716,12 @@ LaTeX Warning: Citation `Nitta_complexBP' on page 4 undefined on input line 114
 LaTeX Warning: Citation `barrachina2021complexvalued' on page 4 undefined on in
 put line 122.
 
-<..//pictures/std_cmplx_norm_distrib.pdf, id=69, 363.72763pt x 327.54874pt>
+<..//pictures/std_cmplx_norm_distrib.pdf, id=69, 710.54527pt x 347.3885pt>
 File: ..//pictures/std_cmplx_norm_distrib.pdf Graphic file (type pdf)
 <use ..//pictures/std_cmplx_norm_distrib.pdf>
 Package pdftex.def Info: ..//pictures/std_cmplx_norm_distrib.pdf  used on input
  line 136.
-(pdftex.def)             Requested size: 181.86336pt x 163.77396pt.
+(pdftex.def)             Requested size: 355.27176pt x 173.69382pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -753,7 +758,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5 <..//pictures/std_cmplx_norm_distrib.pdf>]
-<..//pictures/multiplication_dof.pdf, id=132, 470.04407pt x 192.59955pt>
+<..//pictures/multiplication_dof.pdf, id=119, 470.04407pt x 192.59955pt>
 File: ..//pictures/multiplication_dof.pdf Graphic file (type pdf)
 <use ..//pictures/multiplication_dof.pdf>
 Package pdftex.def Info: ..//pictures/multiplication_dof.pdf  used on input lin
@@ -767,10 +772,6 @@ e 175.
 
 LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 6 undefined on input lin
 e 175.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -802,35 +803,38 @@ Package rerunfilecheck Info: File `complex_analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 4CBA327B026549719460555AD9AA788A;402.
  ) 
 Here is how much of TeX's memory you used:
- 13057 strings out of 479304
- 194401 string characters out of 5869780
- 551744 words of memory out of 5000000
- 29928 multiletter control sequences out of 15000+600000
+ 13109 strings out of 479304
+ 195108 string characters out of 5869780
+ 553839 words of memory out of 5000000
+ 29976 multiletter control sequences out of 15000+600000
  418661 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,120p,1145b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,12n,120p,1145b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on complex_analysis.pdf (7 pages, 2797135 bytes).
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msam10.pfb>
+Output written on complex_analysis.pdf (7 pages, 2973919 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  33 named destinations out of 1000 (max. 500000)
  64 words of extra memory for PDF output out of 10000 (max. 10000000)
 

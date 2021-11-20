@@ -131,12 +131,12 @@ We define the \textbf{circular quotient} $\rho_Z$ as:
 \[ \rho_Z = \frac{\tau_Z}{\sigma^2_Z} \]
 Additionally, we can define also a \textit{correlation coefficient} among real and imaginary parts of $Z$:
 \[ \rho = \frac{\sigma_{XY}}{\sigma_X\sigma_Y} \]
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{figure}
 	\centering
 	\includegraphics[scale=0.5]{pictures/std_cmplx_norm_distrib}
-	\caption{Example of a perfectly circular distribution $(\rho_z=0)$.}
+	\caption{Example of a perfectly circular distribution $(\rho_z=0)$ and a non-circular one (right).}
 	\label{fig:circular_distrib}
-\end{wrapfigure} 
+\end{figure} 
 In some papers, the circular quotient is defined as a covariance measure between $Z$ and $\bar{Z}$, so among a random variable and its complex conjugate, rather than considering real and imaginary parts. We believe that those formulations in the end are equivalent from a practical point of view and so they can be used interchangeably.\\
 From another perspective, a complex random vector $\vb{Z}$ is called circularly symmetric if, for every $\varphi\in[-\pi,\pi)$, the distribution of $e^{i\varphi}\vb{Z}$ is the same of $\vb{Z}$. The vector's PDF then satisfies $f(\vb{Z})=cg(\abs{\vb{Z}}^2)$ for some non-negative function $g$ and normalizing constant $c$. Hence, the regions of constant contours, for this distribution, are circles in the complex plane (as can be observed from figure \ref{fig:circular_distrib}).\\
 Another interesting fact is that $\rho_Z$ possess an intuitive geometrical interpretation since the modulus and phase of its principal square-root are equal to the eccentricity and angle of orientation of the ellipse defined by the covariance matrix of the real and imaginary parts of $Z$.

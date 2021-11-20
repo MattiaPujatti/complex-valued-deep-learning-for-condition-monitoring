@@ -188,7 +188,7 @@ We have to say, however, that most of the candidate functions that have been pro
 In this section, we will explore a few complex-valued activations proposed during the years: first with the ones that are direct extensions of their real counterparts, and then with more "abstract" candidates, that have more reasons to live and work in the complex domain.
 
 \subsection*{Extent from the real case}
-The first class of viable approaches consists into barely extending real-valued activations in the complex domain, like the \texttt{sigmoid} and the \texttt{hypoerbolic tangent}:
+The first class of viable approaches consists into barely extending real-valued activations in the complex domain, like the \texttt{sigmoid} and the \texttt{hyperbolic tangent}:
 \[ \sigma_\mathds{C}(z) = \frac{1}{1+e^{-z}}  \qquad\qquad \tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} \]
 These functions are fully-complex, and also analytic and bounded almost everywhere, at the cost of introducing a set of singular points: both function, in fact, seems to diverge periodically in the imaginary axis of the complex plane. Limiting and scaling carefully the input values seems to help avoiding then those singularities and so partially containing the instability. However, I believe that there are simpler and more efficient alternatives.
 

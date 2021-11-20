@@ -96,17 +96,52 @@ In these last months, the Bonfiglioli laboratory have setup different experiment
 However, for what concern our work, we are interested only in vibration signals.
 
 
-In table \ref{} we leave a small summary containing the main technical details relative to each trial that we decided to use in our analysis. 
+In table \ref{tab:bonfiglioli_summary} we leave a small summary containing the main technical details relative to each trial that we decided to use in our analysis. 
 
 Another interesting fact to specify is that 
 
 
-Sampling was performedbecause a vibration is a periodic signal in the time domain [43], and most fault signals haveperiodicity. Therefore, sampling is used to examine the consistency and continuity of eachcondition using the features calculated from the signals
+Sampling was performed
+because a vibration is a periodic signal in the time domain [43], and most fault signals have
+periodicity. Therefore, sampling is used to examine the consistency and continuity of each
+condition using the features calculated from the signals
 
-The signal segmentation for sampling was based on the rotational frequency of therotor. Generally, in rotating equipment, the rotational frequency is the most dominantcomponent, and the majority of fault components appear in the harmonic form of the
+The signal segmentation for sampling was based on the rotational frequency of the
+rotor. Generally, in rotating equipment, the rotational frequency is the most dominant
+component, and the majority of fault components appear in the harmonic form of the
 rotational frequency.
 
 Then describe train-test split and number of signals of each type
+
+
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c c c c c c}
+		\toprule
+		\textbf{N} & \textbf{Name} & \textbf{Subname} & \textbf{Engine A} & \textbf{Duration} & \textbf{Fault}\\
+		\midrule
+		4  & Prova 4 - BN90 - HF Sbilanciato & 4\_1  & BN90   & 24  & Unbalance \\
+		4  & Prova 4 - BN90 - HF Sbilanciato & 4\_2  & BN90   & 120 & Unbalance \\
+		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_1  & BMD118 & 24  & Bearing   \\
+		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_2  & BMD118 & ?   & Bearing   \\
+		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_3  & BMD118 & 120 & Bearing   \\
+		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_4  & BMD118 & 100 & Bearing   \\
+		6  & Prova 6 - BN90 - HF Cuscinetto  & 6\_3  & BN90   & 100 & Bearing   \\
+		6  & Prova 6 - BN90 - HF Cuscinetto  & 6\_4  & BN90   & 100 & Bearing   \\
+		10 & Prova 10 - MP105 - HF Solare    & 10\_1 & BMD118 & 120 & Solar 	\\
+		10 & Prova 10 - MP105 - HF Solare    & 10\_2 & BMD118 & 24  & Solar 	\\
+		10 & Prova 10 - MP105 - HF Solare    & 10\_3 & BMD118 & 24  & Solar 	\\
+		10 & Prova 10 - MP105 - HF Solare    & 10\_4 & BMD118 & 120 & Solar 	\\
+		11 & Prova 11- S30 - HF Cuscinetto   & 11\_1 & BN112  & 120 & Bearing 	\\
+		13 & Prova 13 - S30 - HF Pignone     & 13\_1 & BN112  & 120 & Pinion    \\
+		15 & Prova 15 - S30 - HF Corona      & 15\_1 & BN112  & 78  & Crown		\\
+		15 & Prova 15 - S30 - HF Corona      & 15\_2 & BN112  & 48  & Crown		\\
+		\bottomrule
+	\end{tabular}
+	\caption{Summary of the main technical features of the datasets provided by Bonfiglioli and used in our analysis.}
+	\label{tab:bonfiglioli_summary}
+\end{table}
 
 
 
@@ -135,7 +170,42 @@ Given the various general purposes for which this dataset was designed (i.e. con
 	\item \textit{health condition} (healthy, faulty with inner race defect, faulty with outer race defect);
 	\item \textit{speed varying condition} (increasing speed, decreasing speed, increasing then decreasing speed and decreasing then increasing speed).
 \end{itemize} 
-Therefore, there are 12 different cases for configuration, each of them constituted of 3 trials, to ensure the authenticity of the data, that explain the 36 subsets.
+Therefore, there are 12 different cases for configuration, each of them constituted of 3 trials, to ensure the authenticity of the data, that explain the 36 subsets. Raw signals and corresponding spectrograms are, in the end, visually similar to the ones of Bonfiglioli \ref{}. Data in the second channel, containing speed information, can be properly visualized via their spectrograms, looking at the frequency changes in the signal through the time (figure \ref{fig:mendelay_speed_changes}).
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/mendelay_speed_changes}
+	\caption{Spectrograms of the four varying-speed conditions of Mendelay data.}
+	\label{fig:mendelay_speed_changes}
+\end{figure}
+For the data generation part, two parameters still needs to be fixed:
+\begin{itemize}
+	\item[-] the \texttt{n\_fft} of \texttt{torchaudio.transform.Spectrogram}, representing the resolution of the spectrogram;
+	\item[-] the "split rate" parameter, determining the number of subsegments in which each signal from the dataset has to be split.
+\end{itemize}
+The latter turns out to be quite important in this problem: recall, in fact, that each vibration registered in the dataset is 10 seconds long, with a sample rate of 200000 Hz, and so it is constituted by a total of $2\cdot 10^6$ points, and so is quite long. Furthermore, the dataset itself is quite small: only $36\cdot 3 = 108$ signals, number that could be increased just splitting them.
+
+\subsection{Mendeley Classification}
+
+We start by fixing the length of the subsignals equal to the sample rate (200000 points): as discussed in \ref{}, it is quite common that fault signals have periodicity, and we believe that the sampling rate provided has been chosen to properly detect this feature. Now, we have a dataset of 360, one second long, vibrations. Train-test splitting is again $75\%-25\%$.\\
+Even if they were not designed to deal with vibration signals registered in non-stationary conditions (with varying speed), we decided to rely on the same architecture built for Bonfiglioli analysis \ref{}.\\
+We trained both models on the Mendelay dataset with all the setup described above, and the results are briefly summarized in picture \ref{fig:mendeley_train_bad}.	
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/mendeley_train_bad}
+	\caption{Performances achieved over the Mendelay dataset constructing one-second long sub-signals.}
+	\label{fig:mendeley_train_bad}
+\end{figure}
+Those are very bad results: the training errors and accuracy, especially in the real-valued case, behaves nicely, but the models look like having bad generalization performances, given the high instability that we can notice on the validation lines. Now, since the architecture is already quite small, and we have already exploited the canonical techniques to prevent overfitting (normalization, dropout) what we can do is acting directly on the dataset.\\
+Other tests realized have proved that using only the files that belong to the same speed class (increasing, decreasing, increasing then decreasing or decreasing then increasing), so keeping only monotonic or non-monotonic speed samples together, we noticed that the overfit and the instability were more limited.\\
+Under this perspective, we believe that further reducing the length of input signals, even before constructing the spectrograms, we can manage to reduce also the effects due to high variations in rotational speed. To prove it, we repeated the train considering samples 0.25 seconds long. In this way we have much more samples (3600) in the dataset.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/mendeley_train_final}
+	\caption{Performances achieved over the Mendelay dataset constructing 0.25 seconds long sub-signals.}
+	\label{fig:mendeley_train_final}
+\end{figure}
+For completeness, it is better to specify that to obtain the results shown in figure \ref{fig:mendeley_train_final} we established a decay schedule for learning rate, in the hope of a faster, but more accurate, convergence.\\
+Finally, this is a really nice behavior, with both models reaching the convergence and the perfect classification ($100\%$) accuracy. This means that our supposition was probably right, and a suitable approach to signal classification in case of time-varying speed conditions, is to fragment the original wave into smaller samples to reduced the effects of this non-stationarity. Of course, we believe that a necessary hypotheses for this to happen is some kind of monotony in the rotational speed variation: also in the third and fourth cases \ref{fig:mendelay_speed_changes}, we could clearly distinguish two regions in which the velocity behavior was monotonic and amenable to the first two. Probably, an higher irregularity in the rotational speed would have made also the classification more unstable and challenging, but we would need further more datasets to verify it.
 
 
 

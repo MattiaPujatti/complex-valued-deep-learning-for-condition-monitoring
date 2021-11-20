@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  16 NOV 2021 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 18:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,11 +536,17 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
 )
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks37
+\minrowclearance=\skip76
+)
 \c@theorem=\count304
 \c@corollary=\count305
 \c@definition=\count306
 \c@observation=\count307
-))) (./extent.aux)
+)))
+(./extent.aux)
 \openout1 = `extent.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -559,6 +565,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -600,12 +607,12 @@ LaTeX Font Info:    ... okay on input line 5.
 \scratchbox=\box58
 \nofMPsegments=\count309
 \nofMParguments=\count310
-\everyMPshowfont=\toks37
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count311
 \MPscratchDim=\dimen259
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks38
+\everyMPtoPDFconversion=\toks39
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -985,13 +992,13 @@ Package rerunfilecheck Info: File `extent.out' has not changed.
 (rerunfilecheck)             Checksum: 69418383BC20A3C5ADE2D66D57B72767;594.
  ) 
 Here is how much of TeX's memory you used:
- 13092 strings out of 479304
- 194928 string characters out of 5869780
- 552442 words of memory out of 5000000
- 29948 multiletter control sequences out of 15000+600000
+ 13145 strings out of 479304
+ 195657 string characters out of 5869780
+ 554506 words of memory out of 5000000
+ 29997 multiletter control sequences out of 15000+600000
  416756 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,15n,120p,1221b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,16n,120p,1221b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -1015,7 +1022,7 @@ dsrom8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm1095.pfb>
-Output written on extent.pdf (12 pages, 915652 bytes).
+Output written on extent.pdf (12 pages, 915650 bytes).
 PDF statistics:
  289 PDF objects out of 1000 (max. 8388607)
  235 compressed objects within 3 object streams

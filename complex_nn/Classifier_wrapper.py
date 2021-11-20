@@ -5,7 +5,7 @@ import jax.numpy as jnp
 from jax.experimental import optimizers
 from functools import partial
 import time
-from tqdm.notebook import tqdm
+from tqdm.auto import tqdm
 import numpy as np
 
 from sklearn.metrics import confusion_matrix

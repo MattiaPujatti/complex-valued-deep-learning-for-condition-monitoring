@@ -45,18 +45,18 @@ Then we examined also the second source of non-circularity, i.e. different varia
 We repeated again the same procedure as for the first source and obtained the results in figure \ref{fig:noncirc_results} (right). The behavior of the accuracies is again quite clear and regular, but this time we see the real model performing better than its complex-valued counterpart; however, this advantage is relatively small, and seems to completely vanish as $\abs{\rho_z}$ approaches 1. A possible justification to this behavior stands on the fact that the real and imaginary part of the data are statistically not correlated, since $\rho=0$. We believe, in fact, that the two independent channels of the real model are probably more adapt to learn such internal structure with respect to the complex-valued architecture, whose parameters still preserve some local correlations, even after the training loop.\\
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=.5]{example-image-c}
+	\includegraphics[width=\textwidth]{pictures/noncirc_results}
 	\caption{Classification accuracy for real and complex-valued networks as function of different source of non-circularity.}
 	\label{fig:noncirc_results}
 \end{figure}
 In the previous analysis we found some really interesting regular behaviors, with situations in which complex models are dominating and others in which are the real ones performing better. But, is there any general law, or rule, that we can find, in order to understand which characteristics should our data have, in order to guarantee nice performances for complex networks?\\
 Let's proceed in the same way as before, fixing a distribution "0" that is perfectly circular, again with the identity as covariance matrix, and let's try to distinguish its samples from the ones coming from a second distribution "1", in which we add some non-circularity from both sources. We decide again to fix $\sigma_x=1$ for the second distribution, while the two remaining degrees of freedom $\sigma_y$ and $\sigma_{xy}$ are let free. Let's vary those parameter in order to space all the possible values that $\rho_z$ can assume, i.e. all the points in the unitary complex circle, and train again the models.\\
-Because of the finite precision and the low amount of points in our samples (128), we cannot construct an accurate and uniform grid spacing all the possible values, and so we decided to adopt a stochastic method: sampling random combinations of $(\sigma_y, \sigma_{xy})$, computing the relative performance measure for the architectures, and reconstructing the accuracy distribution with the functionality \texttt{tri.LinearTriInterpolator}, provided by \texttt{matplotlib}. The final results of this analysis are presented in figure \ref{fig:circ_final}
+Because of the finite precision and the low amount of points in our samples (128), we cannot construct an accurate and uniform grid spacing all the possible values, and so we decided to adopt a stochastic method: sampling random combinations of $(\sigma_y, \sigma_{xy})$, computing the relative performance measure for the architectures, and reconstructing the accuracy distribution with the functionality \texttt{tri.LinearTriInterpolator}, provided by \texttt{matplotlib}. The final results of this analysis are presented in figure \ref{fig:noncirc_comparison_final}
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=.5]{example-image-a}
-	\caption{TODO}
-	\label{fig:circ_final}
+	\includegraphics[width=\textwidth]{pictures/noncirc_comparison_final}
+	\caption{Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient.}
+	\label{fig:noncirc_comparison_final}
 \end{figure}
 
 

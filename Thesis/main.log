@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 00:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,8 +710,8 @@ Overfull \hbox (3.40668pt too wide) detected at line 23
  []
 
 
-Overfull \hbox (9.49002pt too wide) detected at line 24
- []\OT1/cmr/m/n/10.95 xxxiii
+Overfull \hbox (9.18587pt too wide) detected at line 24
+ []\OT1/cmr/m/n/10.95 xxxiv
  []
 
 
@@ -1061,15 +1061,17 @@ File: pictures/circ_class_example.pdf Graphic file (type pdf)
 Package pdftex.def Info: pictures/circ_class_example.pdf  used on input line 31
 .
 (pdftex.def)             Requested size: 483.69687pt x 187.6906pt.
-<example-image-c.pdf, id=606, 321.2pt x 240.9pt>
-File: example-image-c.pdf Graphic file (type pdf)
-<use example-image-c.pdf>
-Package pdftex.def Info: example-image-c.pdf  used on input line 48.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 57.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<pictures/noncirc_results.pdf, id=606, 945.36328pt x 392.03116pt>
+File: pictures/noncirc_results.pdf Graphic file (type pdf)
+<use pictures/noncirc_results.pdf>
+Package pdftex.def Info: pictures/noncirc_results.pdf  used on input line 48.
+(pdftex.def)             Requested size: 483.69687pt x 200.58527pt.
+<pictures/noncirc_comparison_final.pdf, id=608, 1203.12523pt x 350.4783pt>
+File: pictures/noncirc_comparison_final.pdf Graphic file (type pdf)
+<use pictures/noncirc_comparison_final.pdf>
+Package pdftex.def Info: pictures/noncirc_comparison_final.pdf  used on input l
+ine 57.
+(pdftex.def)             Requested size: 483.69687pt x 140.90544pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1080,6 +1082,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [32 <./pictures/circ_class_example.pdf>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1088,7 +1093,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image-c.pdf>]
+[33 <./pictures/noncirc_results.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1097,9 +1102,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34] [35
+[34 <./pictures/noncirc_comparison_final.pdf>] [35
 
-] [36] (./chapters/healthy_faulty_classification.tex
+] [36]
+(./chapters/healthy_faulty_classification.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--14
@@ -1138,19 +1144,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [38]
-<example-image-b.pdf, id=681, 321.2pt x 240.9pt>
+<example-image-b.pdf, id=729, 321.2pt x 240.9pt>
 File: example-image-b.pdf Graphic file (type pdf)
 <use example-image-b.pdf>
 Package pdftex.def Info: example-image-b.pdf  used on input line 43.
 (pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-<pictures/summary_hf_classification_methods.pdf, id=683, 385.77725pt x 181.8313
+<pictures/summary_hf_classification_methods.pdf, id=731, 385.77725pt x 181.8313
 1pt>
 File: pictures/summary_hf_classification_methods.pdf Graphic file (type pdf)
 <use pictures/summary_hf_classification_methods.pdf>
 Package pdftex.def Info: pictures/summary_hf_classification_methods.pdf  used o
 n input line 57.
 (pdftex.def)             Requested size: 483.69687pt x 227.99884pt.
-<pictures/bonfiglioli_logo.pdf, id=687, 853.1875pt x 270.00874pt>
+<pictures/bonfiglioli_logo.pdf, id=735, 853.1875pt x 270.00874pt>
 File: pictures/bonfiglioli_logo.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_logo.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_logo.pdf  used on input line 67.
@@ -1173,7 +1179,7 @@ Underfull \hbox (badness 2846) in paragraph at lines 70--72
 []\OT1/cmr/m/n/10.95 The com-pany pro-vided a large num-ber of
  []
 
-<pictures/bonfiglioli_experimental_setup.pdf, id=699, 436.36626pt x 219.55626pt
+<pictures/bonfiglioli_experimental_setup.pdf, id=747, 436.36626pt x 219.55626pt
 >
 File: pictures/bonfiglioli_experimental_setup.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_experimental_setup.pdf>
@@ -1197,7 +1203,7 @@ nclusion: multiple pdfs with page group included in a single page
 
 LaTeX Warning: Reference `' on page xli undefined on input line 99.
 
-<pictures/mendeley_setup.pdf, id=722, 246.58524pt x 184.72212pt>
+<pictures/mendeley_setup.pdf, id=770, 246.58524pt x 184.72212pt>
 File: pictures/mendeley_setup.pdf Graphic file (type pdf)
 <use pictures/mendeley_setup.pdf>
 Package pdftex.def Info: pictures/mendeley_setup.pdf  used on input line 129.
@@ -1325,10 +1331,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 265466204FD89163A2ED44898973A6A2;2761.
  ) 
 Here is how much of TeX's memory you used:
- 13442 strings out of 479304
- 202171 string characters out of 5869780
- 555632 words of memory out of 5000000
- 30115 multiletter control sequences out of 15000+600000
+ 13449 strings out of 479304
+ 202524 string characters out of 5869780
+ 555852 words of memory out of 5000000
+ 30121 multiletter control sequences out of 15000+600000
  421262 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,15n,103p,1245b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1351,20 +1357,22 @@ onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/
-rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (47 pages, 25384107 bytes).
+cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (47 pages, 25519020 bytes).
 PDF statistics:
- 939 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
+ 988 PDF objects out of 1000 (max. 8388607)
+ 822 compressed objects within 9 object streams
  179 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 390 words of extra memory for PDF output out of 10000 (max. 10000000)
 
