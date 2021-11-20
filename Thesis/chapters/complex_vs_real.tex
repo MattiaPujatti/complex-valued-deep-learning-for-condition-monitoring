@@ -8,6 +8,8 @@
 
 \section*{Introduction and Chapter Organization}
 
+\section{Complex vs Real Models}
+
 \section{Impact of the Circularity}
 
 In chapter \ref{sec:circularity} we dedicated a whole section to the discussion about the circularity property of a complex random variable: we provided rigorous definitions of the circularity and the correlation coefficients, together with a brief explanation of their geometrical interpretation. We also cited a recent work by Barracchina et al. \cite{barrachina2021complexvalued}, suggesting the impact that datasets with such properties could have in machine learning applications. The authors, in fact, set up a classification task with two different distributions at a given circularity value, and then they use these to train real and complex-valued models. However they focused mostly on the training stability rather then on the difference in term of performances, that we, instead, believe could bring to very interesting results. For this reason, we decided to set up a similar problem in order to confirm first what they obtained, and then to come up with a more quantitative analysis of the accuracy that complex models can effectively achieve.
@@ -55,14 +57,14 @@ Because of the finite precision and the low amount of points in our samples (128
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/noncirc_comparison_final}
-	\caption{Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient.}
+	\caption{Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient. The third plot (right), instead, represents simply the differences among the first two.}
 	\label{fig:noncirc_comparison_final}
 \end{figure}
 
+As we can see, there are effectively some regularities in the behavior of those models. For the complex-valued network, we can see that its discrimination performances raises uniformly with the modulus of the circularity quotient, achieving the maximum accuracy, and training stability, on the edge of unitary circle. For their real-valued counterpart, instead, the situation is a bit different: this models, in fact, seems to not handle very well the "first source" of non-circularity ($\sigma_{xy}\neq 0$), probably because it coincide with a non-zero correlation coefficient among real and imaginary parts of data. Looking at the right figure, the one with the effective comparison among the models, we can clearly see that there are still some configurations in which real networks seems to perform better ($-16\%$), but the theoretical advantage ($+40\%$) guaranteed by the complex model in the two red regions is too high to not be taken into account.
 
 
 
-\section{Complex vs Real Models}
 	
 	
 	
