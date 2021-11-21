@@ -19,8 +19,8 @@
 \BOOKMARK [1][-]{section.3.4}{Complex-Valued Activation Functions}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.5}{JAX Implementation}{chapter.3}% 20
 \BOOKMARK [0][-]{chapter.4}{Complex-Valued vs Real Neural Networks}{part.1}% 21
-\BOOKMARK [1][-]{section.4.1}{Impact of the Circularity}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Complex vs Real Models}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.1}{Complex vs Real Models}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Impact of the Circularity}{chapter.4}% 23
 \BOOKMARK [-1][-]{part.2}{II Condition Monitoring}{}% 24
 \BOOKMARK [0][-]{chapter.5}{Healthy-Faulty Signal Classification}{part.2}% 25
 \BOOKMARK [1][-]{section.5.1}{State-of-the-Art}{chapter.5}% 26
@@ -32,7 +32,8 @@
 \BOOKMARK [2][-]{subsection.5.2.3}{Baseline Classification Approach}{section.5.2}% 32
 \BOOKMARK [1][-]{section.5.3}{Mendelay Data}{chapter.5}% 33
 \BOOKMARK [2][-]{subsection.5.3.1}{Dataset Structure}{section.5.3}% 34
-\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 35
-\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 36
-\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 37
-\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 38
+\BOOKMARK [2][-]{subsection.5.3.2}{Mendeley Classification}{section.5.3}% 35
+\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 36
+\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 38
+\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 39

@@ -20,8 +20,8 @@
 \contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxvi}{section.3.4}%
 \contentsline {section}{\numberline {3.5}JAX Implementation}{xxviii}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxi}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Impact of the Circularity}{xxxi}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Complex vs Real Models}{xxxiv}{section.4.2}%
+\contentsline {section}{\numberline {4.1}Complex vs Real Models}{xxxi}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Impact of the Circularity}{xxxi}{section.4.2}%
 \contentsline {part}{II\hspace {1em}Condition Monitoring}{xxxv}{part.2}%
 \contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xxxvii}{chapter.5}%
 \contentsline {section}{\numberline {5.1}State-of-the-Art}{xxxviii}{section.5.1}%
@@ -29,11 +29,12 @@
 \contentsline {subsection}{\numberline {5.1.2}Study in the frequency domain}{xxxix}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}Bonfiglioli}{xl}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Simulation Environment}{xl}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Datasets}{xl}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xli}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Mendelay Data}{xli}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Dataset Structure}{xlii}{subsection.5.3.1}%
-\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xlv}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xlv}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{xlvi}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{xlvii}{section.A.3}%
+\contentsline {subsection}{\numberline {5.2.2}Datasets}{xlii}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xlii}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Mendelay Data}{xlii}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Dataset Structure}{xliii}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Mendeley Classification}{xliv}{subsection.5.3.2}%
+\contentsline {chapter}{\numberline {A}Mathematical Proofs}{xlix}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{xlix}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{l}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{li}{section.A.3}%

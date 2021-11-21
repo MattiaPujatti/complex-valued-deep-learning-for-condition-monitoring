@@ -37,11 +37,11 @@ However, even if condition monitoring is not one of the main tasks over which ma
 It is exactly from the widely developed theory of deep learning applied to audio processing, that we inherit techniques suitable to study a wave signal in the frequency domain. The computational instrument that allow us to do so is the \textbf{Short-Time Fourier Transform} (\textbf{STFT}). Discrete STFT is a method of partitioning
 continuous signals (in the time-dependent representation) over a long period into shorter segments (usually overlapped) at short time intervals, and
 applying a Fourier transform to each of those segments. An additional step can be taken, at this point, deriving the power spectrum of the signal: taking the square modulus of the STFT we can construct a 2D sample, i.e. an image, representing the amplitude of the signal for a particular frequency at a particular time.\\
-In figure \ref{fig:example_stft} we took a random signal from the dataset we are going to study, and we applied the STFT: the leftmost picture represents the original wave, the central one is the result after the application of the transform (so the signal in the frequency domain), while the rightmost is its power spectrum. 
+In figure \ref{fig:example_stft} we took a random signal from the dataset we are going to study, and we transformed it in the Fourier representation: the leftmost picture represents the original wave, the central one is the result after the application of the Fast-Fourier transform (so the signal in the frequency domain), while the rightmost is its power spectrum. 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.5]{example-image-b}
-	\caption{Example signal}
+	\includegraphics[width=\textwidth]{pictures/example_stft}
+	\caption{Representation of a vibration signal in the time domain (left), in the frequency domain via FFT (center) and with its power spectrum (right).}
 	\label{fig:example_stft}	
 \end{figure}
 After the computation of the power spectrum for each vibration signal at this point, there are two directions that the researcher can decide to follow:
@@ -68,8 +68,7 @@ The main motivation of this thesis work was the development and testing of an un
 	\caption{Bonfiglioli logo.}
 	\label{fig:bonfiglioli_logo}
 \end{wrapfigure}
-The company provided a large number of datasets collected from as many experiments, with the purpose of simulating artificially the most frequent faults, that usually occur over the bearings of different kind of engines.
-
+The company provided a large number of datasets collected from as many experiments, with the purpose of simulating artificially the most frequent faults, that usually occur over the bearings of different kind of engines. Our objective will be then to find an efficient approach for failure detection and classification.
 
 \subsection{Simulation Environment}
 
@@ -84,36 +83,25 @@ The laboratory is constituted of four different workbenches in which different e
 
 In the experiments, faults were artificially simulated using mechanical tricks (e.g. unbalance is simulated attaching a small object to the shaft)
 
-data were collected through an accelerometer fixed over the bearing
-+ other measurements
 
-% explain periodic working cycle of 120h
 
+% explain two axis, one healthy and one faulty 
+
+In order to have data more heterogeneous, able to represent the engine behavior under different conditions, and to improve the generalization capabilities of future models trained over them, Bonfiglioli setup a \textit{working cycle}, during which measurements were taken. This cycle is periodic with a period of 24 hours, in general repeated up to five times to collect most of the datasets. It is characterized by the engine varying its speed and torque with a quite regular behavior following a piecewise constant function, also to guarantee stationary conditions during the acquisition phases. Data were not, in fact, collected continuously during this cycle: 60 seconds long windows were fixed along this period, during which sensors were actively measuring. An example of working cycle has been reported in figure \ref{fig:bonfiglioli_example_working_cycle}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/bonfiglioli_example_working_cycle}
+	\caption{Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.}
+	\label{fig:bonfiglioli_example_working_cycle}
+\end{figure}
+Vibrations signals, the ones we are mainly interested in, were collected thanks to accelerometers attached to the components of the engine (motor, brake and multiplier) they wanted to test; as explained above, each acquisition was 60 seconds long, with a sample rate of 25600 Hz: sampling was performed because a vibration is a periodic signal in the time domain, and most fault signals have periodicity. Therefore, sampling can be used to examine the consistency and continuity of each condition \cite{deep_learning_vibration_gravity}. 
+The signal segmentation for sampling is usually based on the rotational frequency of the
+rotor. Generally, in fact, in rotating equipment, the rotational frequency is the most dominant component, and the majority of fault contributions appear in its harmonic form.
 
 \subsection{Datasets}
 
 In these last months, the Bonfiglioli laboratory have setup different experiments, in order to provide data relative to different kind of engines and for different types of simulated faults. For each of those runs, containing 120 hours of measurements, a dataset in \texttt{.h5} format has been provided, with the values registered during a working cycle. Those datasets had an internal structure quite mazy, and so we had to rely on a custom library, provided by FBK researchers, to load and process the data. Each sample contains several entries, related to the different variables measured during the process: beyond vibration signals collected through the accelerometers, Bonfiglioli decided to monitor also the temperature of some components, voltage and current flowing through them, together with the phase information of the inverter. Additionally, for the experiments realized more recently, they used an additional component in their setup, a \textit{multiplier}, providing a second vibration signal.\\
-However, for what concern our work, we are interested only in vibration signals.
-
-
-In table \ref{tab:bonfiglioli_summary} we leave a small summary containing the main technical details relative to each trial that we decided to use in our analysis. 
-
-Another interesting fact to specify is that 
-
-
-Sampling was performed
-because a vibration is a periodic signal in the time domain [43], and most fault signals have
-periodicity. Therefore, sampling is used to examine the consistency and continuity of each
-condition using the features calculated from the signals
-
-The signal segmentation for sampling was based on the rotational frequency of the
-rotor. Generally, in rotating equipment, the rotational frequency is the most dominant
-component, and the majority of fault components appear in the harmonic form of the
-rotational frequency.
-
-Then describe train-test split and number of signals of each type
-
-
+For what concern our work, we are interested only in the vibration signals.
 
 \begin{table}[!ht]
 	\centering
@@ -205,7 +193,26 @@ Under this perspective, we believe that further reducing the length of input sig
 	\label{fig:mendeley_train_final}
 \end{figure}
 For completeness, it is better to specify that to obtain the results shown in figure \ref{fig:mendeley_train_final} we established a decay schedule for learning rate, in the hope of a faster, but more accurate, convergence.\\
-Finally, this is a really nice behavior, with both models reaching the convergence and the perfect classification ($100\%$) accuracy. This means that our supposition was probably right, and a suitable approach to signal classification in case of time-varying speed conditions, is to fragment the original wave into smaller samples to reduced the effects of this non-stationarity. Of course, we believe that a necessary hypotheses for this to happen is some kind of monotony in the rotational speed variation: also in the third and fourth cases \ref{fig:mendelay_speed_changes}, we could clearly distinguish two regions in which the velocity behavior was monotonic and amenable to the first two. Probably, an higher irregularity in the rotational speed would have made also the classification more unstable and challenging, but we would need further more datasets to verify it.
+Finally, this is a really nice behavior, with both models reaching the convergence and the perfect classification ($100\%$) accuracy. This means that our supposition was probably right, and a suitable approach to signal classification in case of time-varying speed conditions, is to fragment the original wave into smaller samples to reduced the effects of this non-stationarity. Of course, we believe that a necessary hypotheses for this to happen is some kind of monotony in the rotational speed variation: also in the third and fourth cases \ref{fig:mendelay_speed_changes}, we could clearly distinguish two regions in which the velocity behavior was monotonic and amenable to the first two. Probably, an higher irregularity in the rotational speed would have made also the classification more unstable and challenging, but we would need further more datasets to verify it.\\
+
+To conclude this part, we want to try stressing the generalization performances of our models. This can be done first dividing the data files based on the four speed conditions (increasing, decreasing, increasing then decreasing, decreasing then increasing), training the networks over just one of them, and computing the classification accuracy over the others. In this way we can effectively verify which is the impact of non-stationary rotational speed conditions in the training process.
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{||c|c||c|c||c|c||c|c||}
+		\toprule
+		100.00 & 99.72 & 98.89 & 97.18 & 99.94 & 99.00 & 99.50 & 99.34\\
+		\midrule
+		100.00 & 99.94 & 79.70 & 77.93 & 99.89 & 96.18 & 96.29 & 73.56\\
+		\midrule
+		100.00 & 100.00 & 88.05 & 82.13 & 98.34 & 98.23 & 100.00 & 89.77\\
+		\midrule
+		100.00 & 99.67 & 88.38 & 94.63 & 97.90 & 94.08 & 99.94 & 98.56\\
+		\bottomrule
+	\end{tabular}
+	\caption{Generalization performances of real and complex-valued models over the Mendelay dataset.}
+	\label{tab:mendeley_generalization}
+\end{table}
+The results, reported in table \ref{tab:mendeley_generalization} are generally good: for almost all the combinations both networks managed to converge, obtaining nearly the perfect classification accuracy.
 
 
 
