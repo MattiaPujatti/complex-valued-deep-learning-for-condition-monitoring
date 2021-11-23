@@ -142,7 +142,6 @@ class Haiku_Classifier:
               optimizer: optimizers.Optimizer,  
               train_dataloader,
               test_dataloader,
-              custom_init: Callable = None,
               verbose: bool = False,
               **model_kwargs
     ) -> Any:
@@ -173,11 +172,7 @@ class Haiku_Classifier:
 
         # Initialize the network
         batch_shape = next(iter(train_dataloader))[0].shape
-
-        if custom_init is not None:
-            model, init_net_params, init_net_state = custom_init(model, batch_shape, **model_kwargs)
-        else:
-            model, init_net_params, init_net_state = initialize_cmplx_haiku_model(model, batch_shape, **model_kwargs)
+        model, init_net_params, init_net_state = initialize_cmplx_haiku_model(model, batch_shape, **model_kwargs)
 
         self.__network = model
         self.update_net_params(init_net_params)

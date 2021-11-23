@@ -21,6 +21,22 @@ def initialize_cmplx_haiku_model(model, init_shape, data_type='complex64', rng_s
     return network, net_params, net_state
 
 
+def initialize_CAM_model(model, init_shape, data_type='complex64', rng_seed=42, **model_kwargs):
+
+    def forward_pass(x, is_training, return_blobs=False):
+        net = model(**model_kwargs)
+        return net(x, is_training)
+
+    key = jax.random.PRNGKey( rng_seed )
+
+    dummy_input = jnp.zeros(init_shape, dtype=data_type)
+
+    network = hk.transform_with_state(forward_pass)
+    net_params, net_state = network.init( key, dummy_input, is_training=True, return_blobs=False )
+
+    return network, net_params, net_state
+
+
 
 def haiku_check_model_parameters(model, init_shape, data_type, verbose=True, **model_kwargs):
 
