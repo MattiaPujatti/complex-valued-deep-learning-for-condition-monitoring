@@ -87,40 +87,31 @@ In the experiments, faults were artificially simulated using mechanical tricks (
 
 % explain two axis, one healthy and one faulty 
 
-In order to have data more heterogeneous, able to represent the engine behavior under different conditions, and to improve the generalization capabilities of future models trained over them, Bonfiglioli setup a \textit{working cycle}, during which measurements were taken. This cycle is periodic with a period of 24 hours, in general repeated up to five times to collect most of the datasets. It is characterized by the engine varying its speed and torque with a quite regular behavior following a piecewise constant function, also to guarantee stationary conditions during the acquisition phases. Data were not, in fact, collected continuously during this cycle: 60 seconds long windows were fixed along this period, during which sensors were actively measuring. An example of working cycle has been reported in figure \ref{fig:bonfiglioli_example_working_cycle}.
+In order to have data more heterogeneous, able to represent the engine behavior under different conditions, and to improve the generalization capabilities of future models trained over them, Bonfiglioli setup a \textit{working cycle}, during which measurements were taken. This cycle is periodic with a period of 24 hours, in general repeated up to five times to collect most of the datasets. It is characterized by the engine varying its speed and torque with a quite regular behavior following a piecewise constant function, also to guarantee stationary conditions during the acquisition phases. Data were not, in fact, collected continuously during this cycle: 30 or 60 seconds long windows were fixed along this period, during which sensors were actively measuring. An example of working cycle has been reported in figure \ref{fig:bonfiglioli_example_working_cycle}.
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{pictures/bonfiglioli_example_working_cycle}
 	\caption{Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.}
 	\label{fig:bonfiglioli_example_working_cycle}
 \end{figure}
-Vibrations signals, the ones we are mainly interested in, were collected thanks to accelerometers attached to the components of the engine (motor, brake and multiplier) they wanted to test; as explained above, each acquisition was 60 seconds long, with a sample rate of 25600 Hz: sampling was performed because a vibration is a periodic signal in the time domain, and most fault signals have periodicity. Therefore, sampling can be used to examine the consistency and continuity of each condition \cite{deep_learning_vibration_gravity}. 
-The signal segmentation for sampling is usually based on the rotational frequency of the
-rotor. Generally, in fact, in rotating equipment, the rotational frequency is the most dominant component, and the majority of fault contributions appear in its harmonic form.
+Vibrations signals, the ones we are mainly interested in, were collected thanks to accelerometers attached to the components of the engine (motor, brake and multiplier) they wanted to test; as explained above, each acquisition was 30/60 seconds long, with a sample rate of 25600 Hz: sampling was performed because a vibration is a periodic signal in the time domain, and most fault signals have periodicity too. Therefore, sampling can be used to examine the consistency and continuity of each condition \cite{deep_learning_vibration_gravity}. The signal segmentation for sampling is usually based on the rotational frequency of the rotor. Generally, in fact, in rotating equipment, the rotational frequency is the most dominant component, and the majority of fault contributions appear in its harmonic form.
 
 \subsection{Datasets}
 
 In these last months, the Bonfiglioli laboratory have setup different experiments, in order to provide data relative to different kind of engines and for different types of simulated faults. For each of those runs, containing 120 hours of measurements, a dataset in \texttt{.h5} format has been provided, with the values registered during a working cycle. Those datasets had an internal structure quite mazy, and so we had to rely on a custom library, provided by FBK researchers, to load and process the data. Each sample contains several entries, related to the different variables measured during the process: beyond vibration signals collected through the accelerometers, Bonfiglioli decided to monitor also the temperature of some components, voltage and current flowing through them, together with the phase information of the inverter. Additionally, for the experiments realized more recently, they used an additional component in their setup, a \textit{multiplier}, providing a second vibration signal.\\
-For what concern our work, we are interested only in the vibration signals.
+For what concern our work, we are interested only in the vibration signals. In table \ref{tab:bonfiglioli_summary} are reported, with some technical details, the dataset we have used in our analysis.
 
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{c c c c c c}
 		\toprule
-		\textbf{N} & \textbf{Name} & \textbf{Subname} & \textbf{Engine A} & \textbf{Duration} & \textbf{Fault}\\
+		\textbf{N} & \textbf{Name} & \textbf{Subname} & \textbf{Engine A} & \textbf{Duration (h)} & \textbf{Fault}\\
 		\midrule
-		4  & Prova 4 - BN90 - HF Sbilanciato & 4\_1  & BN90   & 24  & Unbalance \\
 		4  & Prova 4 - BN90 - HF Sbilanciato & 4\_2  & BN90   & 120 & Unbalance \\
-		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_1  & BMD118 & 24  & Bearing   \\
-		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_2  & BMD118 & ?   & Bearing   \\
 		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_3  & BMD118 & 120 & Bearing   \\
-		5  & Prova 5 - MP105 - HF Cuscinetto & 5\_4  & BMD118 & 100 & Bearing   \\
 		6  & Prova 6 - BN90 - HF Cuscinetto  & 6\_3  & BN90   & 100 & Bearing   \\
-		6  & Prova 6 - BN90 - HF Cuscinetto  & 6\_4  & BN90   & 100 & Bearing   \\
 		10 & Prova 10 - MP105 - HF Solare    & 10\_1 & BMD118 & 120 & Solar 	\\
-		10 & Prova 10 - MP105 - HF Solare    & 10\_2 & BMD118 & 24  & Solar 	\\
-		10 & Prova 10 - MP105 - HF Solare    & 10\_3 & BMD118 & 24  & Solar 	\\
-		10 & Prova 10 - MP105 - HF Solare    & 10\_4 & BMD118 & 120 & Solar 	\\
+		10 & Prova 10 - MP105 - FH Solare    & 10\_4 & BMD118 & 120 & Solar 	\\
 		11 & Prova 11- S30 - HF Cuscinetto   & 11\_1 & BN112  & 120 & Bearing 	\\
 		13 & Prova 13 - S30 - HF Pignone     & 13\_1 & BN112  & 120 & Pinion    \\
 		15 & Prova 15 - S30 - HF Corona      & 15\_1 & BN112  & 78  & Crown		\\
@@ -132,10 +123,20 @@ For what concern our work, we are interested only in the vibration signals.
 \end{table}
 
 
-
 \subsection{Baseline Classification Approach}
 
+For completeness, we would like to briefly describe also the baseline approach, the one actually followed by FBK researchers, even if in this work it wasn't either considered.\\
+The procedure actually implemented in the project is quite similar to the one presented as the state-of-the-art. The idea behind is, in fact, fundamentally the same: given a dataset of vibration acquisitions, these are splitted into subsignals of a given fixed size (usually 3 seconds), preprocessed and sent through a "feature extractor" that takes from them the information useful for the classification. Different kind of extractions are possible: up to now you can choose among MFCCs, ordinary Short Time Fourier Transform and power spectrograms, all of them with a wide margin of customization. The main library used for this is feature-extraction part is \texttt{scipy}.\\
+All the information got thanks to this step is then sent through a neural network classifier, that in this case is a Residual Network \footnote{\href{https://en.wikipedia.org/wiki/Residual\_neural\_network}{ResNet}}, with a fundamental block constituted by two $3x3$ convolutions and a few regularization layers.\\
+With respect to the procedure we are going to implement, this is much more efficient from the point of view of the memory complexity (especially if you select the MFCCs), but it requires an architecture that is much larger. We will prove that we can still manage to obtain very good results even with a much smaller number of parameters.
 
+
+\subsection{Complex Spectrogram Classification}
+
+As anticipated, the approach we decided to follow is slightly different. In sound classification tasks, the advantage provided by convolutional neural networks has been widely demonstrated, in recent years. 
+
+
+\section{Bonfiglioli - Results}
 
 
 \section{Mendelay Data}
@@ -195,24 +196,24 @@ Under this perspective, we believe that further reducing the length of input sig
 For completeness, it is better to specify that to obtain the results shown in figure \ref{fig:mendeley_train_final} we established a decay schedule for learning rate, in the hope of a faster, but more accurate, convergence.\\
 Finally, this is a really nice behavior, with both models reaching the convergence and the perfect classification ($100\%$) accuracy. This means that our supposition was probably right, and a suitable approach to signal classification in case of time-varying speed conditions, is to fragment the original wave into smaller samples to reduced the effects of this non-stationarity. Of course, we believe that a necessary hypotheses for this to happen is some kind of monotony in the rotational speed variation: also in the third and fourth cases \ref{fig:mendelay_speed_changes}, we could clearly distinguish two regions in which the velocity behavior was monotonic and amenable to the first two. Probably, an higher irregularity in the rotational speed would have made also the classification more unstable and challenging, but we would need further more datasets to verify it.\\
 
-To conclude this part, we want to try stressing the generalization performances of our models. This can be done first dividing the data files based on the four speed conditions (increasing, decreasing, increasing then decreasing, decreasing then increasing), training the networks over just one of them, and computing the classification accuracy over the others. In this way we can effectively verify which is the impact of non-stationary rotational speed conditions in the training process.
+To conclude this part, we want to try stressing the generalization performances of our models. This can be done by first dividing the data files based on the four speed conditions (increasing, decreasing, increasing then decreasing, decreasing then increasing), training the networks over just one of them, and computing the classification accuracy over the others. In this way we can effectively verify which is the impact of non-stationary rotational speed conditions in the training process.
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{||c|c||c|c||c|c||c|c||}
 		\toprule
 		100.00 & 99.72 & 98.89 & 97.18 & 99.94 & 99.00 & 99.50 & 99.34\\
 		\midrule
-		100.00 & 99.94 & 79.70 & 77.93 & 99.89 & 96.18 & 96.29 & 73.56\\
+		100.00 & 99.94 & \cellcolor{red} 79.70 & \cellcolor{red} 77.93 & 99.89 & 96.18 & 96.29 & \cellcolor{orange} 73.56\\
 		\midrule
-		100.00 & 100.00 & 88.05 & 82.13 & 98.34 & 98.23 & 100.00 & 89.77\\
+		100.00 & 100.00 & \cellcolor{red} 88.05 & \cellcolor{red} 82.13 & 98.34 & 98.23 & 100.00 & \cellcolor{orange} 89.77\\
 		\midrule
-		100.00 & 99.67 & 88.38 & 94.63 & 97.90 & 94.08 & 99.94 & 98.56\\
+		100.00 & 99.67 & \cellcolor{red} 88.38 & 94.63 & 97.90 & 94.08 & 99.94 & 98.56\\
 		\bottomrule
 	\end{tabular}
 	\caption{Generalization performances of real and complex-valued models over the Mendelay dataset.}
 	\label{tab:mendeley_generalization}
 \end{table}
-The results, reported in table \ref{tab:mendeley_generalization} are generally good: for almost all the combinations both networks managed to converge, obtaining nearly the perfect classification accuracy.
+The results, reported in table \ref{tab:mendeley_generalization} are generally good: for almost all the combinations both networks managed to converge, obtaining nearly the perfect classification accuracy. The cells colored in red represents the cases in which the network barely overfit and wasn't able to generalize properly, with the validation loss growing instead of decreasing during the training. There are two cases in which both models failed, and one seeing the only the complex network to do so (even with a nice accuracy, in the end). What is more interesting, instead, are the cells colored in orange: in those situations, limited to real-valued models, the loss behaved correctly, but the accuracy reached was quite limited, at least with respect to the score offered by its complex-valued counterpart. Furthermore, except for one case (the red one), all the combinations shown the complex architecture to reach higher accuracy, proving again that these kind of models are less likely to overfit and, in general, guarantees better generalization performances.
 
 
 

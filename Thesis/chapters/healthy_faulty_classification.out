@@ -6,6 +6,8 @@
 \BOOKMARK [2][-]{subsection.1.2.1}{Simulation Environment}{section.1.2}% 6
 \BOOKMARK [2][-]{subsection.1.2.2}{Datasets}{section.1.2}% 7
 \BOOKMARK [2][-]{subsection.1.2.3}{Baseline Classification Approach}{section.1.2}% 8
-\BOOKMARK [1][-]{section.1.3}{Mendelay Data}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.3.1}{Dataset Structure}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.2}{Mendeley Classification}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.2.4}{Complex Spectrogram Classification}{section.1.2}% 9
+\BOOKMARK [1][-]{section.1.3}{Bonfiglioli - Results}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.4}{Mendelay Data}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.4.1}{Dataset Structure}{section.1.4}% 12
+\BOOKMARK [2][-]{subsection.1.4.2}{Mendeley Classification}{section.1.4}% 13

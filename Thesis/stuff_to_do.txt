@@ -17,3 +17,13 @@ for Bonfiglioli:
 * analysis of all dataset
 * global average pooling?
 * study feature maps / weights?
+
+matrix of results:
+- real/complex accuracy on all 120h datasets taken alone
+- performances on all and all w multiplier signal
+
+stats analysis (on all):
+- confusion matrix
+- fpr, tpr, roc curve?
+- accuracy vs precision vs recall
+- CAM and fault score?
