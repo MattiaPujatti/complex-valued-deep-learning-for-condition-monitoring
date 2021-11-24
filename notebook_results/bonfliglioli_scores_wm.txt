@@ -1,0 +1,119 @@
+Testing dataset 53
+	Loaded 6071 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.002770
+Average accuracy over the set: 99.891496%
+Average loss of the set: 0.007398
+Average accuracy over the set: 99.739581%
+Training the real model...
+Average loss of the set: 0.000471
+Average accuracy over the set: 99.956596%
+Average loss of the set: 0.005014
+Average accuracy over the set: 99.804688%
+Circularity coefficient of healthy data: 0.013306-0.000403j. Correlation coefficient: 0.000404
+Circularity coefficient of faulty data: 0.999945-0.000000j. Correlation coefficient: 0.000021
+
+-----------------------------------------
+
+Testing dataset 101
+	Loaded 5966 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.005338
+Average accuracy over the set: 99.620533%
+Average loss of the set: 0.007638
+Average accuracy over the set: 99.414062%
+Training the real model...
+Average loss of the set: 0.005130
+Average accuracy over the set: 99.732143%
+Average loss of the set: 0.006710
+Average accuracy over the set: 99.479169%
+Circularity coefficient of healthy data: 0.013753-0.000092j. Correlation coefficient: 0.000092
+Circularity coefficient of faulty data: 0.022764-0.000224j. Correlation coefficient: 0.000224
+
+-----------------------------------------
+
+Testing dataset 104
+	Loaded 5979 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.007588
+Average accuracy over the set: 99.537849%
+Average loss of the set: 0.011538
+Average accuracy over the set: 99.037594%
+Training the real model...
+Average loss of the set: 0.003515
+Average accuracy over the set: 99.955988%
+Average loss of the set: 0.005142
+Average accuracy over the set: 100.000000%
+Circularity coefficient of healthy data: 0.021835-0.000337j. Correlation coefficient: -0.000338
+Circularity coefficient of faulty data: 0.016433-0.000208j. Correlation coefficient: -0.000208
+
+-----------------------------------------
+
+Testing dataset 111
+	Loaded 3744 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.000020
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000028
+Average accuracy over the set: 100.000000%
+Training the real model...
+Average loss of the set: 0.000001
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000001
+Average accuracy over the set: 100.000000%
+Circularity coefficient of healthy data: 0.009079-0.000268j. Correlation coefficient: -0.000268
+Circularity coefficient of faulty data: 0.007508-0.000047j. Correlation coefficient: -0.000047
+
+-----------------------------------------
+
+Testing dataset 131
+	Loaded 3750 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.000006
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000007
+Average accuracy over the set: 100.000000%
+Training the real model...
+Average loss of the set: 0.000001
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000001
+Average accuracy over the set: 100.000000%
+Circularity coefficient of healthy data: 0.012205+0.000180j. Correlation coefficient: 0.000180
+Circularity coefficient of faulty data: 0.008119-0.000165j. Correlation coefficient: -0.000165
+
+-----------------------------------------
+
+Testing dataset 151
+	Loaded 1498 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.000365
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.002025
+Average accuracy over the set: 100.000000%
+Training the real model...
+Average loss of the set: 0.000040
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000039
+Average accuracy over the set: 100.000000%
+Circularity coefficient of healthy data: 0.999978-0.000000j. Correlation coefficient: -0.000005
+Circularity coefficient of faulty data: 0.009687-0.000137j. Correlation coefficient: -0.000137
+
+-----------------------------------------
+
+Testing dataset 152
+	Loaded 1498 samples of shape (2, 151, 171)
+Training the complex model...
+Average loss of the set: 0.000123
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000164
+Average accuracy over the set: 100.000000%
+Training the real model...
+Average loss of the set: 0.000051
+Average accuracy over the set: 100.000000%
+Average loss of the set: 0.000056
+Average accuracy over the set: 100.000000%
+Circularity coefficient of healthy data: 0.999978-0.000000j. Correlation coefficient: -0.000005
+Circularity coefficient of faulty data: 0.009687-0.000137j. Correlation coefficient: -0.000137
+
+-----------------------------------------
+

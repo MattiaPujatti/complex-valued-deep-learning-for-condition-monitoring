@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  23 NOV 2021 21:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  25 NOV 2021 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,12 +707,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-<..//pictures/example_stft.pdf, id=64, 1084.05pt x 289.08pt>
+<..//pictures/example_stft.pdf, id=80, 1084.05pt x 289.08pt>
 File: ..//pictures/example_stft.pdf Graphic file (type pdf)
 <use ..//pictures/example_stft.pdf>
 Package pdftex.def Info: ..//pictures/example_stft.pdf  used on input line 43.
 (pdftex.def)             Requested size: 483.69687pt x 128.98645pt.
-<..//pictures/summary_hf_classification_methods.pdf, id=66, 385.77725pt x 181.8
+<..//pictures/summary_hf_classification_methods.pdf, id=82, 385.77725pt x 181.8
 3131pt>
 File: ..//pictures/summary_hf_classification_methods.pdf Graphic file (type pdf
 )
@@ -729,7 +729,7 @@ n input line 58.
 LaTeX Warning: Citation `deep_learning_vibration_gravity' on page 3 undefined o
 n input line 58.
 
-<..//pictures/bonfiglioli_logo.pdf, id=68, 853.1875pt x 270.00874pt>
+<..//pictures/bonfiglioli_logo.pdf, id=84, 853.1875pt x 270.00874pt>
 File: ..//pictures/bonfiglioli_logo.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_logo.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_logo.pdf  used on input line 
@@ -753,14 +753,14 @@ Underfull \hbox (badness 2846) in paragraph at lines 70--72
 []\OT1/cmr/m/n/10.95 The com-pany pro-vided a large num-ber of
  []
 
-<..//pictures/bonfiglioli_experimental_setup.pdf, id=132, 436.36626pt x 219.556
+<..//pictures/bonfiglioli_experimental_setup.pdf, id=148, 436.36626pt x 219.556
 26pt>
 File: ..//pictures/bonfiglioli_experimental_setup.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_experimental_setup.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_experimental_setup.pdf  used 
 on input line 78.
 (pdftex.def)             Requested size: 483.69687pt x 243.382pt.
-<..//pictures/bonfiglioli_example_working_cycle.pdf, id=134, 498.22939pt x 275.
+<..//pictures/bonfiglioli_example_working_cycle.pdf, id=150, 498.22939pt x 275.
 05963pt>
 File: ..//pictures/bonfiglioli_example_working_cycle.pdf Graphic file (type pdf
 )
@@ -805,19 +805,16 @@ g_cycle.pdf): PDF inclusion: multiple pdfs with page group included in a single
  page
 >]
 
-LaTeX Warning: Citation `mendeley_dataset' on page 6 undefined on input line 14
-2.
+LaTeX Warning: Reference `fig:example_bonf_spectrum' on page 6 undefined on inp
+ut line 140.
 
-<..//pictures/mendeley_setup.pdf, id=176, 246.58524pt x 184.72212pt>
-File: ..//pictures/mendeley_setup.pdf Graphic file (type pdf)
-<use ..//pictures/mendeley_setup.pdf>
-Package pdftex.def Info: ..//pictures/mendeley_setup.pdf  used on input line 14
-6.
-(pdftex.def)             Requested size: 241.84843pt x 181.17583pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+<..//pictures/example_bonfiglioli_spectrum.pdf, id=191, 1100.67216pt x 356.0020
+1pt>
+File: ..//pictures/example_bonfiglioli_spectrum.pdf Graphic file (type pdf)
+<use ..//pictures/example_bonfiglioli_spectrum.pdf>
+Package pdftex.def Info: ..//pictures/example_bonfiglioli_spectrum.pdf  used on
+ input line 143.
+(pdftex.def)             Requested size: 483.69687pt x 156.4458pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -828,14 +825,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 160.
+LaTeX Warning: Reference `' on page 7 undefined on input line 151.
 
-<..//pictures/mendelay_speed_changes.pdf, id=189, 1182.26973pt x 324.17073pt>
-File: ..//pictures/mendelay_speed_changes.pdf Graphic file (type pdf)
-<use ..//pictures/mendelay_speed_changes.pdf>
-Package pdftex.def Info: ..//pictures/mendelay_speed_changes.pdf  used on input
- line 163.
-(pdftex.def)             Requested size: 483.69687pt x 132.62396pt.
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 151.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 151.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 151.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -844,31 +844,110 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7 <..//pictures/mendeley_setup.pdf>]
+[7 <..//pictures/example_bonfiglioli_spectrum.pdf>]
+<..//pictures/bonfiglioli_onecycle_results.pdf, id=220, 1186.23976pt x 289.08pt
+>
+File: ..//pictures/bonfiglioli_onecycle_results.pdf Graphic file (type pdf)
+<use ..//pictures/bonfiglioli_onecycle_results.pdf>
+Package pdftex.def Info: ..//pictures/bonfiglioli_onecycle_results.pdf  used on
+ input line 198.
+(pdftex.def)             Requested size: 483.69687pt x 117.87514pt.
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 176.
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 202.
+
+<..//pictures/bonfiglioli_onecycle_confmat.pdf, id=223, 1156.32pt x 433.62pt>
+File: ..//pictures/bonfiglioli_onecycle_confmat.pdf Graphic file (type pdf)
+<use ..//pictures/bonfiglioli_onecycle_confmat.pdf>
+Package pdftex.def Info: ..//pictures/bonfiglioli_onecycle_confmat.pdf  used on
+ input line 221.
+(pdftex.def)             Requested size: 483.69687pt x 181.38472pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
+<..//pictures/bonfiglioli_CAM_images.pdf, id=232, 1149.09305pt x 364.80768pt>
+File: ..//pictures/bonfiglioli_CAM_images.pdf Graphic file (type pdf)
+<use ..//pictures/bonfiglioli_CAM_images.pdf>
+Package pdftex.def Info: ..//pictures/bonfiglioli_CAM_images.pdf  used on input
+ line 235.
+(pdftex.def)             Requested size: 483.69687pt x 153.5633pt.
 
 
-LaTeX Warning: Reference `' on page 8 undefined on input line 177.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-<..//pictures/mendeley_train_bad.pdf, id=208, 1445.4pt x 289.08pt>
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9 <..//pictures/bonfiglioli_onecycle_results.pdf>]
+
+LaTeX Warning: Citation `mendeley_dataset' on page 10 undefined on input line 2
+44.
+
+<..//pictures/mendeley_setup.pdf, id=248, 246.58524pt x 184.72212pt>
+File: ..//pictures/mendeley_setup.pdf Graphic file (type pdf)
+<use ..//pictures/mendeley_setup.pdf>
+Package pdftex.def Info: ..//pictures/mendeley_setup.pdf  used on input line 24
+8.
+(pdftex.def)             Requested size: 241.84843pt x 181.17583pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10 <..//pictures/bonfiglioli_onecycle_confmat.pdf> <..//pictures/bonfiglioli_C
+AM_images.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/bonfiglioli_CAM_images.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `' on page 11 undefined on input line 262.
+
+<..//pictures/mendelay_speed_changes.pdf, id=368, 1182.26973pt x 324.17073pt>
+File: ..//pictures/mendelay_speed_changes.pdf Graphic file (type pdf)
+<use ..//pictures/mendelay_speed_changes.pdf>
+Package pdftex.def Info: ..//pictures/mendelay_speed_changes.pdf  used on input
+ line 265.
+(pdftex.def)             Requested size: 483.69687pt x 132.62396pt.
+
+LaTeX Warning: Reference `' on page 11 undefined on input line 278.
+
+
+LaTeX Warning: Reference `' on page 11 undefined on input line 279.
+
+<..//pictures/mendeley_train_bad.pdf, id=370, 1445.4pt x 289.08pt>
 File: ..//pictures/mendeley_train_bad.pdf Graphic file (type pdf)
 <use ..//pictures/mendeley_train_bad.pdf>
 Package pdftex.def Info: ..//pictures/mendeley_train_bad.pdf  used on input lin
-e 181.
+e 283.
 (pdftex.def)             Requested size: 483.69687pt x 96.73763pt.
-<..//pictures/mendeley_train_final.pdf, id=209, 867.24pt x 722.7pt>
+<..//pictures/mendeley_train_final.pdf, id=371, 867.24pt x 722.7pt>
 File: ..//pictures/mendeley_train_final.pdf Graphic file (type pdf)
 <use ..//pictures/mendeley_train_final.pdf>
 Package pdftex.def Info: ..//pictures/mendeley_train_final.pdf  used on input l
-ine 190.
+ine 292.
 (pdftex.def)             Requested size: 483.69687pt x 403.0882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--196
+Underfull \hbox (badness 10000) in paragraph at lines 278--298
 
  []
 
 
+Underfull \vbox (badness 5359) has occurred while \output is active []
+
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -876,11 +955,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8 <..//pictures/mendelay_speed_changes.pdf> <..//pictures/mendeley_train_bad.p
-df
+[11 <..//pictures/mendeley_setup.pdf> <..//pictures/mendelay_speed_changes.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/mendeley_train_bad.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/mendelay_speed_changes.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -890,7 +968,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9 <..//pictures/mendeley_train_final.pdf>]
+[12 <..//pictures/mendeley_train_bad.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -899,53 +977,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10] (./healthy_faulty_classification.aux)
+[13 <..//pictures/mendeley_train_final.pdf>]
+(./healthy_faulty_classification.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `healthy_faulty_classification.out' has ch
-anged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `healthy_faulty_classification.out':
-
-(rerunfilecheck)             Before: 8C1B8BC587AB970D9733108292B6E75F;778
-(rerunfilecheck)             After:  3A6C7B32590844BF289D2633C9032528;934.
+Package rerunfilecheck Info: File `healthy_faulty_classification.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: 087A1046D040EA9ED81F9AD547376F10;1088.
  ) 
 Here is how much of TeX's memory you used:
- 13136 strings out of 479304
- 197002 string characters out of 5869780
- 554017 words of memory out of 5000000
- 29998 multiletter control sequences out of 15000+600000
+ 13183 strings out of 479304
+ 198680 string characters out of 5869780
+ 561675 words of memory out of 5000000
+ 30032 multiletter control sequences out of 15000+600000
  416038 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,11n,120p,1139b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.1.3.2} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on healthy_faulty_classification.pdf (10 pages, 22243360 bytes).
+ 116i,12n,120p,1259b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfrm1095.pfb>
+Output written on healthy_faulty_classification.pdf (13 pages, 25420996 bytes).
 
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 38 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

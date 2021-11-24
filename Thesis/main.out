@@ -30,10 +30,14 @@
 \BOOKMARK [2][-]{subsection.5.2.1}{Simulation Environment}{section.5.2}% 30
 \BOOKMARK [2][-]{subsection.5.2.2}{Datasets}{section.5.2}% 31
 \BOOKMARK [2][-]{subsection.5.2.3}{Baseline Classification Approach}{section.5.2}% 32
-\BOOKMARK [1][-]{section.5.3}{Mendelay Data}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.3.1}{Dataset Structure}{section.5.3}% 34
-\BOOKMARK [2][-]{subsection.5.3.2}{Mendeley Classification}{section.5.3}% 35
-\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 36
-\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 37
-\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 38
-\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.5.2.4}{Complex Spectrogram Classification}{section.5.2}% 33
+\BOOKMARK [1][-]{section.5.3}{Bonfiglioli - Results}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.3.1}{Multiclass Classification}{section.5.3}% 35
+\BOOKMARK [2][-]{subsection.5.3.2}{Class Activation Maps}{section.5.3}% 36
+\BOOKMARK [1][-]{section.5.4}{Mendelay Data}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.4.1}{Dataset Structure}{section.5.4}% 38
+\BOOKMARK [2][-]{subsection.5.4.2}{Mendeley Classification}{section.5.4}% 39
+\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 40
+\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 43

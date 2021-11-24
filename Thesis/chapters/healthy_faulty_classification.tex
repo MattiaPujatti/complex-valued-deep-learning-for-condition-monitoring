@@ -133,12 +133,112 @@ With respect to the procedure we are going to implement, this is much more effic
 
 \subsection{Complex Spectrogram Classification}
 
-As anticipated, the approach we decided to follow is slightly different. In sound classification tasks, the advantage provided by convolutional neural networks has been widely demonstrated, in recent years. 
+As anticipated, the approach we decided to follow is slightly different. In sound classification tasks, the advantage provided by convolutional neural networks has been widely demonstrated, in recent years, providing a valid alternative to the standard procedure of exploiting high-level features (like MFCCs) \cite{}.\\
+In our implementation, we first split the data acquisitions into signals of fixed length: we found that a window of 1.0 second was representing a nice tradeoff between dataset size and resolution, preserving, at the same time, the eventual periodicity of the wave. We then proceed computing, for each signal in the dataset, the corresponding \textbf{complex spectrogram} (essentially a STFT), i.e. a plot associating amplitude and phase in a coordinate system that foresees the time on the horizontal axis and the frequency in the vertical one. In the end, instead of losing all the phase information considering the power spectrum, we keep the complex data and exploit the new complex-valued deep learning framework we have just developed. Complex convolutional networks, in particular, seems to suggests that a model sensitive to the phase structure could provide very nice results.\\
+From a practical perspective, the spectrogram extraction step was preformed using the corresponding functions provided by \texttt{Torchaudio} (and based on \texttt{librosa}): we believe that their implementation is better, at least for classification purposes, with respect to its alternative that relies on \texttt{scipy}, mainly because of efficiency and normalizations reasons.\\
+The main difficulty in this implementation consists into finding a proper resolution, both in time and frequency, for the signal to effectively point out its discriminative characteristics: we found that, for a 1 second long vibration, setting the \texttt{n\_fft} parameter to 300 and leaving the other to their default values was guaranteeing nice results. As a general rule, however, we feel to empirically suggest that a nice combination of parameters is the one creating a spectrogram that is square, or at most rectangular with longer time dimension, since, apparently, these cases were the ones behaving better with our models.\\
+In figure \ref{fig:example_bonf_spectrum} we left an example of the data we are going to classify. Since complex data are quite difficult to plot, we relied on a modified "colorize" function, that inherits from \texttt{mpmath} a mapping from the polar representation $(m, \theta)$ of complex numbers to triplets of colors in the \texttt{hls} representation. We know that the result is not very good aesthetically, but that's what we could achieve in continuity with amplitude and phase spectra.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/example_bonfiglioli_spectrum}
+	\caption{Example of spectrograms derived from a signal in the Bonfiglioli dataset. For completeness, we represented also the power spectrum (right) and the phase spectrum (center). The leftmost one is instead our representation of the complex spectrum.}
+	\label{fig:example_bonfiglioli_spectrum}
+\end{figure}
 
 
 \section{Bonfiglioli - Results}
 
+Before presenting the effective results of this classification task, a couple of words should be spent presenting the analysis setup. As for the PhaseMNIST dataset \ref{}, we decided to employ two different networks: a purely complex-valued architecture and its corresponding real-valued counterpart, that treats real and imaginary parts of the input as two independent channels and, for this reason, has twice the trainable parameters of the first. Those architectures are based on the canonical forms of \href{https://en.wikipedia.org/wiki/AlexNet}{Alexnet} and \href{https://medium.com/@mygreatlearning/what-is-vgg16-introduction-to-vgg16-f2d63849f615}{VGG16}, with a few convolutional layers stacked on top of a multi-layer perceptron. In figure \ref{} we can visualize the models we have effectively used. It is interesting to notice that the networks are quite small (\ref{} and \ref{} parameters, respectively), and the reason is that ...
 
+Also, an important role is covered by the $3\times 3$ average pooling layers, that are fundamental to reduce the dimensionality of the inputs. However, the only important difference among the complex and the real architectures, beyond the data type employed, is the activation function: \texttt{cardioid} for the first and ordinary \texttt{ReLU} for the second one.\\
+Regarding the training setup, we followed a quite ordinary approach: since this is a classification problem we relied on the \textbf{crossentropy} (on the output's magnitude) as loss function and on the \textbf{categorical accuracy} to evaluate the performances of a model. The optimizer is a complex-valued version of \texttt{Adam} with an exponentially decaying learning rate (to improve the convergence at the beginning and the precision in the late) following the rule $lr(x) = 10^{-2}*(0.9)^{(x/100)}$. No further data preprocessing was needed (especially because spectrograms are already normalized) and labels were one-hot encoded. We used a $75\%-25\%$ splitting to determine training and test sets.\\
+The first results the we want to present are the classification scores obtained over the datasets listed in table \ref{tab:bonfiglioli_summary}. For all of them we extracted the vibration signals measured by the accelerometers installed on the engines, that are divided into two classes, "healthy" (label 0) and "faulty" (label 1), depending on the axis they belonged to. Recall, also, that for some of them (basically all but 4\_2 and 6\_3) we could use two signals (motor and multiplier) rather then just one (motor only): in order to verify that the classification could effectively benefit of multiplier vibrations, for those datasets we repeated the analysis twice, one with and one without this kind of measurements. We then proceed extracting the complex spectrograms from those signals: setting the segmentation window to 1.0 second and the parameter \texttt{n\_fft} to 300, we obtain a dataset of images of dimension $(1,151,171)$ (just like the ones in figure \ref{fig:example_bonfiglioli_spectrum}). In the cases with the multiplier, we simply consider the two spectrograms as two independent channels of the same image: in this way, the inputs will have shape $(2,151,171)$.\\
+In table \ref{tab:bonfigloli_ds_results} we summarized the accuracy and loss obtained for all the single datasets provided by Bonfiglioli, via binary classification for 100 epochs.
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c | c c c c c}
+		\toprule
+		\textbf{Dataset} & \textbf{Samples} & \textbf{Fault type} & \textbf{Accuracy ($\%$)} & \textbf{Loss $(\cdot 10^{-3})$} \\
+		\midrule
+		4\_2           & 3508 & Unbalance & 100 - 100 & 0.52 - 0.14 \\
+		5\_3           & 100  & Bearing   &  \\
+		5\_3 w/ multi  & 6071 & Bearing   & 99.74 - 99.80 & 7.398 - 5.014 \\
+		6\_3\_1        & 700  & Bearing   & 96.17 - 100 & 106.924 - 0.18 \\
+		6\_3\_2        & 2102 & Bearing   & 100 - 100 & 0.008 - 0.004 \\
+		10\_1          & 100 & Solar     &   \\
+		10\_1 w/ multi & 5966 & Solar     & 99.41 - 99.48 & 7.638 - 6.710 \\
+		10\_4 		   & 100 & Solar     &  \\
+		10\_4 w/ multi & 5979 & Solar     & 99.04 - 100 & 11.538 - 5.142  \\
+		11\_1      	   & 100 & Bearing   &  \\
+		11\_1 w/ multi & 3744 & Bearing   & 100 - 100 & 0.028 - 0.001 \\
+		13\_1          & 100 & Pinion    &  \\
+		13\_1 w/ multi & 3750 & Pinion    & 100 - 100 & 0.007 - 0.001 \\
+		15\_1          & 100 & Crown     &  \\
+		15\_1 w/ multi & 1498 & Crown     & 100 - 100 & 2.025 - 0.039 \\
+		15\_2          & 100 & Crown     &   \\
+		15\_2 w/ multi & 100 & Crown     &  \\
+		\bottomrule
+	\end{tabular}
+	\caption{Binary classification of single Bonfiglioli datasets.}
+	\label{tab:bonfigloli_ds_results}
+\end{table}
+
+
+% MAYBE IS FAULT OF POOR CORRELATION
+% WHEN MULTICLASS REMEMBER TO CREATE PROPORTIONAL SETS
+
+
+\subsection{Multiclass Classification}
+
+After performing all the binary classification tasks on the single datasets provided, is time to verify if our model are effectively able to distinguish also among different types of fault.\\
+We setup, then, a multiclass classification problem, with 6 possible labels: \textit{healthy}, \textit{unbalance}, \textit{bearing}, \textit{solar}, \textit{pinion}, \textit{crown}. In order to have a properly balanced dataset, with all those classes being equally represented, and also to reduce the memory complexity of this task, we decided to adopt only one cycle of measurements for each dataset considered, i.e. instead of taking all the 120h of 4\_2 we took only the first 24h. And this is a reasonable solution to guarantee equilibrium in the distribution of labels, given the heterogeneous collections of data provided. The equity, in reality, is not total: each dataset is composed by one half of healthy signals, and so this class will be represented, in the final distribution, five times more respect to the others. We could have bypassed this problem simply by taking subsets of healthy data every time, but, apparently, the results have not been affected so much, and so we left the proportions as they were. In the end this "comprehensive" dataset is constituted by 4612 samples (complex spectrogram). \\
+Back to the classification, the training setup and the architectures are essentially the same as before: the only difference is that now we have 6 different classes, and so the last layer of both networks should then have 6 units rather than 2.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/bonfiglioli_onecycle_results}
+	\caption{Training loops of real and complex-valued models for the Bonfiglioli multiclass classification problem.}
+	\label{fig:bonfiglioli_onecycle_results}
+\end{figure}
+In figure \ref{fig:bonfiglioli_onecycle_results} we can observe and analyze the training loops' scores of both the real and the complex-valued models over this comprehensive dataset. Differently from the situations before, this time it seems that something emerged. The first contrast that comes to our eyes is of course the stability: for the complex network we see the train and validation losses properly converging together, while, the real case, especially for the test line, is characterized by a lot of fluctuations. In the end, however, we see that the final performances are not so different: in table \ref{} we reported a few statistical estimators of the results, while in figure \ref{fig:bonfiglioli_onecycle_confmat} we can check the confusion matrices of both models.
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c | c c c c}
+		\toprule
+		 & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1Score} \\
+		 \midrule
+		\textbf{Healthy}   & 0.986 - 0.990 & 1.000 - 0.988 & 0.973 - 0.992 & 0.987 - 0.990\\
+		\textbf{Unbalance} & 0.991 - 0.999 & 0.900 - 0.989 & 1.000 - 1.000 & 0.947 - 0.994\\
+		\textbf{Solar}     & 0.997 - 0.994 & 1.000 - 0.954 & 0.979 - 1.000 & 0.990 - 0.977\\
+		\textbf{Bearing}   & 0.992 - 0.997 & 0.941 - 1.000 & 1.000 - 0.972 & 0.969 - 0.986\\
+		\textbf{Pinion}    & 1.000 - 0.997 & 1.000 - 1.000 & 1.000 - 0.964 & 1.000 - 0.982\\
+		\textbf{Crown}     & 1.000 - 0.997 & 1.000 - 1.000 & 1.000 - 0.966 & 1.000 - 0.983\\
+		\bottomrule	
+	\end{tabular}
+	\caption{Statistical estimators of the Bonfiglioli analysis.}
+\end{table}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/bonfiglioli_onecycle_confmat}
+	\caption{Confusion matrices of the Bonfiglioli multiclass classification problem.}
+	\label{fig:bonfiglioli_onecycle_confmat}
+\end{figure}
+Just like before, we are nearby the perfect classification, with all the statistics almost reaching saturation. For this reason we believe that in this kind of situations, a qualitative analysis of the process' stability can be the better discriminator among two equivalent approaches.
+
+\subsection{Class Activation Maps}
+
+% help reducing parameters because you remove all fully connected
+
+In the section above we were struggling because we couldn't 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/bonfiglioli_CAM_images}
+	\caption{text}
+	\label{fig:bonfiglioli_CAM_images}	
+\end{figure}
+
+
+\newpage
 \section{Mendelay Data}
 
 The last dataset we are going to analyze for this chapter is the Mendeley Dataset \cite{mendeley_dataset}: a collection of vibration signals collected from bearings with different health conditions and under different time-varying speed conditions. The problem is again an healthy-faulty classification task with two different "bad" classes: faulty with an inner race defect and faulty with an outer race defect. \\
