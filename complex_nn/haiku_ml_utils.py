@@ -25,7 +25,7 @@ def initialize_CAM_model(model, init_shape, data_type='complex64', rng_seed=42, 
 
     def forward_pass(x, is_training, return_blobs=False):
         net = model(**model_kwargs)
-        return net(x, is_training)
+        return net(x, is_training, return_blobs)
 
     key = jax.random.PRNGKey( rng_seed )
 

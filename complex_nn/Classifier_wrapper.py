@@ -270,8 +270,8 @@ class Haiku_Classifier:
                 log_val_acc.append(batch_accuracy)
             
 
-            print('Average loss of the set: {:.3f}'.format(np.mean(log_val_loss)))
-            print('Average accuracy over the set: {:.2f}%'.format(np.mean(log_val_acc)*100))
+            print('Average loss of the set: {:.6f}'.format(np.mean(log_val_loss)))
+            print('Average accuracy over the set: {:.6f}%'.format(np.mean(log_val_acc)*100))
             
         
 
@@ -354,6 +354,7 @@ class Haiku_Classifier:
                       class_path,
                       model_path,
                       init_dataloader,
+                      custom_init: Callable = None,
                       **model_kwargs
     ):
         """Load an instance of the whole class and all its attributes.
@@ -379,7 +380,13 @@ class Haiku_Classifier:
 
         # Re-initialize the network
         batch_shape = next(iter(init_dataloader))[0].shape
-        network, _, _ = initialize_cmplx_haiku_model(model, batch_shape, **model_kwargs)
+
+        if custom_init is not None:
+            network, _, _ = custom_init(model, batch_shape, **model_kwargs)
+        else:
+            network, _, _ = initialize_cmplx_haiku_model(model, batch_shape, **model_kwargs)
+            
+        
         self.__network = network
             
 
