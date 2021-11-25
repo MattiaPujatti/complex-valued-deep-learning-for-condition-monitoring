@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  19 NOV 2021 18:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  25 NOV 2021 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,11 +756,12 @@ LaTeX Warning: Citation `Hualiang_nonlinear' on page 4 undefined on input line
 LaTeX Warning: Reference `app:cmplx_optim' on page 4 undefined on input line 71
 .
 
-<example-image-a.pdf, id=78, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 80.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<..//pictures/cmplx_gradient_descent.pdf, id=78, 1156.32pt x 505.89pt>
+File: ..//pictures/cmplx_gradient_descent.pdf Graphic file (type pdf)
+<use ..//pictures/cmplx_gradient_descent.pdf>
+Package pdftex.def Info: ..//pictures/cmplx_gradient_descent.pdf  used on input
+ line 80.
+(pdftex.def)             Requested size: 483.69687pt x 211.61551pt.
 
 Overfull \hbox (21.2961pt too wide) detected at line 104
 [] \OT1/cmr/m/n/10.95 = [][] + [][]
@@ -810,8 +811,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image-a.pdf> <..//pictu
-res/pass_cmplx_layer.pdf>]
+[4 <..//pictures/cmplx_gradient_descent.pdf>]
 
 LaTeX Warning: Reference `subsec:cmplx_multiplication' on page 5 undefined on i
 nput line 129.
@@ -838,12 +838,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5]
+[5 <..//pictures/pass_cmplx_layer.pdf>]
 
 LaTeX Warning: Citation `trabelsi2018deep' on page 6 undefined on input line 14
 7.
 
-<..//pictures/complex_convolution.pdf, id=120, 199.56155pt x 251.21053pt>
+<..//pictures/complex_convolution.pdf, id=162, 199.56155pt x 251.21053pt>
 File: ..//pictures/complex_convolution.pdf Graphic file (type pdf)
 <use ..//pictures/complex_convolution.pdf>
 Package pdftex.def Info: ..//pictures/complex_convolution.pdf  used on input li
@@ -858,13 +858,6 @@ LaTeX Warning: Citation `trabelsi2018deep' on page 6 undefined on input line 15
 2.
 
 
-LaTeX Warning: Citation `trabelsi2018deep' on page 6 undefined on input line 17
-0.
-
-
-LaTeX Warning: Reference `' on page 6 undefined on input line 170.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -874,8 +867,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Citation `cogswell2016reducing' on page 7 undefined on input lin
-e 177.
+LaTeX Warning: Citation `trabelsi2018deep' on page 7 undefined on input line 17
+0.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 170.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -886,6 +886,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7 <..//pictures/complex_convolution.pdf>]
+
+LaTeX Warning: Citation `cogswell2016reducing' on page 8 undefined on input lin
+e 177.
+
 
 LaTeX Warning: Reference `th:Liouville' on page 8 undefined on input line 186.
 
@@ -919,40 +923,40 @@ Overfull \hbox (2.51306pt too wide) in paragraph at lines 222--225
 
 
 LaTeX Warning: Citation `Nitta_complexBP' on page 10 undefined on input line 23
-9.
+7.
 
 
-LaTeX Warning: Citation `Nitta_complexBP' on page 10 undefined on input line 24
-0.
+LaTeX Warning: Citation `Nitta_complexBP' on page 10 undefined on input line 23
+8.
 
 
 LaTeX Warning: Citation `trabelsi2018deep' on page 10 undefined on input line 2
-41.
+39.
 
 
 LaTeX Warning: Citation `guberman2016complex' on page 10 undefined on input lin
-e 242.
+e 240.
 
 
 LaTeX Warning: Citation `Koutsougeras_siglog' on page 10 undefined on input lin
-e 243.
+e 241.
+
+
+LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 10 undefined on input li
+ne 242.
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/ArjovskySB15' on page 10 undefined 
+on input line 243.
 
 
 LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 10 undefined on input li
 ne 244.
 
-
-LaTeX Warning: Citation `DBLP:journals/corr/ArjovskySB15' on page 10 undefined 
-on input line 245.
-
-
-LaTeX Warning: Citation `Virtue:EECS-2019-126' on page 10 undefined on input li
-ne 246.
-
-<..//pictures/JAX_logo.pdf, id=170, 639.38875pt x 406.51875pt>
+<..//pictures/JAX_logo.pdf, id=211, 639.38875pt x 406.51875pt>
 File: ..//pictures/JAX_logo.pdf Graphic file (type pdf)
 <use ..//pictures/JAX_logo.pdf>
-Package pdftex.def Info: ..//pictures/JAX_logo.pdf  used on input line 259.
+Package pdftex.def Info: ..//pictures/JAX_logo.pdf  used on input line 257.
 (pdftex.def)             Requested size: 241.84843pt x 153.76538pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -963,7 +967,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10]
-Overfull \hbox (2.60356pt too wide) in paragraph at lines 266--267
+Overfull \hbox (2.60356pt too wide) in paragraph at lines 264--265
 []\OT1/cmr/m/n/10.95 many com-plex op-er-a-tions/lay-ers are al-ready
  []
 
@@ -992,13 +996,13 @@ Package rerunfilecheck Info: File `extent.out' has not changed.
 (rerunfilecheck)             Checksum: 69418383BC20A3C5ADE2D66D57B72767;594.
  ) 
 Here is how much of TeX's memory you used:
- 13145 strings out of 479304
- 195657 string characters out of 5869780
- 554506 words of memory out of 5000000
+ 13144 strings out of 479304
+ 195765 string characters out of 5869780
+ 553506 words of memory out of 5000000
  29997 multiletter control sequences out of 15000+600000
  416756 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,16n,120p,1221b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,16n,120p,1221b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -1018,14 +1022,13 @@ e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestr
 oke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/
-dsrom8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm1095.pfb>
-Output written on extent.pdf (12 pages, 915650 bytes).
+dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on extent.pdf (12 pages, 972430 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

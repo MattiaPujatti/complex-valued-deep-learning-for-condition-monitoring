@@ -84,6 +84,14 @@ S.~Lee, H.~yu, H.~Yang, I.~Song, J.~Choi, J.~Yang, G.~Lim, K.-S. Kim, B.~Choi,
   visualization of defects for predictive maintenance of gravity acceleration
   equipment,'' {\em Applied Sciences}, vol.~11, p.~1564, 02 2021.
 
+\bibitem{network_in_network}
+M.~Lin, Q.~Chen, and S.~Yan, ``Network in network,'' 2014.
+
+\bibitem{class_activation_maps}
+B.~Zhou, A.~Khosla, A.~Lapedriza, A.~Oliva, and A.~Torralba, ``Learning deep
+  features for discriminative localization,'' {\em CoRR}, vol.~abs/1512.04150,
+  2015.
+
 \bibitem{mendeley_dataset}
 H.~Huang and N.~Baddour, ``Bearing vibration data collected under time-varying
   rotational speed conditions,'' {\em Data in Brief}, vol.~21, pp.~1745--1749,
@@ -143,5 +151,8 @@ N.~Schlömer, ``cplot: Plot complex functions,'' Nov. 2021.
 \bibitem{Farris_visual_complex_analysis}
 T.~Farris, Frank A.;~Needham, ``Visual complex analysis.,'' {\em American
   Mathematical Monthly vol. 105 iss. 6}, vol.~105, jun 1998.
+
+\bibitem{Schlomer_cplot_Plot_complex}
+N.~Schlömer, ``{cplot: Plot complex functions}.''
 
 \end{thebibliography}

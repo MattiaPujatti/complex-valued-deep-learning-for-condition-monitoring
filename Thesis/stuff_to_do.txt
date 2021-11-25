@@ -5,25 +5,11 @@ write thesis organization
 
 in appendix check if proof is fine or prefer changing it
 
-in "extent" add images gradient descent
-add plot most important activation functions / diverging sigmoid / real restriction of cardioid to relu
-maybe add appendix with all plot of activation functions (+explain library cplot)
+in "extent" 
+add plot  / diverging sigmoid / real restriction of cardioid to relu
+
 
 test stability on several datasets: * bad networks
 				    * no regularization
 				 
-for Bonfiglioli: 
-* compare different faults
-* analysis of all dataset
-* global average pooling?
-* study feature maps / weights?
 
-matrix of results:
-- real/complex accuracy on all 120h datasets taken alone
-- performances on all and all w multiplier signal
-
-stats analysis (on all):
-- confusion matrix
-- fpr, tpr, roc curve?
-- accuracy vs precision vs recall
-- CAM and fault score?

@@ -77,7 +77,7 @@ where $\alpha\in\mathds{R}$ is the learning rate.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.5]{example-image-a}
+	\includegraphics[width=\textwidth]{pictures/cmplx_gradient_descent}
 	\caption{Complex Gradient Descent.}
 	\label{fig:cmplx_gradient_descent}
 \end{figure}
@@ -183,6 +183,8 @@ In simple \texttt{Complex Normalization} we scales a complex scalar input $\vb{z
 There are many layers that do not need any further re-definition to work also in the complex domain: \texttt{Dropout}, Pad or Attention layer, for example. There are also many other structures that should be re-derived (e.g Recurrent layers, LSTM, etc.), but that were out of our scope and so we haven't examined. This should be interpreted just as a starting point in the development of an higher level complex-valued deep learning framework.
 
 \section{Complex-Valued Activation Functions}
+\label{sec:cmplx_activations}
+
 One of the main issues encountered in the last 30 years in the developing of a complex-valued deep learning framework was exactly the definition of reliable activation functions. The extension from the real-valued domain turned out to be quite challenging: because of the Liouville's theorem \ref{th:Liouville}, in fact, stating that the only complex-valued functions that are bounded and analytic everywhere are constants, one have necessarily to choose between boundedness and analyticity, in the design of those activations. Furthermore, before the introduction of ReLU, almost all the activation functions known in the real case were bounded. And for the same ReLU the extent was not trivial, since operations like \textit{max} are not defined in the complex domain, Additionally, with complex-valued outputs, we have lost the probabilistic interpretations that functions like \texttt{sigmoid} and \texttt{softmax} used to provide.\\
 We have to say, however, that most of the candidate functions that have been proposed, have been developed in a split fashion, i.e. by considering the real and imaginary parts of the activation separately. But, as discussed also in the previous chapter, this approach should be abandoned, since you risk losing the complex correlations stored in those variables.\\
 In this section, we will explore a few complex-valued activations proposed during the years: first with the ones that are direct extensions of their real counterparts, and then with more "abstract" candidates, that have more reasons to live and work in the complex domain.
@@ -226,8 +228,6 @@ The analytical expression for this activation function is:
 Another very nice property is that when the inputs are restricted to real values, this function becomes simply the ReLU activation.\\
 We will see, in our applications, that the cardioid effectively allows complex networks to converge in a fast and also stable way.
 
-\subsection*{A brief recap}
-
 \begin{table}[!ht]
 \centering
 \begin{tabular}{c c c}
@@ -246,7 +246,7 @@ modReLU & $ReLU(\norm{z} + b)e^{i\theta_z}$ & \cite{DBLP:journals/corr/ArjovskyS
 Cardioid & $\frac{1}{2}\left(1 + \cos(\angle z)\right)z$ & \cite{Virtue:EECS-2019-126}\\
 \bottomrule
 \end{tabular}
-\caption{Recal of the most popular complex-valued activation functions.}
+\caption{Recap of the most popular complex-valued activation functions.}
 \label{tab:cmplx_activations}
 \end{table}
 

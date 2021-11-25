@@ -78,9 +78,24 @@ Thus, the gradient optimization of $g$ should use the update rule
 as this form leads to a non-positive increment given by $\Delta g = -2\alpha\norm{\nabla_{\vb{\bar{z}}}}^2$, while the same rule but exploiting the other gradient would result in an update of $\Delta g = -2\alpha\Re\left\{\langle\nabla_{\vb{\bar{z}}}g, \nabla_{\vb{z}}g\right\}$, which are not guaranteed to be non-positive.
 
 
+\chapter{Activation Functions in the Complex Domain}
+\label{app:activations}
+
+This appendix has been realized in order to give a visual overview of the complex-valued activation functions discussed in section \ref{sec:cmplx_activations}.\\
+However, providing a complex representation of a function with values in $\mathds{C}$ is a quite challenging task, but we managed to do it thanks to a library called \texttt{cplot} \cite{Schlomer_cplot_Plot_complex}.\\
+This library basically combines the three "historical" ways to plot complex functions:
+\begin{itemize}
+	\item showing only the absolute value, eventually with a 3D plot;
+	\item showing only the phase/argument in a color wheel;
+	\item showing contour lines for both modulus and arguments.
+\end{itemize}
+
+By default, \texttt{cplot}, in fact, uses a perceptually uniform color space for the arguments: from green $(\theta=0)$ to blue $(\theta=\pi/2)$ and from orange $(\theta=-\pi/2)$ to pink $(\theta=\pi)$. The modulus, instead, follows a gray scale: from the darker areas $(m\to 0)$ to the lighter ones $(m\to\infty)$. All of this is combined with a contour that emphasize the region with modulus 1.\\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{pictures/cmplx_activations}
+\end{figure}
 
 
-
-
-	
 \end{document}
