@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  20 NOV 2021 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  27 NOV 2021 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,50 +652,132 @@ LaTeX Info: Redefining \nameref on input line 5.
 
 Chapter 1.
 
-LaTeX Warning: Reference `sec:circularity' on page 1 undefined on input line 15
-.
+LaTeX Warning: Citation `ziller2021complexvalued' on page 1 undefined on input 
+line 15.
 
-
-LaTeX Warning: Citation `barrachina2021complexvalued' on page 1 undefined on in
-put line 15.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
+5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+<..//pictures/phasemnist_example.pdf, id=17, 1042.85606pt x 300.64319pt>
+File: ..//pictures/phasemnist_example.pdf Graphic file (type pdf)
+<use ..//pictures/phasemnist_example.pdf>
+Package pdftex.def Info: ..//pictures/phasemnist_example.pdf  used on input lin
+e 18.
+(pdftex.def)             Requested size: 483.69687pt x 139.4444pt.
+<example-image-a.pdf, id=19, 321.2pt x 240.9pt>
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 31.
+(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<..//pictures/phasemnist_200.pdf, id=21, 1156.32pt x 361.35pt>
+File: ..//pictures/phasemnist_200.pdf Graphic file (type pdf)
+<use ..//pictures/phasemnist_200.pdf>
+Package pdftex.def Info: ..//pictures/phasemnist_200.pdf  used on input line 39
+.
+(pdftex.def)             Requested size: 483.69687pt x 151.15393pt.
+ [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<..//pictures/circ_class_example.pdf, id=34, 902.16425pt x 350.0732pt>
+
+LaTeX Warning: Reference `subsec:linear_layers' on page 2 undefined on input li
+ne 48.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2 <..//pictures/phasemnist_example.pdf> </usr/share/texlive/texmf-dist/tex/lat
+ex/mwe/example-image-a.pdf>]
+
+LaTeX Warning: Reference `subsec:linear_layers' on page 3 undefined on input li
+ne 54.
+
+
+LaTeX Warning: Reference `subsec:linear_layers' on page 3 undefined on input li
+ne 55.
+
+<..//pictures/performance_winit.pdf, id=58, 1084.05pt x 722.7pt>
+File: ..//pictures/performance_winit.pdf Graphic file (type pdf)
+<use ..//pictures/performance_winit.pdf>
+Package pdftex.def Info: ..//pictures/performance_winit.pdf  used on input line
+ 59.
+(pdftex.def)             Requested size: 483.69687pt x 322.46614pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3 <..//pictures/phasemnist_200.pdf> <..//pictures/performance_winit.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/performance_winit.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `sec:cmplx_activations' on page 4 undefined on input l
+ine 70.
+
+
+LaTeX Warning: Reference `sec:circularity' on page 4 undefined on input line 75
+.
+
+
+LaTeX Warning: Citation `barrachina2021complexvalued' on page 4 undefined on in
+put line 75.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+<..//pictures/circ_class_example.pdf, id=168, 902.16425pt x 350.0732pt>
 File: ..//pictures/circ_class_example.pdf Graphic file (type pdf)
 <use ..//pictures/circ_class_example.pdf>
 Package pdftex.def Info: ..//pictures/circ_class_example.pdf  used on input lin
-e 33.
+e 93.
 (pdftex.def)             Requested size: 483.69687pt x 187.6906pt.
-<..//pictures/noncirc_results.pdf, id=37, 945.36328pt x 392.03116pt>
+<..//pictures/noncirc_results.pdf, id=171, 945.36328pt x 392.03116pt>
 File: ..//pictures/noncirc_results.pdf Graphic file (type pdf)
 <use ..//pictures/noncirc_results.pdf>
-Package pdftex.def Info: ..//pictures/noncirc_results.pdf  used on input line 5
-0.
+Package pdftex.def Info: ..//pictures/noncirc_results.pdf  used on input line 1
+10.
 (pdftex.def)             Requested size: 483.69687pt x 200.58527pt.
-<..//pictures/noncirc_comparison_final.pdf, id=39, 1203.12523pt x 350.4783pt>
+<..//pictures/noncirc_comparison_final.pdf, id=173, 1203.12523pt x 350.4783pt>
 File: ..//pictures/noncirc_comparison_final.pdf Graphic file (type pdf)
 <use ..//pictures/noncirc_comparison_final.pdf>
 Package pdftex.def Info: ..//pictures/noncirc_comparison_final.pdf  used on inp
-ut line 59.
+ut line 119.
 (pdftex.def)             Requested size: 483.69687pt x 140.90544pt.
 
 
@@ -706,7 +788,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[2 <..//pictures/circ_class_example.pdf>]
+[5 <..//pictures/circ_class_example.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -715,7 +797,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[3 <..//pictures/noncirc_results.pdf>]
+[6 <..//pictures/noncirc_results.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -724,21 +806,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4 <..//pictures/noncirc_comparison_final.pdf>] (./complex_vs_real.aux)
+[7 <..//pictures/noncirc_comparison_final.pdf>] (./complex_vs_real.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `complex_vs_real.out' has not changed.
-(rerunfilecheck)             Checksum: C634B7664671336F16167E9F856CEA9A;212.
+(rerunfilecheck)             Checksum: D72B3D2D2225C0619C506F0D072C784D;247.
  ) 
 Here is how much of TeX's memory you used:
- 13018 strings out of 479304
- 193816 string characters out of 5869780
- 551259 words of memory out of 5000000
- 29922 multiletter control sequences out of 15000+600000
- 412211 words of font info for 60 fonts, out of 8000000 for 9000
+ 13077 strings out of 479304
+ 195305 string characters out of 5869780
+ 551696 words of memory out of 5000000
+ 29962 multiletter control sequences out of 15000+600000
+ 412667 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,11n,120p,1109b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,11n,120p,1122b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -754,12 +836,13 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1095.pfb>
-Output written on complex_vs_real.pdf (4 pages, 455468 bytes).
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+s17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on complex_vs_real.pdf (7 pages, 566291 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 14 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 60 words of extra memory for PDF output out of 10000 (max. 10000000)
 

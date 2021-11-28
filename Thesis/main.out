@@ -19,7 +19,7 @@
 \BOOKMARK [1][-]{section.3.4}{Complex-Valued Activation Functions}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.5}{JAX Implementation}{chapter.3}% 20
 \BOOKMARK [0][-]{chapter.4}{Complex-Valued vs Real Neural Networks}{part.1}% 21
-\BOOKMARK [1][-]{section.4.1}{Complex vs Real Models}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.1}{Implementation of a Complex-valued Classification Problem}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.2}{Impact of the Circularity}{chapter.4}% 23
 \BOOKMARK [-1][-]{part.2}{II Condition Monitoring}{}% 24
 \BOOKMARK [0][-]{chapter.5}{Healthy-Faulty Signal Classification}{part.2}% 25

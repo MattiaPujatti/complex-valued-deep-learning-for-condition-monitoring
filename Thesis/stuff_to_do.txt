@@ -5,11 +5,4 @@ write thesis organization
 
 in appendix check if proof is fine or prefer changing it
 
-in "extent" 
-add plot  / diverging sigmoid / real restriction of cardioid to relu
-
-
-test stability on several datasets: * bad networks
-				    * no regularization
-				 
 

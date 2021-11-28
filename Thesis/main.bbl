@@ -37,6 +37,10 @@ J.~A. Barrachina, C.~Ren, C.~Morisseau, G.~Vieillard, and J.-P. Ovarlez,
   perspectives: An example on non-circular data.''
   \url{https://arxiv.org/abs/2009.08340v2}, 2021.
 
+\bibitem{circularity_geometric_interpretation}
+E.~Ollila, ``On the circularity of a complex random variable,'' {\em IEEE
+  Signal Processing Letters}, vol.~15, pp.~841--844, 2008.
+
 \bibitem{Virtue:EECS-2019-126}
 P.~Virtue, {\em Complex-valued Deep Learning with Applications to Magnetic
   Resonance Image Synthesis}.
@@ -78,6 +82,11 @@ G.~Georgiou and C.~Koutsougeras, ``Complex domain backpropagation,'' {\em IEEE
 M.~Arjovsky, A.~Shah, and Y.~Bengio, ``Unitary evolution recurrent neural
   networks,'' {\em CoRR}, vol.~abs/1511.06464, 2015.
 
+\bibitem{ziller2021complexvalued}
+A.~Ziller, D.~Usynin, M.~Knolle, K.~Hammernik, D.~Rueckert, and G.~Kaissis,
+  ``Complex-valued deep learning with differential privacy.''
+  \url{https://arxiv.org/abs/2110.03478}, 2021.
+
 \bibitem{deep_learning_vibration_gravity}
 S.~Lee, H.~yu, H.~Yang, I.~Song, J.~Choi, J.~Yang, G.~Lim, K.-S. Kim, B.~Choi,
   and J.~Kwon, ``A study on deep learning application of vibration data and
@@ -97,19 +106,10 @@ H.~Huang and N.~Baddour, ``Bearing vibration data collected under time-varying
   rotational speed conditions,'' {\em Data in Brief}, vol.~21, pp.~1745--1749,
   2018.
 
-\bibitem{ziller2021complexvalued}
-A.~Ziller, D.~Usynin, M.~Knolle, K.~Hammernik, D.~Rueckert, and G.~Kaissis,
-  ``Complex-valued deep learning with differential privacy.''
-  \url{https://arxiv.org/abs/2110.03478}, 2021.
-
 \bibitem{article}
 M.~Ragab, Z.~Chen, M.~Wu, H.~Li, C.-K. Kwoh, R.~Yan, and X.~li, ``Adversarial
   multiple-target domain adaptation for fault classification,'' {\em IEEE
   Transactions on Instrumentation and Measurement}, vol.~PP, pp.~1--1, 07 2020.
-
-\bibitem{4682548}
-E.~Ollila, ``On the circularity of a complex random variable,'' {\em IEEE
-  Signal Processing Letters}, vol.~15, pp.~841--844, 2008.
 
 \bibitem{virtue2017better}
 P.~Virtue, S.~X. Yu, and M.~Lustig, ``Better than real: Complex-valued neural

@@ -50,6 +50,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Other theorems}{xiii}{section.2.3}\protected@file@percent }
 \citation{Nitta_complexBP}
 \citation{barrachina2021complexvalued}
+\citation{circularity_geometric_interpretation}
 \newlabel{th:Liouville}{{2.3.1}{xiv}{}{theorem.2.3.1}{}}
 \newlabel{th:identity}{{2.3.2}{xiv}{}{theorem.2.3.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Circularity}{xiv}{section.2.4}\protected@file@percent }
@@ -99,6 +100,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Forward and backward pass through a complex layer. (source \cite  {Virtue:EECS-2019-126})\relax }}{xxiii}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:visual_cmplx_backpropagation}{{3.3}{xxiii}{Forward and backward pass through a complex layer. (source \cite {Virtue:EECS-2019-126})\relax }{figure.caption.17}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Re-definition of the main neural network layers}{xxiii}{section.3.3}\protected@file@percent }
+\newlabel{subsec:linear_layers}{{3.3}{xxiii}{Fully-Connected Layers}{section*.18}{}}
 \citation{trabelsi2018deep}
 \citation{trabelsi2018deep}
 \citation{trabelsi2018deep}
@@ -110,6 +112,8 @@
 \newlabel{eq:cmplx_batchnorm}{{3.3}{xxvi}{Normalization Layers}{equation.3.3.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxvi}{section.3.4}\protected@file@percent }
 \newlabel{sec:cmplx_activations}{{3.4}{xxvi}{Complex-Valued Activation Functions}{section.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Sigmoid activation function extended in the complex plane. The magnitude (left) goes to $\pm \infty $ at $i\pi (2N-1)$. These singularities may also be seen in the output phase (right).\relax }}{xxvii}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:cmplx_sigmoid}{{3.5}{xxvii}{Sigmoid activation function extended in the complex plane. The magnitude (left) goes to $\pm \infty $ at $i\pi (2N-1)$. These singularities may also be seen in the output phase (right).\relax }{figure.caption.25}{}}
 \citation{Virtue:EECS-2019-126}
 \citation{Nitta_complexBP}
 \citation{Nitta_complexBP}
@@ -119,82 +123,95 @@
 \citation{Virtue:EECS-2019-126}
 \citation{DBLP:journals/corr/ArjovskySB15}
 \citation{Virtue:EECS-2019-126}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}JAX Implementation}{xxviii}{section.3.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Recap of the most popular complex-valued activation functions.\relax }}{xxix}{table.caption.28}\protected@file@percent }
-\newlabel{tab:cmplx_activations}{{3.2}{xxix}{Recap of the most popular complex-valued activation functions.\relax }{table.caption.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces JAX logo.\relax }}{xxix}{figure.caption.29}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Complex cardioid activation function. The magnitude transformation of the cardioid shows that it is reduced to the ReLU on the real axis (right, orange line).\relax }}{xxix}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:cmplx_cardioid}{{3.6}{xxix}{Complex cardioid activation function. The magnitude transformation of the cardioid shows that it is reduced to the ReLU on the real axis (right, orange line).\relax }{figure.caption.29}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Recap of the most popular complex-valued activation functions.\relax }}{xxix}{table.caption.31}\protected@file@percent }
+\newlabel{tab:cmplx_activations}{{3.2}{xxix}{Recap of the most popular complex-valued activation functions.\relax }{table.caption.31}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}JAX Implementation}{xxix}{section.3.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces JAX logo.\relax }}{xxx}{figure.caption.32}\protected@file@percent }
+\citation{ziller2021complexvalued}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxiii}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Implementation of a Complex-valued Classification Problem}{xxxiii}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Sample from the \texttt  {PhaseMNIST} dataset.\relax }}{xxxiv}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:phasemnist_example}{{4.1}{xxxiv}{Sample from the \texttt {PhaseMNIST} dataset.\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Real and complex-valued models used to classify \texttt  {PhaseMNIST} samples.\relax }}{xxxiv}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:phasemnist_models}{{4.2}{xxxiv}{Real and complex-valued models used to classify \texttt {PhaseMNIST} samples.\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Performance comparison of real and complex-valued model over 200 samples from the \texttt  {PhaseMNIST} dataset.\relax }}{xxxv}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:phasemnist_200}{{4.3}{xxxv}{Performance comparison of real and complex-valued model over 200 samples from the \texttt {PhaseMNIST} dataset.\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Performance comparison of different weights initializations over the \texttt  {PhaseMNIST} dataset.\relax }}{xxxv}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:performance_winit}{{4.4}{xxxv}{Performance comparison of different weights initializations over the \texttt {PhaseMNIST} dataset.\relax }{figure.caption.38}{}}
 \citation{barrachina2021complexvalued}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxi}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Impact of the Circularity}{xxxvi}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Samples coming from a perfectly circular distribution (left) and from a non-circular one (right).\relax }}{xxxvii}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:circ_class_example}{{4.5}{xxxvii}{Samples coming from a perfectly circular distribution (left) and from a non-circular one (right).\relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Classification accuracy for real and complex-valued networks as function of different source of non-circularity.\relax }}{xxxviii}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:noncirc_results}{{4.6}{xxxviii}{Classification accuracy for real and complex-valued networks as function of different source of non-circularity.\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient. The third plot (right), instead, represents simply the differences among the first two.\relax }}{xxxix}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:noncirc_comparison_final}{{4.7}{xxxix}{Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient. The third plot (right), instead, represents simply the differences among the first two.\relax }{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Condition Monitoring}{xli}{part.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xliii}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Complex vs Real Models}{xxxi}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Impact of the Circularity}{xxxi}{section.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Samples coming from a perfectly circular distribution (left) and from a non-circular one (right).\relax }}{xxxii}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:circ_class_example}{{4.1}{xxxii}{Samples coming from a perfectly circular distribution (left) and from a non-circular one (right).\relax }{figure.caption.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Classification accuracy for real and complex-valued networks as function of different source of non-circularity.\relax }}{xxxiii}{figure.caption.34}\protected@file@percent }
-\newlabel{fig:noncirc_results}{{4.2}{xxxiii}{Classification accuracy for real and complex-valued networks as function of different source of non-circularity.\relax }{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient. The third plot (right), instead, represents simply the differences among the first two.\relax }}{xxxiv}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:noncirc_comparison_final}{{4.3}{xxxiv}{Comparison of the accuracy achieved by a complex-valued model (left) and its real equivalent counterpart (center) in distinguishing a perfectly circular distribution from a second one as function of its circularity quotient. The third plot (right), instead, represents simply the differences among the first two.\relax }{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Condition Monitoring}{xxxv}{part.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xxxvii}{chapter.5}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}State-of-the-Art}{xxxviii}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Baseline Machine Learning}{xxxviii}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}State-of-the-Art}{xliv}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Baseline Machine Learning}{xliv}{subsection.5.1.1}\protected@file@percent }
 \citation{deep_learning_vibration_gravity}
 \citation{deep_learning_vibration_gravity}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Study in the frequency domain}{xxxix}{subsection.5.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Representation of a vibration signal in the time domain (left), in the frequency domain via FFT (center) and with its power spectrum (right).\relax }}{xxxix}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:example_stft}{{5.1}{xxxix}{Representation of a vibration signal in the time domain (left), in the frequency domain via FFT (center) and with its power spectrum (right).\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Study in the frequency domain}{xlv}{subsection.5.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Representation of a vibration signal in the time domain (left), in the frequency domain via FFT (center) and with its power spectrum (right).\relax }}{xlv}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:example_stft}{{5.1}{xlv}{Representation of a vibration signal in the time domain (left), in the frequency domain via FFT (center) and with its power spectrum (right).\relax }{figure.caption.45}{}}
 \citation{deep_learning_vibration_gravity}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces State-of-the-art approaches for vibration data classification applied to predictive maintenance (source: \cite  {deep_learning_vibration_gravity}).\relax }}{xl}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:summary_hf_classification_methods}{{5.2}{xl}{State-of-the-art approaches for vibration data classification applied to predictive maintenance (source: \cite {deep_learning_vibration_gravity}).\relax }{figure.caption.37}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Bonfiglioli}{xl}{section.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Bonfiglioli logo.\relax }}{xl}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:bonfiglioli_logo}{{5.3}{xl}{Bonfiglioli logo.\relax }{figure.caption.38}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Simulation Environment}{xl}{subsection.5.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Schematic representation of the experimental workbench used by Bonfiglioli.\relax }}{xli}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:bonfiglioli_experimental_setup}{{5.4}{xli}{Schematic representation of the experimental workbench used by Bonfiglioli.\relax }{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Some of the faults simulated by Bonfiglioli on the mechanical components of the system.\relax }}{xli}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:example_bonfiglioli_faults}{{5.5}{xli}{Some of the faults simulated by Bonfiglioli on the mechanical components of the system.\relax }{figure.caption.40}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.\relax }}{xlii}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:bonfiglioli_example_working_cycle}{{5.6}{xlii}{Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.\relax }{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Datasets}{xlii}{subsection.5.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the main technical features of the datasets provided by Bonfiglioli and used in our analysis.\relax }}{xlii}{table.caption.42}\protected@file@percent }
-\newlabel{tab:bonfiglioli_summary}{{5.1}{xlii}{Summary of the main technical features of the datasets provided by Bonfiglioli and used in our analysis.\relax }{table.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces State-of-the-art approaches for vibration data classification applied to predictive maintenance (source: \cite  {deep_learning_vibration_gravity}).\relax }}{xlvi}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:summary_hf_classification_methods}{{5.2}{xlvi}{State-of-the-art approaches for vibration data classification applied to predictive maintenance (source: \cite {deep_learning_vibration_gravity}).\relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Bonfiglioli}{xlvi}{section.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Bonfiglioli logo.\relax }}{xlvi}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:bonfiglioli_logo}{{5.3}{xlvi}{Bonfiglioli logo.\relax }{figure.caption.47}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Simulation Environment}{xlvi}{subsection.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Schematic representation of the experimental workbench used by Bonfiglioli.\relax }}{xlvii}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:bonfiglioli_experimental_setup}{{5.4}{xlvii}{Schematic representation of the experimental workbench used by Bonfiglioli.\relax }{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Some of the faults simulated by Bonfiglioli on the mechanical components of the system.\relax }}{xlvii}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:example_bonfiglioli_faults}{{5.5}{xlvii}{Some of the faults simulated by Bonfiglioli on the mechanical components of the system.\relax }{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.\relax }}{xlviii}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:bonfiglioli_example_working_cycle}{{5.6}{xlviii}{Example of working cycle (from Prova-5) of the Bonfiglioli experimental setup.\relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Datasets}{xlviii}{subsection.5.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the main technical features of the datasets provided by Bonfiglioli and used in our analysis.\relax }}{xlviii}{table.caption.51}\protected@file@percent }
+\newlabel{tab:bonfiglioli_summary}{{5.1}{xlviii}{Summary of the main technical features of the datasets provided by Bonfiglioli and used in our analysis.\relax }{table.caption.51}{}}
 \citation{}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xliii}{subsection.5.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Complex Spectrogram Classification}{xliii}{subsection.5.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Example of spectrograms derived from a signal in the Bonfiglioli dataset. For completeness, we represented also the power spectrum (right) and the phase spectrum (center). The leftmost one is instead our representation of the complex spectrum.\relax }}{xliv}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:example_bonfiglioli_spectrum}{{5.7}{xliv}{Example of spectrograms derived from a signal in the Bonfiglioli dataset. For completeness, we represented also the power spectrum (right) and the phase spectrum (center). The leftmost one is instead our representation of the complex spectrum.\relax }{figure.caption.43}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Bonfiglioli - Results}{xliv}{section.5.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Binary classification of single Bonfiglioli datasets (real - complex).\relax }}{xlv}{table.caption.44}\protected@file@percent }
-\newlabel{tab:bonfigloli_ds_results}{{5.2}{xlv}{Binary classification of single Bonfiglioli datasets (real - complex).\relax }{table.caption.44}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Multiclass Classification}{xlv}{subsection.5.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Training loops of real and complex-valued models for the Bonfiglioli multiclass classification problem.\relax }}{xlv}{figure.caption.45}\protected@file@percent }
-\newlabel{fig:bonfiglioli_onecycle_results}{{5.8}{xlv}{Training loops of real and complex-valued models for the Bonfiglioli multiclass classification problem.\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xlix}{subsection.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Complex Spectrogram Classification}{xlix}{subsection.5.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Example of spectrograms derived from a signal in the Bonfiglioli dataset. For completeness, we represented also the power spectrum (right) and the phase spectrum (center). The leftmost one is instead our representation of the complex spectrum.\relax }}{l}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:example_bonfiglioli_spectrum}{{5.7}{l}{Example of spectrograms derived from a signal in the Bonfiglioli dataset. For completeness, we represented also the power spectrum (right) and the phase spectrum (center). The leftmost one is instead our representation of the complex spectrum.\relax }{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Bonfiglioli - Results}{l}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Complex and real-valued architecture implemented for the Bonfiglioli classification problem.\relax }}{l}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:bonfiglioli_architectures}{{5.8}{l}{Complex and real-valued architecture implemented for the Bonfiglioli classification problem.\relax }{figure.caption.53}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Binary classification of single Bonfiglioli datasets (real - complex).\relax }}{li}{table.caption.54}\protected@file@percent }
+\newlabel{tab:bonfigloli_ds_results}{{5.2}{li}{Binary classification of single Bonfiglioli datasets (real - complex).\relax }{table.caption.54}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Multiclass Classification}{li}{subsection.5.3.1}\protected@file@percent }
 \citation{network_in_network}
 \citation{class_activation_maps}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Statistical estimators of the Bonfiglioli analysis (real - complex).\relax }}{xlvi}{table.caption.46}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Confusion matrices of the Bonfiglioli multiclass classification problem.\relax }}{xlvi}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:bonfiglioli_onecycle_confmat}{{5.9}{xlvi}{Confusion matrices of the Bonfiglioli multiclass classification problem.\relax }{figure.caption.47}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Class Activation Maps}{xlvi}{subsection.5.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Training loops of real and complex-valued models for the Bonfiglioli multiclass classification problem.\relax }}{lii}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:bonfiglioli_onecycle_results}{{5.9}{lii}{Training loops of real and complex-valued models for the Bonfiglioli multiclass classification problem.\relax }{figure.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Statistical estimators of the Bonfiglioli analysis (real - complex).\relax }}{lii}{table.caption.56}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Confusion matrices of the Bonfiglioli multiclass classification problem.\relax }}{lii}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:bonfiglioli_onecycle_confmat}{{5.10}{lii}{Confusion matrices of the Bonfiglioli multiclass classification problem.\relax }{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Class Activation Maps}{lii}{subsection.5.3.2}\protected@file@percent }
 \citation{mendeley_dataset}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Average spectrograms and class activation maps of the Bonfiglioli validation set.\relax }}{xlvii}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:bonfiglioli_CAM_images}{{5.10}{xlvii}{Average spectrograms and class activation maps of the Bonfiglioli validation set.\relax }{figure.caption.48}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Mendelay Data}{xlvii}{section.5.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Experimental setup for Mendeley data.\relax }}{xlviii}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:mendeley_setup}{{5.11}{xlviii}{Experimental setup for Mendeley data.\relax }{figure.caption.49}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Dataset Structure}{xlviii}{subsection.5.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Spectrograms of the four varying-speed conditions of Mendelay data.\relax }}{xlviii}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:mendelay_speed_changes}{{5.12}{xlviii}{Spectrograms of the four varying-speed conditions of Mendelay data.\relax }{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Mendeley Classification}{xlix}{subsection.5.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Performances achieved over the Mendelay dataset constructing one-second long sub-signals.\relax }}{xlix}{figure.caption.51}\protected@file@percent }
-\newlabel{fig:mendeley_train_bad}{{5.13}{xlix}{Performances achieved over the Mendelay dataset constructing one-second long sub-signals.\relax }{figure.caption.51}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Performances achieved over the Mendelay dataset constructing 0.25 seconds long sub-signals.\relax }}{l}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:mendeley_train_final}{{5.14}{l}{Performances achieved over the Mendelay dataset constructing 0.25 seconds long sub-signals.\relax }{figure.caption.52}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Generalization performances of real and complex-valued models over the Mendelay dataset.\relax }}{l}{table.caption.53}\protected@file@percent }
-\newlabel{tab:mendeley_generalization}{{5.4}{l}{Generalization performances of real and complex-valued models over the Mendelay dataset.\relax }{table.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Average spectrograms and class activation maps of the Bonfiglioli validation set.\relax }}{liii}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:bonfiglioli_CAM_images}{{5.11}{liii}{Average spectrograms and class activation maps of the Bonfiglioli validation set.\relax }{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Mendelay Data}{liv}{section.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Experimental setup for Mendeley data.\relax }}{liv}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:mendeley_setup}{{5.12}{liv}{Experimental setup for Mendeley data.\relax }{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Dataset Structure}{liv}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Spectrograms of the four varying-speed conditions of Mendelay data.\relax }}{lv}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:mendelay_speed_changes}{{5.13}{lv}{Spectrograms of the four varying-speed conditions of Mendelay data.\relax }{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Mendeley Classification}{lv}{subsection.5.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Performances achieved over the Mendelay dataset constructing one-second long sub-signals.\relax }}{lv}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:mendeley_train_bad}{{5.14}{lv}{Performances achieved over the Mendelay dataset constructing one-second long sub-signals.\relax }{figure.caption.61}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Performances achieved over the Mendelay dataset constructing 0.25 seconds long sub-signals.\relax }}{lvi}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:mendeley_train_final}{{5.15}{lvi}{Performances achieved over the Mendelay dataset constructing 0.25 seconds long sub-signals.\relax }{figure.caption.62}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Generalization performances of real and complex-valued models over the Mendelay dataset.\relax }}{lvii}{table.caption.63}\protected@file@percent }
+\newlabel{tab:mendeley_generalization}{{5.4}{lvii}{Generalization performances of real and complex-valued models over the Mendelay dataset.\relax }{table.caption.63}{}}
 \citation{*}
 \bibdata{bibliography}
 \bibcite{trabelsi2018deep}{1}
@@ -205,22 +222,22 @@
 \bibcite{kreutzdelgado2009complex}{6}
 \bibcite{Nitta_complexBP}{7}
 \bibcite{barrachina2021complexvalued}{8}
-\bibcite{Virtue:EECS-2019-126}{9}
-\bibcite{hirose_cvnn}{10}
-\bibcite{amin_wirtinger}{11}
-\bibcite{xavier_init}{12}
-\bibcite{he2015delving}{13}
-\bibcite{cogswell2016reducing}{14}
-\bibcite{guberman2016complex}{15}
-\bibcite{Koutsougeras_siglog}{16}
-\bibcite{DBLP:journals/corr/ArjovskySB15}{17}
-\bibcite{deep_learning_vibration_gravity}{18}
-\bibcite{network_in_network}{19}
-\bibcite{class_activation_maps}{20}
-\bibcite{mendeley_dataset}{21}
-\bibcite{ziller2021complexvalued}{22}
-\bibcite{article}{23}
-\bibcite{4682548}{24}
+\bibcite{circularity_geometric_interpretation}{9}
+\bibcite{Virtue:EECS-2019-126}{10}
+\bibcite{hirose_cvnn}{11}
+\bibcite{amin_wirtinger}{12}
+\bibcite{xavier_init}{13}
+\bibcite{he2015delving}{14}
+\bibcite{cogswell2016reducing}{15}
+\bibcite{guberman2016complex}{16}
+\bibcite{Koutsougeras_siglog}{17}
+\bibcite{DBLP:journals/corr/ArjovskySB15}{18}
+\bibcite{ziller2021complexvalued}{19}
+\bibcite{deep_learning_vibration_gravity}{20}
+\bibcite{network_in_network}{21}
+\bibcite{class_activation_maps}{22}
+\bibcite{mendeley_dataset}{23}
+\bibcite{article}{24}
 \bibcite{virtue2017better}{25}
 \bibcite{GARDNER2021116245}{26}
 \bibcite{ajakan2015domainadversarial}{27}
@@ -237,22 +254,22 @@
 \citation{he2015delving}
 \citation{xavier_init}
 \citation{he2015delving}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Mathematical Proofs}{lv}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Mathematical Proofs}{lxi}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:cmplx_optim}{{A}{lv}{Mathematical Proofs}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite  {trabelsi2018deep}}{lv}{section.A.1}\protected@file@percent }
-\newlabel{app:weight_init}{{A.1}{lv}{Complex Weights Initialization \cite {trabelsi2018deep}}{section.A.1}{}}
+\newlabel{app:cmplx_optim}{{A}{lxi}{Mathematical Proofs}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite  {trabelsi2018deep}}{lxi}{section.A.1}\protected@file@percent }
+\newlabel{app:weight_init}{{A.1}{lxi}{Complex Weights Initialization \cite {trabelsi2018deep}}{section.A.1}{}}
 \citation{Messerschmitt_stationary_points}
 \citation{MESSERSCHMITT_STATIONARY_POINTS}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite  {Messerschmitt_stationary_points}}{lvi}{section.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite  {Messerschmitt_stationary_points}}{lxii}{section.A.2}\protected@file@percent }
 \citation{Hualiang_nonlinear}
 \citation{HUALIANG_NONLINEAR}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite  {Hualiang_nonlinear}}{lvii}{section.A.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite  {Hualiang_nonlinear}}{lxiii}{section.A.3}\protected@file@percent }
 \citation{HUALIANG_NONLINEAR}
 \citation{Schlomer_cplot_Plot_complex}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Activation Functions in the Complex Domain}{lix}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Activation Functions in the Complex Domain}{lxv}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:activations}{{B}{lix}{Activation Functions in the Complex Domain}{appendix.B}{}}
-\gdef \@abspage@last{60}
+\newlabel{app:activations}{{B}{lxv}{Activation Functions in the Complex Domain}{appendix.B}{}}
+\gdef \@abspage@last{66}

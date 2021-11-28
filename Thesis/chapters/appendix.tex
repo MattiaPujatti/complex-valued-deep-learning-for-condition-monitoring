@@ -15,7 +15,7 @@ Given a generic neural network layer, let's call $\vb{w}\in\mathds{C}$ its set o
 The variance of this set is defined as 
 \[ \Var(\vb{w}) = \Ev{\vb{w}\bar{\vb{w}}} - (\Ev{\vb{w}})^2 = \Ev{\norm{\vb{w}}^2} - (\Ev{\vb{w}})^2 \]
 that, if the parameters are symmetrically distributed around 0, reduces to $\Ev{\norm{\vb{w}}^2}$.\\
-In order to compute these quantities, we rely on the fact that the magnitude of a standard complex normally distributed variable follows the Rayleigh distribution \footnote{\href{https://en.wikipedia.org/wiki/Rayleigh\_distribution}{source}}, i.e. basically a Chi-Square with two degrees of freedom. Just for knowledge, its probability density function depends only on a single parameter and writes
+In order to compute these quantities, we rely on the fact that the magnitude of a standard complex normally distributed variable follows the Rayleigh distribution \footnote{\href{https://en.wikipedia.org/wiki/Rayleigh\_distribution}{Rayleigh Distribution}}, i.e. basically a Chi-Square with two degrees of freedom. Just for knowledge, its probability density function depends only on a single parameter and writes
 \[ f(x; \sigma) = \frac{x}{\sigma^2}e^{-x^2 / (2\sigma^2)} \]
 So we can find a relation among the variances of $\vb{w}$ and its magnitude:
 \[ \Var(\norm{\vb{w}}) = \Var{\vb{w}} - (\Ev{\norm{\vb{w}}})^2 \qquad\longrightarrow\qquad \Var({\vb{w}}) = \Var(\norm{\vb{w}}) + (\Ev{\norm{\vb{w}}})^2 \]

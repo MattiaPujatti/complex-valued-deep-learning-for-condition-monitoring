@@ -18,28 +18,28 @@
 \contentsline {subsection}{\numberline {3.2.2}Backpropagation with a Real-valued Loss}{xxii}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Re-definition of the main neural network layers}{xxiii}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Complex-Valued Activation Functions}{xxvi}{section.3.4}%
-\contentsline {section}{\numberline {3.5}JAX Implementation}{xxviii}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxi}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Complex vs Real Models}{xxxi}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Impact of the Circularity}{xxxi}{section.4.2}%
-\contentsline {part}{II\hspace {1em}Condition Monitoring}{xxxv}{part.2}%
-\contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xxxvii}{chapter.5}%
-\contentsline {section}{\numberline {5.1}State-of-the-Art}{xxxviii}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Baseline Machine Learning}{xxxviii}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Study in the frequency domain}{xxxix}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Bonfiglioli}{xl}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Simulation Environment}{xl}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Datasets}{xlii}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xliii}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Complex Spectrogram Classification}{xliii}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Bonfiglioli - Results}{xliv}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Multiclass Classification}{xlv}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Class Activation Maps}{xlvi}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Mendelay Data}{xlvii}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Dataset Structure}{xlviii}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Mendeley Classification}{xlix}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {A}Mathematical Proofs}{lv}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{lv}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{lvi}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{lvii}{section.A.3}%
-\contentsline {chapter}{\numberline {B}Activation Functions in the Complex Domain}{lix}{appendix.B}%
+\contentsline {section}{\numberline {3.5}JAX Implementation}{xxix}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Complex-Valued vs Real Neural Networks}{xxxiii}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Implementation of a Complex-valued Classification Problem}{xxxiii}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Impact of the Circularity}{xxxvi}{section.4.2}%
+\contentsline {part}{II\hspace {1em}Condition Monitoring}{xli}{part.2}%
+\contentsline {chapter}{\numberline {5}Healthy-Faulty Signal Classification}{xliii}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State-of-the-Art}{xliv}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Baseline Machine Learning}{xliv}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Study in the frequency domain}{xlv}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Bonfiglioli}{xlvi}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Simulation Environment}{xlvi}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Datasets}{xlviii}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Baseline Classification Approach}{xlix}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Complex Spectrogram Classification}{xlix}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Bonfiglioli - Results}{l}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Multiclass Classification}{li}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Class Activation Maps}{lii}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Mendelay Data}{liv}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Dataset Structure}{liv}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Mendeley Classification}{lv}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {A}Mathematical Proofs}{lxi}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Complex Weights Initialization \cite {trabelsi2018deep}}{lxi}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Stationary points of a real-valued function of a complex variable \cite {Messerschmitt_stationary_points}}{lxii}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Steepest complex gradient descent \cite {Hualiang_nonlinear}}{lxiii}{section.A.3}%
+\contentsline {chapter}{\numberline {B}Activation Functions in the Complex Domain}{lxv}{appendix.B}%

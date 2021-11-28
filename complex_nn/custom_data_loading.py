@@ -44,6 +44,9 @@ class MyDataset(Dataset):
         self.Y = np.array(self.Y)
         self.classes = np.unique(self.Y)
 
+        if n_classes == 2:
+            self.Y[self.Y != 0] = 1
+
         self.nrow = self.X.shape[2]
         self.ncol = self.X.shape[3]
         self.n_channels = self.X.shape[1]

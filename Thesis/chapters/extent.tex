@@ -123,6 +123,8 @@ We have started writing down this chapter with the purpose of building a working
 In section \ref{sec:problems_extent} we have analyzed the main obstacles that we encounter during this extension, while in \ref{sec:cmplx_backpropagation} we 
 
 \subsection*{Fully-Connected Layers}
+\label{subsec:linear_layers}
+
 For the fundamental layers of a neural network the extension is quite trivial. Consider a layer with $K$ complex-valued units, a weight vector $\vb{w}\in\mathds{C}^K$ and a bias term $\beta\in\mathds{C}$; then, the response to a certain input vector $\vb{z}\in\mathds{C}^N$ (given also the activation function $f$) is:
 \[ \vb{y} = f(\vb{z}, \left\{\vb{w},\beta\right\}) = f\left(\sum_k z_kw_k + \beta\right) = f\left(\vb{z}^T\vb{w} + \beta\right) \]
 
@@ -192,7 +194,13 @@ In this section, we will explore a few complex-valued activations proposed durin
 \subsection*{Extent from the real case}
 The first class of viable approaches consists into barely extending real-valued activations in the complex domain, like the \texttt{sigmoid} and the \texttt{hyperbolic tangent}:
 \[ \sigma_\mathds{C}(z) = \frac{1}{1+e^{-z}}  \qquad\qquad \tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} \]
-These functions are fully-complex, and also analytic and bounded almost everywhere, at the cost of introducing a set of singular points: both function, in fact, seems to diverge periodically in the imaginary axis of the complex plane. Limiting and scaling carefully the input values seems to help avoiding then those singularities and so partially containing the instability. However, I believe that there are simpler and more efficient alternatives.
+These functions are fully-complex, and also analytic and bounded almost everywhere, at the cost of introducing a set of singular points: both function, in fact, seems to diverge periodically in the imaginary axis of the complex plane \ref{fig:cmplx_sigmoid}. Limiting and scaling carefully the input values seems to help avoiding then those singularities and so partially containing the instability. However, I believe that there are simpler and more efficient alternatives.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/cmplx_sigmoid}
+	\caption{Sigmoid activation function extended in the complex plane. The magnitude (left) goes to $\pm\infty$ at $i\pi(2N-1)$. These singularities may also be seen in the output phase (right).}
+	\label{fig:cmplx_sigmoid}
+\end{figure}
 
 \subsection*{Separable Activations}
 As already explained, the main tendency in the development of complex-valued activation functions was basically getting back the "old" designs for real-valued models and using them independently on the real and imaginary components of the input.\\
@@ -225,8 +233,21 @@ Even if the \texttt{iGaussian} has nice gradients properties around the origin i
 Because of this, recently a new complex activation function have been proposed: the \texttt{Complex Cardioid} \cite{Virtue:EECS-2019-126}. The cardioid acts as an extension of the ReLU function to the complex domain, rescaling from one to zero all the values with non-zero imaginary component, based on how much the same input is rotated in phase with respect to the real axis. Also, the cardioid is sensitive to the input phase, rather than the modulus: the output magnitude is, in fact, attenuated based on the input phase, while the output phase remains equal to the original one.\\
 The analytical expression for this activation function is:
 \[ cardioid(z) = \frac{1}{2}\left(1 + \cos(\angle z)\right)z \]
-Another very nice property is that when the inputs are restricted to real values, this function becomes simply the ReLU activation.\\
+Another very nice property is that when the inputs are restricted to real values, this function becomes simply the ReLU activation \ref{fig:cmplx_cardioid}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/cmplx_cardioid}
+	\caption{Complex cardioid activation function. 
+	The magnitude transformation of the cardioid shows that it is reduced to
+the ReLU on the real axis (right, orange line).}
+	\label{fig:cmplx_cardioid}
+\end{figure}
 We will see, in our applications, that the cardioid effectively allows complex networks to converge in a fast and also stable way.
+
+
+\subsection*{Activations Recap}
+
+In table \ref{tab:cmplx_activations} we left a brief recap of all the activations function in $\mathds{C}$ discussed up to now. We provided also the relative plots in appendix \ref{app:activations}.
 
 \begin{table}[!ht]
 \centering
@@ -249,6 +270,8 @@ Cardioid & $\frac{1}{2}\left(1 + \cos(\angle z)\right)z$ & \cite{Virtue:EECS-201
 \caption{Recap of the most popular complex-valued activation functions.}
 \label{tab:cmplx_activations}
 \end{table}
+
+
 
 \section{JAX Implementation}
 

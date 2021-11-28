@@ -9,8 +9,19 @@
 	\item At present, the vast majority of deep learning architectures are based on real-valued operations and representations. However, recent works and fundamental theoretical analyses suggest that complex numbers can have richer expressiveness: many deterministic wave signals, such as seismic, electrical, or vibrational, contain information in their phase, which risks being lost when studied using a real-valued model.
 	\item most methods nowadays work like: drop phase info, take modulus or 2 independent channels, ignoring inherent relationships among them
 	\item complex-valued deep learning grew very slowly during the years, due to a long list of factors that we will list during the thesis. there are inherently complex data (e.g. MRI signals) and also real data can be "moved" to the complex space (e.g. via Fourier transform)
+	\item Although complexvalued data can be processed with RVNNs by considering the data as doubledimensional real-valued data, several studies have shown that CVNNs are much
+	more preferable in terms of nonlinear mapping ability, learning convergence,
+	number of parameters, and generalization ability [6].
+	\item complex-valued data arise in	various practical contexts, such as array signal processing [1], radar and magneticresonance data processing [2,3], communication systems [4], signal representation in complex baseband [5], and processing data in the frequency domain [2]
 \end{itemize}
+
 \section{Previous work}
+
+Since the dawn of deep learning, many researchers have proposed 
+At the really beginning, in absence of such a framework, the canonical approach to complex data was either dropping the phase of signals or splitting the values into their real and imaginary parts, barely ignoring the inherent relationship among the two components. 
+
+Several attempts have been performed during the years, in order to develop 
+
 \begin{itemize}
 	\item \cite{Dramsch_seismic}: Modern networks apply real-valued transformations on the
 	data. Particularly, convolutions in convolutional neural networks discard phase
@@ -21,9 +32,18 @@
 	phase information in feature maps improves both training and inference from
 	deterministic physical data. Furthermore, we show that the reduction of parameters
 	in a complex network outperforms larger real-valued networks.
+	\item Complex-valued neural networks bring with them, in the Machine Learning world,
+	 holomorphic functions, with all the consequent necessities of defining a suitable optimization algorithm to work with both holomorphic and non-holomorphic functions.
+	The problem has already been widely discussed: since casting the optimization problem in the real domain and using traditional algorithms often requires long and tedious computations, almost anyone nowadays agrees on using Wirtinger calculus \cite{amin_wirtinger, kreutzdelgado2009complex, Nitta_complexBP}.
+	\item A last 
 \end{itemize}
 
 \section{Neuronal Synchrony}
+
+In the last ten years, deep learning has led to great successes in the most various tasks; however, deep networks are still outmatched by the power and versatility of the brain, perhaps in part due to thericher neuronal computations available to cortical circuits \cite{reichert2014neuronal}.
+
+
+
 \section{Thesis Organization}
 
 
