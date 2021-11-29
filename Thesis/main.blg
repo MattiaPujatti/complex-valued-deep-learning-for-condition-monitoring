@@ -3,26 +3,22 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
 Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
----line 264 of file main.aux
+---line 289 of file main.aux
  : \citation{MESSERSCHMITT_STATIONARY_POINTS
  :                                          }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 267 of file main.aux
+---line 292 of file main.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 269 of file main.aux
+---line 294 of file main.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
 Repeated entry---line 123 of file bibliography.bib
- : @article{article
- :                 ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 167 of file bibliography.bib
  : @article{article
  :                 ,
 I'm skipping whatever remains of this entry
@@ -40,47 +36,47 @@ I'm skipping whatever remains of this entry
 Warning--entry type for "Schlomer_cplot_Plot_complex" isn't style-file defined
 --line 409 of file bibliography.bib
 Warning--I didn't find a database entry for ""
-Warning--empty journal in Dramsch_seismic
 Warning--empty booktitle in amin_wirtinger
-You've used 34 entries,
+Warning--empty journal in Dramsch_seismic
+You've used 35 entries,
             1876 wiz_defined-function locations,
-            672 strings with 10355 characters,
-and the built_in function-call counts, 6918 in all, are:
-= -- 590
-> -- 399
+            681 strings with 10640 characters,
+and the built_in function-call counts, 7194 in all, are:
+= -- 619
+> -- 407
 < -- 1
-+ -- 148
-- -- 114
-* -- 486
-:= -- 1058
-add.period$ -- 37
-call.type$ -- 34
-change.case$ -- 31
++ -- 151
+- -- 116
+* -- 506
+:= -- 1096
+add.period$ -- 38
+call.type$ -- 35
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 295
-empty$ -- 675
-format.name$ -- 114
-if$ -- 1662
+cite$ -- 37
+duplicate$ -- 309
+empty$ -- 700
+format.name$ -- 116
+if$ -- 1732
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 18
-newline$ -- 109
-num.names$ -- 34
-pop$ -- 148
+int.to.str$ -- 35
+missing$ -- 19
+newline$ -- 112
+num.names$ -- 35
+pop$ -- 149
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 222
+skip$ -- 235
 stack$ -- 0
-substring$ -- 192
-swap$ -- 94
+substring$ -- 212
+swap$ -- 101
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 49
-width$ -- 36
-write$ -- 298
-(There were 7 error messages)
+while$ -- 52
+width$ -- 37
+write$ -- 308
+(There were 6 error messages)

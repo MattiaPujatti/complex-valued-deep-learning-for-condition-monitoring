@@ -1,21 +1,26 @@
 This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: appendix.aux
+Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
+---line 34 of file appendix.aux
+ : \citation{MESSERSCHMITT_STATIONARY_POINTS
+ :                                          }
+I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 33 of file appendix.aux
+---line 37 of file appendix.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
 Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 35 of file appendix.aux
+---line 39 of file appendix.aux
  : \citation{HUALIANG_NONLINEAR
  :                             }
 I'm skipping whatever remains of this command
 I found no \bibdata command---while reading file appendix.aux
 I found no \bibstyle command---while reading file appendix.aux
-You've used 5 entries,
+You've used 6 entries,
             0 wiz_defined-function locations,
-            90 strings with 628 characters,
+            92 strings with 682 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
@@ -54,4 +59,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 0
-(There were 4 error messages)
+(There were 5 error messages)
