@@ -2,81 +2,53 @@ This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: ieeetr.bst
-Case mismatch error between cite keys MESSERSCHMITT_STATIONARY_POINTS and Messerschmitt_stationary_points
----line 289 of file main.aux
- : \citation{MESSERSCHMITT_STATIONARY_POINTS
- :                                          }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 292 of file main.aux
- : \citation{HUALIANG_NONLINEAR
- :                             }
-I'm skipping whatever remains of this command
-Case mismatch error between cite keys HUALIANG_NONLINEAR and Hualiang_nonlinear
----line 294 of file main.aux
- : \citation{HUALIANG_NONLINEAR
- :                             }
-I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
-Repeated entry---line 123 of file bibliography.bib
- : @article{article
- :                 ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 199 of file bibliography.bib
- : @article{article
- :                 ,
-I'm skipping whatever remains of this entry
 Warning--entry type for "schlomer_nico_2021_5636188" isn't style-file defined
 --line 243 of file bibliography.bib
-I was expecting a `,' or a `}'---line 254 of file bibliography.bib
- : 
- : @book{stein_complex_analysis,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--entry type for "Schlomer_cplot_Plot_complex" isn't style-file defined
---line 409 of file bibliography.bib
+--line 410 of file bibliography.bib
 Warning--I didn't find a database entry for ""
 Warning--empty booktitle in amin_wirtinger
 Warning--empty journal in Dramsch_seismic
-You've used 35 entries,
+You've used 37 entries,
             1876 wiz_defined-function locations,
-            681 strings with 10640 characters,
-and the built_in function-call counts, 7194 in all, are:
-= -- 619
-> -- 407
+            693 strings with 11249 characters,
+and the built_in function-call counts, 7530 in all, are:
+= -- 649
+> -- 423
 < -- 1
-+ -- 151
-- -- 116
-* -- 506
-:= -- 1096
-add.period$ -- 38
-call.type$ -- 35
-change.case$ -- 32
++ -- 157
+- -- 120
+* -- 534
+:= -- 1152
+add.period$ -- 40
+call.type$ -- 37
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 309
-empty$ -- 700
-format.name$ -- 116
-if$ -- 1732
+cite$ -- 39
+duplicate$ -- 327
+empty$ -- 732
+format.name$ -- 120
+if$ -- 1811
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 19
-newline$ -- 112
-num.names$ -- 35
-pop$ -- 149
+int.to.str$ -- 37
+missing$ -- 21
+newline$ -- 118
+num.names$ -- 37
+pop$ -- 153
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 235
+skip$ -- 244
 stack$ -- 0
-substring$ -- 212
-swap$ -- 101
+substring$ -- 214
+swap$ -- 105
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 52
-width$ -- 37
-write$ -- 308
-(There were 6 error messages)
+while$ -- 55
+width$ -- 39
+write$ -- 327
+(There were 5 warnings)

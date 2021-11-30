@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  29 NOV 2021 00:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 01:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,16 +741,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--58
  []
 
 
-LaTeX Warning: Citation `MESSERSCHMITT_STATIONARY_POINTS' on page 2 undefined o
-n input line 62.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 25.16252pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.16252pt}.
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
 
@@ -778,10 +774,6 @@ n/10.95 r[] \OT1/cmr/m/n/10.95 = []$ for the vec-tor $\OT1/cmr/bx/n/10.95 z \OT
  []
 
 
-LaTeX Warning: Citation `HUALIANG_NONLINEAR' on page 3 undefined on input line 
-81.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -790,10 +782,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-
-LaTeX Warning: Citation `HUALIANG_NONLINEAR' on page 4 undefined on input line 
-81.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -819,16 +807,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-<..//pictures/cmplx_activations.pdf, id=61, 1217.74945pt x 1165.71509pt>
-File: ..//pictures/cmplx_activations.pdf Graphic file (type pdf)
-<use ..//pictures/cmplx_activations.pdf>
-Package pdftex.def Info: ..//pictures/cmplx_activations.pdf  used on input line
- 97.
-(pdftex.def)             Requested size: 435.32422pt x 416.7222pt.
+<..//pictures/cmplx_activations_1.pdf, id=59, 1217.74945pt x 392.42609pt>
+File: ..//pictures/cmplx_activations_1.pdf Graphic file (type pdf)
+<use ..//pictures/cmplx_activations_1.pdf>
+Package pdftex.def Info: ..//pictures/cmplx_activations_1.pdf  used on input li
+ne 97.
+(pdftex.def)             Requested size: 435.32422pt x 140.28526pt.
+<..//pictures/cmplx_activations_2.pdf, id=60, 1217.74945pt x 401.09851pt>
+File: ..//pictures/cmplx_activations_2.pdf Graphic file (type pdf)
+<use ..//pictures/cmplx_activations_2.pdf>
+Package pdftex.def Info: ..//pictures/cmplx_activations_2.pdf  used on input li
+ne 101.
+(pdftex.def)             Requested size: 435.32422pt x 143.3855pt.
+<..//pictures/cmplx_activations_3.pdf, id=61, 1217.74945pt x 381.5856pt>
+File: ..//pictures/cmplx_activations_3.pdf Graphic file (type pdf)
+<use ..//pictures/cmplx_activations_3.pdf>
+Package pdftex.def Info: ..//pictures/cmplx_activations_3.pdf  used on input li
+ne 105.
+(pdftex.def)             Requested size: 435.32422pt x 136.40999pt.
+[5 <..//pictures/cmplx_activations_1.pdf> <..//pictures/cmplx_activations_2.pdf
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5]
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/cmplx_activations_2.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -837,7 +839,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6 <..//pictures/cmplx_activations.pdf>] (./appendix.aux)
+[6 <..//pictures/cmplx_activations_3.pdf>] (./appendix.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -845,35 +847,33 @@ Package rerunfilecheck Info: File `appendix.out' has not changed.
 (rerunfilecheck)             Checksum: 2F99C4895D13EF15ACF0FA8AFA675567;462.
  ) 
 Here is how much of TeX's memory you used:
- 13054 strings out of 479304
- 193824 string characters out of 5869780
- 550786 words of memory out of 5000000
- 29943 multiletter control sequences out of 15000+600000
- 416202 words of font info for 79 fonts, out of 8000000 for 9000
+ 13062 strings out of 479304
+ 194292 string characters out of 5869780
+ 550756 words of memory out of 5000000
+ 29949 multiletter control sequences out of 15000+600000
+ 415490 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,120p,549b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfrm1095.pfb>
-Output written on appendix.pdf (6 pages, 1151412 bytes).
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/doublestroke/dsrom10.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfrm1095.pfb>
+Output written on appendix.pdf (6 pages, 1136525 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 14 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

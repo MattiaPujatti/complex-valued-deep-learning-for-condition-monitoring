@@ -7,6 +7,9 @@
 \chapter{Complex-Valued vs Real Neural Networks}
 \label{ch:cmplx_vs_real}
 
+In this chapter we will test the complex-valued deep learning framework that we developed in the previous chapters. Thanks to this python library based on JAX, we can properly train neural networks with complex-valued parameters (even with convolutional layers) in a reasonable amount of time, even without effective support by acceleration hardware like GPUs or TPUs.\\
+We will first verify that a complex architecture can effectively "learn" something, testing a simple network on an ingenious dataset built on top of \texttt{MNIST}, stressing the algorithm also in search of those "stability advantages" that complex models should guarantee, at least according to what suggested in many other similar works.\\
+Second, we will check the effective impact that the circularity property of a data distribution, discussed in section \ref{sec:circularity}, has on the performances of our models. From that analysis we got surprising results that, from our point of view, should deserve further studies.
 
 \section{Implementation of a Complex-valued Classification Problem}
 

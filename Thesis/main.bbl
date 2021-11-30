@@ -124,15 +124,15 @@ H.~Huang and N.~Baddour, ``Bearing vibration data collected under time-varying
   rotational speed conditions,'' {\em Data in Brief}, vol.~21, pp.~1745--1749,
   2018.
 
-\bibitem{article}
+\bibitem{shen2018wasserstein}
+J.~Shen, Y.~Qu, W.~Zhang, and Y.~Yu, ``Wasserstein distance guided
+  representation learning for domain adaptation.''
+  \url{https://arxiv.org/abs/1707.01217}, 2018.
+
+\bibitem{adversarial_domain_adaptation}
 M.~Ragab, Z.~Chen, M.~Wu, H.~Li, C.-K. Kwoh, R.~Yan, and X.~li, ``Adversarial
   multiple-target domain adaptation for fault classification,'' {\em IEEE
   Transactions on Instrumentation and Measurement}, vol.~PP, pp.~1--1, 07 2020.
-
-\bibitem{GARDNER2021116245}
-P.~Gardner, L.~Bull, N.~Dervilis, and K.~Worden, ``Overcoming the problem of
-  repair in structural health monitoring: Metric-informed transfer learning,''
-  {\em Journal of Sound and Vibration}, vol.~510, p.~116245, 2021.
 
 \bibitem{ajakan2015domainadversarial}
 H.~Ajakan, P.~Germain, H.~Larochelle, F.~Laviolette, and M.~Marchand,
@@ -144,10 +144,20 @@ Y.~Ganin, E.~Ustinova, H.~Ajakan, P.~Germain, H.~Larochelle, F.~Laviolette,
   M.~Marchand, and V.~Lempitsky, ``Domain-adversarial training of neural
   networks.'' \url{https://arxiv.org/abs/1505.07818}, 2016.
 
-\bibitem{shen2018wasserstein}
-J.~Shen, Y.~Qu, W.~Zhang, and Y.~Yu, ``Wasserstein distance guided
-  representation learning for domain adaptation.''
-  \url{https://arxiv.org/abs/1707.01217}, 2018.
+\bibitem{gardner_shm}
+P.~Gardner, L.~Bull, N.~Dervilis, and K.~Worden, ``Overcoming the problem of
+  repair in structural health monitoring: Metric-informed transfer learning,''
+  {\em Journal of Sound and Vibration}, vol.~510, p.~116245, 2021.
+
+\bibitem{da_shm}
+A.~Ozdagli and X.~Koutsoukos, ``Domain adaptation for structural health
+  monitoring,'' {\em Annual Conference of the PHM Society}, vol.~12, p.~9, 11
+  2020.
+
+\bibitem{article}
+A.~Hirose and S.~Yoshida, ``Relationship between phase and amplitude
+  generalization errors in complex- and real-valued feedforward neural
+  networks,'' {\em Neural Computing and Applications}, vol.~22, 06 2012.
 
 \bibitem{schlomer_nico_2021_5636188}
 N.~Schlömer, ``cplot: Plot complex functions,'' Nov. 2021.

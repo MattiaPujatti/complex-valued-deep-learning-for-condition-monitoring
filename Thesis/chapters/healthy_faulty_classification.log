@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  26 NOV 2021 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  29 NOV 2021 23:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -652,7 +652,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--14
+Underfull \hbox (badness 10000) in paragraph at lines 10--15
 
  []
 
@@ -661,42 +661,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 25.
-
-
-LaTeX Warning: Reference `' on page 2 undefined on input line 25.
-
-
-LaTeX Warning: Reference `' on page 2 undefined on input line 25.
+LaTeX Warning: Reference `' on page 2 undefined on input line 26.
 
 
 LaTeX Warning: Reference `' on page 2 undefined on input line 26.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 26.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 27.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 28
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+eus on input line 27.
+LaTeX Font Info:    Trying to load font information for U+eus on input line 28.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 27.
+LaTeX Warning: Reference `' on page 2 undefined on input line 28.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -707,36 +707,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-<..//pictures/example_stft.pdf, id=80, 1084.05pt x 289.08pt>
+<..//pictures/example_stft.pdf, id=79, 1084.05pt x 289.08pt>
 File: ..//pictures/example_stft.pdf Graphic file (type pdf)
 <use ..//pictures/example_stft.pdf>
-Package pdftex.def Info: ..//pictures/example_stft.pdf  used on input line 43.
+Package pdftex.def Info: ..//pictures/example_stft.pdf  used on input line 44.
 (pdftex.def)             Requested size: 483.69687pt x 128.98645pt.
-<..//pictures/summary_hf_classification_methods.pdf, id=82, 385.77725pt x 181.8
+<..//pictures/summary_hf_classification_methods.pdf, id=81, 385.77725pt x 181.8
 3131pt>
 File: ..//pictures/summary_hf_classification_methods.pdf Graphic file (type pdf
 )
 <use ..//pictures/summary_hf_classification_methods.pdf>
 Package pdftex.def Info: ..//pictures/summary_hf_classification_methods.pdf  us
-ed on input line 57.
+ed on input line 58.
 (pdftex.def)             Requested size: 483.69687pt x 227.99884pt.
 
 
 LaTeX Warning: Citation `deep_learning_vibration_gravity' on page 3 undefined o
-n input line 58.
+n input line 59.
 
 
 LaTeX Warning: Citation `deep_learning_vibration_gravity' on page 3 undefined o
-n input line 58.
+n input line 59.
 
-<..//pictures/bonfiglioli_logo.pdf, id=84, 853.1875pt x 270.00874pt>
+<..//pictures/bonfiglioli_logo.pdf, id=83, 853.1875pt x 270.00874pt>
 File: ..//pictures/bonfiglioli_logo.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_logo.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_logo.pdf  used on input line 
-67.
+68.
 (pdftex.def)             Requested size: 241.84843pt x 76.53716pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--70
+Underfull \hbox (badness 10000) in paragraph at lines 66--71
 
  []
 
@@ -749,35 +749,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3 <..//pictures/example_stft.pdf>]
-Underfull \hbox (badness 2846) in paragraph at lines 70--72
+Underfull \hbox (badness 2846) in paragraph at lines 71--73
 []\OT1/cmr/m/n/10.95 The com-pany pro-vided a large num-ber of
  []
 
-<..//pictures/bonfiglioli_experimental_setup.pdf, id=148, 436.36626pt x 219.556
+<..//pictures/bonfiglioli_experimental_setup.pdf, id=147, 436.36626pt x 219.556
 26pt>
 File: ..//pictures/bonfiglioli_experimental_setup.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_experimental_setup.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_experimental_setup.pdf  used 
-on input line 78.
+on input line 79.
 (pdftex.def)             Requested size: 483.69687pt x 243.382pt.
-<..//pictures/example_bonfiglioli_faults.pdf, id=150, 484.69081pt x 158.27129pt
+<..//pictures/example_bonfiglioli_faults.pdf, id=149, 484.69081pt x 158.27129pt
 >
 File: ..//pictures/example_bonfiglioli_faults.pdf Graphic file (type pdf)
 <use ..//pictures/example_bonfiglioli_faults.pdf>
 Package pdftex.def Info: ..//pictures/example_bonfiglioli_faults.pdf  used on i
-nput line 94.
+nput line 95.
 (pdftex.def)             Requested size: 483.69687pt x 157.94727pt.
-<..//pictures/bonfiglioli_example_working_cycle.pdf, id=152, 498.22939pt x 275.
+<..//pictures/bonfiglioli_example_working_cycle.pdf, id=151, 498.22939pt x 275.
 05963pt>
 File: ..//pictures/bonfiglioli_example_working_cycle.pdf Graphic file (type pdf
 )
 <use ..//pictures/bonfiglioli_example_working_cycle.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_example_working_cycle.pdf  us
-ed on input line 101.
+ed on input line 102.
 (pdftex.def)             Requested size: 483.69687pt x 267.03835pt.
 
 LaTeX Warning: Citation `deep_learning_vibration_gravity' on page 4 undefined o
-n input line 105.
+n input line 106.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -824,25 +824,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6 <..//pictures/bonfiglioli_example_working_cycle.pdf>]
 
 LaTeX Warning: Reference `fig:example_bonf_spectrum' on page 7 undefined on inp
-ut line 146.
+ut line 147.
 
-<..//pictures/example_bonfiglioli_spectrum.pdf, id=220, 1100.67216pt x 356.0020
+<..//pictures/example_bonfiglioli_spectrum.pdf, id=219, 1100.67216pt x 356.0020
 1pt>
 File: ..//pictures/example_bonfiglioli_spectrum.pdf Graphic file (type pdf)
 <use ..//pictures/example_bonfiglioli_spectrum.pdf>
 Package pdftex.def Info: ..//pictures/example_bonfiglioli_spectrum.pdf  used on
- input line 149.
+ input line 150.
 (pdftex.def)             Requested size: 483.69687pt x 156.4458pt.
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 157.
+LaTeX Warning: Reference `' on page 7 undefined on input line 158.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 157.
+LaTeX Warning: Citation `Dramsch_seismic' on page 7 undefined on input line 158
+.
 
-<example-image-b.pdf, id=224, 321.2pt x 240.9pt>
+<example-image-b.pdf, id=223, 321.2pt x 240.9pt>
 File: example-image-b.pdf Graphic file (type pdf)
 <use example-image-b.pdf>
-Package pdftex.def Info: example-image-b.pdf  used on input line 160.
+Package pdftex.def Info: example-image-b.pdf  used on input line 161.
 (pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
 
 Underfull \vbox (badness 7613) has occurred while \output is active []
@@ -867,23 +868,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8 <..//pictures/example_bonfiglioli_spectrum.pdf> </usr/share/texlive/texmf-di
 st/tex/latex/mwe/example-image-b.pdf>]
-<..//pictures/bonfiglioli_onecycle_results.pdf, id=258, 1186.23976pt x 289.08pt
+<..//pictures/bonfiglioli_onecycle_results.pdf, id=257, 1186.23976pt x 289.08pt
 >
 File: ..//pictures/bonfiglioli_onecycle_results.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_onecycle_results.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_onecycle_results.pdf  used on
- input line 210.
+ input line 211.
 (pdftex.def)             Requested size: 483.69687pt x 117.87514pt.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 214.
+LaTeX Warning: Reference `' on page 9 undefined on input line 215.
 
-<..//pictures/bonfiglioli_onecycle_confmat.pdf, id=261, 1156.32pt x 433.62pt>
+<..//pictures/bonfiglioli_onecycle_confmat.pdf, id=260, 990.09903pt x 433.62pt>
+
 File: ..//pictures/bonfiglioli_onecycle_confmat.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_onecycle_confmat.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_onecycle_confmat.pdf  used on
- input line 233.
-(pdftex.def)             Requested size: 483.69687pt x 181.38472pt.
+ input line 234.
+(pdftex.def)             Requested size: 483.69687pt x 211.83386pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -895,11 +897,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [9]
 
 LaTeX Warning: Citation `network_in_network' on page 10 undefined on input line
- 241.
+ 242.
 
 
 LaTeX Warning: Citation `class_activation_maps' on page 10 undefined on input l
-ine 242.
+ine 243.
+
+
+Underfull \vbox (badness 1902) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -916,22 +922,22 @@ pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/bonfiglioli_onecycle_confm
 at.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
 >]
-<..//pictures/bonfiglioli_CAM_images.pdf, id=327, 474.57298pt x 176.33879pt>
+<..//pictures/bonfiglioli_CAM_images.pdf, id=287, 474.57298pt x 176.33879pt>
 File: ..//pictures/bonfiglioli_CAM_images.pdf Graphic file (type pdf)
 <use ..//pictures/bonfiglioli_CAM_images.pdf>
 Package pdftex.def Info: ..//pictures/bonfiglioli_CAM_images.pdf  used on input
- line 252.
+ line 253.
 (pdftex.def)             Requested size: 483.69687pt x 179.73132pt.
 
 
 LaTeX Warning: Citation `mendeley_dataset' on page 11 undefined on input line 2
-61.
+63.
 
-<..//pictures/mendeley_setup.pdf, id=329, 246.58524pt x 184.72212pt>
+<..//pictures/mendeley_setup.pdf, id=289, 246.58524pt x 184.72212pt>
 File: ..//pictures/mendeley_setup.pdf Graphic file (type pdf)
 <use ..//pictures/mendeley_setup.pdf>
 Package pdftex.def Info: ..//pictures/mendeley_setup.pdf  used on input line 26
-5.
+7.
 (pdftex.def)             Requested size: 241.84843pt x 181.17583pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -941,15 +947,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11 <..//pictures/bonfiglioli_CAM_images.pdf>]
+[11]
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 279.
+LaTeX Warning: Reference `' on page 12 undefined on input line 281.
 
-<..//pictures/mendelay_speed_changes.pdf, id=344, 1182.26973pt x 324.17073pt>
+<..//pictures/mendelay_speed_changes.pdf, id=298, 1182.26973pt x 324.17073pt>
 File: ..//pictures/mendelay_speed_changes.pdf Graphic file (type pdf)
 <use ..//pictures/mendelay_speed_changes.pdf>
 Package pdftex.def Info: ..//pictures/mendelay_speed_changes.pdf  used on input
- line 282.
+ line 284.
 (pdftex.def)             Requested size: 483.69687pt x 132.62396pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -959,30 +965,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12 <..//pictures/mendeley_setup.pdf>]
+[12 <..//pictures/bonfiglioli_CAM_images.pdf> <..//pictures/mendeley_setup.pdf
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 295.
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/mendeley_setup.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `' on page 13 undefined on input line 297.
 
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 296.
+LaTeX Warning: Reference `' on page 13 undefined on input line 298.
 
-<..//pictures/mendeley_train_bad.pdf, id=359, 1445.4pt x 289.08pt>
+<..//pictures/mendeley_train_bad.pdf, id=317, 1445.4pt x 289.08pt>
 File: ..//pictures/mendeley_train_bad.pdf Graphic file (type pdf)
 <use ..//pictures/mendeley_train_bad.pdf>
 Package pdftex.def Info: ..//pictures/mendeley_train_bad.pdf  used on input lin
-e 300.
+e 302.
 (pdftex.def)             Requested size: 483.69687pt x 96.73763pt.
-<..//pictures/mendeley_train_final.pdf, id=360, 867.24pt x 722.7pt>
+<..//pictures/mendeley_train_final.pdf, id=318, 867.24pt x 722.7pt>
 File: ..//pictures/mendeley_train_final.pdf Graphic file (type pdf)
 <use ..//pictures/mendeley_train_final.pdf>
 Package pdftex.def Info: ..//pictures/mendeley_train_final.pdf  used on input l
-ine 309.
+ine 311.
 (pdftex.def)             Requested size: 483.69687pt x 403.0882pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 295--315
-
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -997,9 +1002,6 @@ pdf
 pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/mendeley_train_bad.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
-Underfull \vbox (badness 1533) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1023,16 +1025,16 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `healthy_faulty_classification.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 087A1046D040EA9ED81F9AD547376F10;1088.
+(rerunfilecheck)             Checksum: 2637CBB03F77474F67FC7D2A3EF0C727;1088.
  ) 
 Here is how much of TeX's memory you used:
- 13205 strings out of 479304
- 199333 string characters out of 5869780
- 562019 words of memory out of 5000000
+ 13204 strings out of 479304
+ 199346 string characters out of 5869780
+ 562104 words of memory out of 5000000
  30048 multiletter control sequences out of 15000+600000
- 416038 words of font info for 77 fonts, out of 8000000 for 9000
+ 415685 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,120p,1259b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,12n,120p,1445b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -1042,18 +1044,18 @@ s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on healthy_faulty_classification.pdf (15 pages, 27388739 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.p
+fb>
+Output written on healthy_faulty_classification.pdf (15 pages, 27415621 bytes).
 
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
+ 511 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  51 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

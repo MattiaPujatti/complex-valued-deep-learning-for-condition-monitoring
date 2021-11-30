@@ -257,7 +257,8 @@ In figure \ref{fig:bonfiglioli_CAM_images} we represented the CAMs for each clas
 
 Looking at those images it is quite clear why we obtained so high performances up to now. Both the spectrograms and the activation maps are quite different from class to class, and it seems that we can easily distinguish among them, even without the help of the networks.
 
-\section{Mendelay Data}
+\section{Mendeley Data}
+\label{sec:mendeley_analysis}
 
 The last dataset we are going to analyze for this chapter is the Mendeley Dataset \cite{mendeley_dataset}: a collection of vibration signals collected from bearings with different health conditions and under different time-varying speed conditions. The problem is again an healthy-faulty classification task with two different "bad" classes: faulty with an inner race defect and faulty with an outer race defect. \\
 The experiments have been realized over a machinery fault simulator with the setup shown in \ref{fig:mendeley_setup}. 
@@ -313,22 +314,22 @@ Under this perspective, we believe that further reducing the length of input sig
 \end{figure}
 For completeness, it is better to specify that to obtain the results shown in figure \ref{fig:mendeley_train_final} we established a decay schedule for learning rate, in the hope of a faster, but more accurate, convergence.\\
 Finally, this is a really nice behavior, with both models reaching the convergence and the perfect classification ($100\%$) accuracy. This means that our supposition was probably right, and a suitable approach to signal classification in case of time-varying speed conditions, is to fragment the original wave into smaller samples to reduced the effects of this non-stationarity. Of course, we believe that a necessary hypotheses for this to happen is some kind of monotony in the rotational speed variation: also in the third and fourth cases \ref{fig:mendelay_speed_changes}, we could clearly distinguish two regions in which the velocity behavior was monotonic and amenable to the first two. Probably, an higher irregularity in the rotational speed would have made also the classification more unstable and challenging, but we would need further more datasets to verify it.\\
-
-To conclude this part, we want to try stressing the generalization performances of our models. This can be done by first dividing the data files based on the four speed conditions (increasing, decreasing, increasing then decreasing, decreasing then increasing), training the networks over just one of them, and computing the classification accuracy over the others. In this way we can effectively verify which is the impact of non-stationary rotational speed conditions in the training process.
+To conclude this part, we want to try stressing the generalization performances of our models. This can be done by first dividing the data files based on the four speed conditions (increasing (I), decreasing (II), increasing then decreasing (III), decreasing then increasing (IV)), training the networks over just one of them, and computing the classification accuracy over the others. In this way we can effectively verify which is the impact of non-stationary rotational speed conditions in the training process.
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{||c|c||c|c||c|c||c|c||}
+	\begin{tabular}{l|c|c|c|c}
+		 & \textbf{Test - I} & \textbf{Test - II} & \textbf{Test - III} & \textbf{Test - IV} \\
 		\toprule
-		100.00 & 99.72 & 98.89 & 97.18 & 99.94 & 99.00 & 99.50 & 99.34\\
+		\textbf{Train - I} & 99.72 - 100.00 & 97.18 - 98.89 & 99.00 - 99.94 & 99.94 - 99.50\\
 		\midrule
-		100.00 & 99.94 & \cellcolor{red} 79.70 & \cellcolor{red} 77.93 & 99.89 & 96.18 & 96.29 & \cellcolor{orange} 73.56\\
+		\textbf{Train - II} & 99.94 - 100.00 & \cellcolor{red} 77.93 - 79.70 & 96.18 - 99.89 & \cellcolor{orange} 73.56 - 96.29\\
 		\midrule
-		100.00 & 100.00 & \cellcolor{red} 88.05 & \cellcolor{red} 82.13 & 98.34 & 98.23 & 100.00 & \cellcolor{orange} 89.77\\
+		\textbf{Train - III} & 100.00 - 100.00 & \cellcolor{red} 82.13 - 88.05 & 98.23 - 98.34 & \cellcolor{orange} 89.77 - 100.00\\
 		\midrule
-		100.00 & 99.67 & \cellcolor{red} 88.38 & 94.63 & 97.90 & 94.08 & 99.94 & 98.56\\
+		\textbf{Train - IV} & 99.67 - 100.00 & \cellcolor{red} 94.63 - 88.38 & 94.08 - 97.90 & 98.56 - 99.94\\
 		\bottomrule
 	\end{tabular}
-	\caption{Generalization performances of real and complex-valued models over the Mendelay dataset.}
+	\caption{Generalization performances of real and complex-valued models over the Mendeley dataset (real-complex).}
 	\label{tab:mendeley_generalization}
 \end{table}
 The results, reported in table \ref{tab:mendeley_generalization} are generally good: for almost all the combinations both networks managed to converge, obtaining nearly the perfect classification accuracy. The cells colored in red represents the cases in which the network barely overfit and wasn't able to generalize properly, with the validation loss growing instead of decreasing during the training. There are two cases in which both models failed, and one seeing the only the complex network to do so (even with a nice accuracy, in the end). What is more interesting, instead, are the cells colored in orange: in those situations, limited to real-valued models, the loss behaved correctly, but the accuracy reached was quite limited, at least with respect to the score offered by its complex-valued counterpart. Furthermore, except for one case (the red one), all the combinations shown the complex architecture to reach higher accuracy, proving again that these kind of models are less likely to overfit and, in general, guarantees better generalization performances.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  29 NOV 2021 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  29 NOV 2021 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,33 +661,24 @@ t line 10.
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `conclusions.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `conclusions.out':
-(rerunfilecheck)             Before: A472FBD9B2BC388231AD4FD5E9D424B8;63
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `conclusions.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12897 strings out of 479304
- 191380 string characters out of 5869780
- 536613 words of memory out of 5000000
- 29843 multiletter control sequences out of 15000+600000
+ 12894 strings out of 479304
+ 191358 string characters out of 5869780
+ 537601 words of memory out of 5000000
+ 29841 multiletter control sequences out of 15000+600000
  404644 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,5n,120p,678b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on conclusions.pdf (1 page, 38567 bytes).
+ 116i,5n,120p,823b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on conclusions.pdf (1 page, 39017 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

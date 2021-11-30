@@ -33,12 +33,14 @@
 \BOOKMARK [1][-]{section.5.3}{Bonfiglioli - Results}{chapter.5}% 33
 \BOOKMARK [2][-]{subsection.5.3.1}{Multiclass Classification}{section.5.3}% 34
 \BOOKMARK [2][-]{subsection.5.3.2}{Class Activation Maps}{section.5.3}% 35
-\BOOKMARK [1][-]{section.5.4}{Mendelay Data}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.4}{Mendeley Data}{chapter.5}% 36
 \BOOKMARK [2][-]{subsection.5.4.1}{Dataset Structure}{section.5.4}% 37
 \BOOKMARK [2][-]{subsection.5.4.2}{Mendeley Classification}{section.5.4}% 38
 \BOOKMARK [0][-]{chapter.6}{Domain Adaptation}{part.2}% 39
-\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 40
-\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 42
-\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 43
-\BOOKMARK [0][-]{appendix.B}{Activation Functions in the Complex Domain}{part.2}% 44
+\BOOKMARK [1][-]{section.6.1}{Wasserstein Distance Guided Representation Learning}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{Domain Adaptation of Bonfiglioli Data}{chapter.6}% 41
+\BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 42
+\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 44
+\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 45
+\BOOKMARK [0][-]{appendix.B}{Activation Functions in the Complex Domain}{part.2}% 46
