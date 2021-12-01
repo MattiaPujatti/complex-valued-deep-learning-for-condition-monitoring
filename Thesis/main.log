@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 01:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,7 +762,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-<pictures/std_cmplx_norm_distrib.pdf, id=379, 710.54527pt x 347.3885pt>
+<pictures/std_cmplx_norm_distrib.pdf, id=374, 710.54527pt x 347.3885pt>
 File: pictures/std_cmplx_norm_distrib.pdf Graphic file (type pdf)
 <use pictures/std_cmplx_norm_distrib.pdf>
 Package pdftex.def Info: pictures/std_cmplx_norm_distrib.pdf  used on input lin
@@ -778,16 +778,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
-
- []
-
-<pictures/cmplx_multiplication.pdf, id=391, 470.83904pt x 205.31908pt>
+<pictures/cmplx_multiplication.pdf, id=386, 470.83904pt x 205.31908pt>
 File: pictures/cmplx_multiplication.pdf Graphic file (type pdf)
 <use pictures/cmplx_multiplication.pdf>
 Package pdftex.def Info: pictures/cmplx_multiplication.pdf  used on input line 
-155.
+154.
 (pdftex.def)             Requested size: 483.69687pt x 210.93587pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -797,11 +794,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17 <./pictures/std_cmplx_norm_distrib.pdf>]
-<pictures/multiplication_dof.pdf, id=433, 470.04407pt x 192.59955pt>
+<pictures/multiplication_dof.pdf, id=428, 470.04407pt x 192.59955pt>
 File: pictures/multiplication_dof.pdf Graphic file (type pdf)
 <use pictures/multiplication_dof.pdf>
 Package pdftex.def Info: pictures/multiplication_dof.pdf  used on input line 17
-3.
+2.
 (pdftex.def)             Requested size: 483.69687pt x 198.19754pt.
 
 
@@ -838,7 +835,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 3.
-<pictures/complex_neuron.pdf, id=467, 993.7125pt x 478.78876pt>
+<pictures/complex_neuron.pdf, id=461, 993.7125pt x 478.78876pt>
 File: pictures/complex_neuron.pdf Graphic file (type pdf)
 <use pictures/complex_neuron.pdf>
 Package pdftex.def Info: pictures/complex_neuron.pdf  used on input line 24.
@@ -869,7 +866,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [23]
-<pictures/cmplx_gradient_descent.pdf, id=507, 1156.32pt x 505.89pt>
+<pictures/cmplx_gradient_descent.pdf, id=503, 1156.32pt x 505.89pt>
 File: pictures/cmplx_gradient_descent.pdf Graphic file (type pdf)
 <use pictures/cmplx_gradient_descent.pdf>
 Package pdftex.def Info: pictures/cmplx_gradient_descent.pdf  used on input lin
@@ -890,7 +887,7 @@ Overfull \hbox (35.99998pt too wide) in alignment at lines 106--106
 [][][] 
  []
 
-<pictures/pass_cmplx_layer.pdf, id=516, 367.1316pt x 88.45848pt>
+<pictures/pass_cmplx_layer.pdf, id=512, 367.1316pt x 88.45848pt>
 File: pictures/pass_cmplx_layer.pdf Graphic file (type pdf)
 <use pictures/pass_cmplx_layer.pdf>
 Package pdftex.def Info: pictures/pass_cmplx_layer.pdf  used on input line 113.
@@ -914,7 +911,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [25 <./pictures/pass_cmplx_layer.pdf>]
-<pictures/complex_convolution.pdf, id=603, 199.56155pt x 251.21053pt>
+<pictures/complex_convolution.pdf, id=599, 199.56155pt x 251.21053pt>
 File: pictures/complex_convolution.pdf Graphic file (type pdf)
 <use pictures/complex_convolution.pdf>
 Package pdftex.def Info: pictures/complex_convolution.pdf  used on input line 1
@@ -930,10 +927,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-
-LaTeX Warning: Reference `' on page 27 undefined on input line 174.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -955,7 +948,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [28]
-<pictures/cmplx_sigmoid.pdf, id=647, 276.55319pt x 132.495pt>
+<pictures/cmplx_sigmoid.pdf, id=644, 276.55319pt x 132.495pt>
 File: pictures/cmplx_sigmoid.pdf Graphic file (type pdf)
 <use pictures/cmplx_sigmoid.pdf>
 Package pdftex.def Info: pictures/cmplx_sigmoid.pdf  used on input line 202.
@@ -975,7 +968,7 @@ Overfull \hbox (2.51306pt too wide) in paragraph at lines 234--237
 -tion have been pro-posed: the \OT1/cmtt/m/n/10.95 Complex Cardioid
  []
 
-<pictures/cmplx_cardioid.pdf, id=664, 451.39842pt x 147.86441pt>
+<pictures/cmplx_cardioid.pdf, id=661, 451.39842pt x 147.86441pt>
 File: pictures/cmplx_cardioid.pdf Graphic file (type pdf)
 <use pictures/cmplx_cardioid.pdf>
 Package pdftex.def Info: pictures/cmplx_cardioid.pdf  used on input line 241.
@@ -989,7 +982,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [30]
-<pictures/JAX_logo.pdf, id=685, 639.38875pt x 406.51875pt>
+<pictures/JAX_logo.pdf, id=682, 639.38875pt x 406.51875pt>
 File: pictures/JAX_logo.pdf Graphic file (type pdf)
 <use pictures/JAX_logo.pdf>
 Package pdftex.def Info: pictures/JAX_logo.pdf  used on input line 284.
@@ -1038,22 +1031,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 4.
-<pictures/phasemnist_example.pdf, id=733, 1042.85606pt x 300.64319pt>
+<pictures/phasemnist_example.pdf, id=730, 1042.85606pt x 300.64319pt>
 File: pictures/phasemnist_example.pdf Graphic file (type pdf)
 <use pictures/phasemnist_example.pdf>
-Package pdftex.def Info: pictures/phasemnist_example.pdf  used on input line 21
+Package pdftex.def Info: pictures/phasemnist_example.pdf  used on input line 22
 .
 (pdftex.def)             Requested size: 483.69687pt x 139.4444pt.
 [35]
-<example-image-a.pdf, id=740, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 34.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-<pictures/phasemnist_200.pdf, id=742, 1156.32pt x 361.35pt>
+<pictures/phasemnist_models.pdf, id=737, 295.8252pt x 132.97679pt>
+File: pictures/phasemnist_models.pdf Graphic file (type pdf)
+<use pictures/phasemnist_models.pdf>
+Package pdftex.def Info: pictures/phasemnist_models.pdf  used on input line 35.
+
+(pdftex.def)             Requested size: 483.69687pt x 217.43402pt.
+<pictures/phasemnist_200.pdf, id=739, 1156.32pt x 361.35pt>
 File: pictures/phasemnist_200.pdf Graphic file (type pdf)
 <use pictures/phasemnist_200.pdf>
-Package pdftex.def Info: pictures/phasemnist_200.pdf  used on input line 42.
+Package pdftex.def Info: pictures/phasemnist_200.pdf  used on input line 43.
 (pdftex.def)             Requested size: 483.69687pt x 151.15393pt.
 
 
@@ -1064,17 +1058,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36 <./pictures/phasemnist_example.pdf> </usr/share/texlive/texmf-dist/tex/late
-x/mwe/example-image-a.pdf>]
-<pictures/performance_winit.pdf, id=766, 1084.05pt x 722.7pt>
+[36 <./pictures/phasemnist_example.pdf> <./pictures/phasemnist_models.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./pictures/phasemnist_models.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+>]
+<pictures/performance_winit.pdf, id=777, 1084.05pt x 722.7pt>
 File: pictures/performance_winit.pdf Graphic file (type pdf)
 <use pictures/performance_winit.pdf>
-Package pdftex.def Info: pictures/performance_winit.pdf  used on input line 62.
+Package pdftex.def Info: pictures/performance_winit.pdf  used on input line 63.
 
 (pdftex.def)             Requested size: 483.69687pt x 322.46614pt.
-
-Underfull \vbox (badness 4752) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1085,9 +1079,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [37 <./pictures/phasemnist_200.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1097,10 +1088,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [38 <./pictures/performance_winit.pdf>]
-<pictures/circ_class_example.pdf, id=878, 902.16425pt x 350.0732pt>
+<pictures/circ_class_example.pdf, id=889, 902.16425pt x 350.0732pt>
 File: pictures/circ_class_example.pdf Graphic file (type pdf)
 <use pictures/circ_class_example.pdf>
-Package pdftex.def Info: pictures/circ_class_example.pdf  used on input line 96
+Package pdftex.def Info: pictures/circ_class_example.pdf  used on input line 98
 .
 (pdftex.def)             Requested size: 483.69687pt x 187.6906pt.
 
@@ -1113,16 +1104,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [39 <./pictures/circ_class_example.pdf>]
-<pictures/noncirc_results.pdf, id=914, 945.36328pt x 392.03116pt>
+<pictures/noncirc_results.pdf, id=924, 945.36328pt x 392.03116pt>
 File: pictures/noncirc_results.pdf Graphic file (type pdf)
 <use pictures/noncirc_results.pdf>
-Package pdftex.def Info: pictures/noncirc_results.pdf  used on input line 113.
+Package pdftex.def Info: pictures/noncirc_results.pdf  used on input line 115.
 (pdftex.def)             Requested size: 483.69687pt x 200.58527pt.
-<pictures/noncirc_comparison_final.pdf, id=916, 1203.12523pt x 350.4783pt>
+<pictures/noncirc_comparison_final.pdf, id=926, 1203.12523pt x 350.4783pt>
 File: pictures/noncirc_comparison_final.pdf Graphic file (type pdf)
 <use pictures/noncirc_comparison_final.pdf>
 Package pdftex.def Info: pictures/noncirc_comparison_final.pdf  used on input l
-ine 122.
+ine 124.
 (pdftex.def)             Requested size: 483.69687pt x 140.90544pt.
 
 
@@ -1159,33 +1150,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] [43] [44] (./chapters/healthy_faulty_classification.tex
 Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--15
-
- []
-
 [45
 
 ]
+LaTeX Font Info:    Trying to load font information for U+eus on input line 27.
 
-LaTeX Warning: Reference `' on page 46 undefined on input line 26.
-
-
-LaTeX Warning: Reference `' on page 46 undefined on input line 26.
-
-
-LaTeX Warning: Reference `' on page 46 undefined on input line 26.
-
-
-LaTeX Warning: Reference `' on page 46 undefined on input line 27.
-
-LaTeX Font Info:    Trying to load font information for U+eus on input line 28.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-
-LaTeX Warning: Reference `' on page 46 undefined on input line 28.
+<pictures/example_stft.pdf, id=1011, 1084.05pt x 289.08pt>
+File: pictures/example_stft.pdf Graphic file (type pdf)
+<use pictures/example_stft.pdf>
+Package pdftex.def Info: pictures/example_stft.pdf  used on input line 43.
+(pdftex.def)             Requested size: 483.69687pt x 128.98645pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1196,27 +1173,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [46]
-<pictures/example_stft.pdf, id=1000, 1084.05pt x 289.08pt>
-File: pictures/example_stft.pdf Graphic file (type pdf)
-<use pictures/example_stft.pdf>
-Package pdftex.def Info: pictures/example_stft.pdf  used on input line 44.
-(pdftex.def)             Requested size: 483.69687pt x 128.98645pt.
-<pictures/summary_hf_classification_methods.pdf, id=1002, 385.77725pt x 181.831
+<pictures/summary_hf_classification_methods.pdf, id=1018, 385.77725pt x 181.831
 31pt>
 File: pictures/summary_hf_classification_methods.pdf Graphic file (type pdf)
 <use pictures/summary_hf_classification_methods.pdf>
 Package pdftex.def Info: pictures/summary_hf_classification_methods.pdf  used o
-n input line 58.
+n input line 57.
 (pdftex.def)             Requested size: 483.69687pt x 227.99884pt.
-<pictures/bonfiglioli_logo.pdf, id=1006, 853.1875pt x 270.00874pt>
+<pictures/bonfiglioli_logo.pdf, id=1022, 853.1875pt x 270.00874pt>
 File: pictures/bonfiglioli_logo.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_logo.pdf>
-Package pdftex.def Info: pictures/bonfiglioli_logo.pdf  used on input line 68.
+Package pdftex.def Info: pictures/bonfiglioli_logo.pdf  used on input line 67.
 (pdftex.def)             Requested size: 241.84843pt x 76.53716pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--71
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1227,29 +1203,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [47 <./pictures/example_stft.pdf>]
-Underfull \hbox (badness 2846) in paragraph at lines 71--73
+Underfull \hbox (badness 2846) in paragraph at lines 70--72
 []\OT1/cmr/m/n/10.95 The com-pany pro-vided a large num-ber of
  []
 
-<pictures/bonfiglioli_experimental_setup.pdf, id=1069, 436.36626pt x 219.55626p
+<pictures/bonfiglioli_experimental_setup.pdf, id=1085, 436.36626pt x 219.55626p
 t>
 File: pictures/bonfiglioli_experimental_setup.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_experimental_setup.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_experimental_setup.pdf  used on i
-nput line 79.
+nput line 78.
 (pdftex.def)             Requested size: 483.69687pt x 243.382pt.
-<pictures/example_bonfiglioli_faults.pdf, id=1071, 484.69081pt x 158.27129pt>
+<pictures/example_bonfiglioli_faults.pdf, id=1087, 484.69081pt x 158.27129pt>
 File: pictures/example_bonfiglioli_faults.pdf Graphic file (type pdf)
 <use pictures/example_bonfiglioli_faults.pdf>
 Package pdftex.def Info: pictures/example_bonfiglioli_faults.pdf  used on input
- line 95.
+ line 94.
 (pdftex.def)             Requested size: 483.69687pt x 157.94727pt.
-<pictures/bonfiglioli_example_working_cycle.pdf, id=1073, 498.22939pt x 275.059
+<pictures/bonfiglioli_example_working_cycle.pdf, id=1089, 498.22939pt x 275.059
 63pt>
 File: pictures/bonfiglioli_example_working_cycle.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_example_working_cycle.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_example_working_cycle.pdf  used o
-n input line 102.
+n input line 101.
 (pdftex.def)             Requested size: 483.69687pt x 267.03835pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1294,25 +1270,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [50 <./pictures/bonfiglioli_example_working_cycle.pdf>]
-
-LaTeX Warning: Reference `fig:example_bonf_spectrum' on page 51 undefined on in
-put line 147.
-
-<pictures/example_bonfiglioli_spectrum.pdf, id=1143, 1100.67216pt x 356.00201pt
+<pictures/example_bonfiglioli_spectrum.pdf, id=1161, 1100.67216pt x 356.00201pt
 >
 File: pictures/example_bonfiglioli_spectrum.pdf Graphic file (type pdf)
 <use pictures/example_bonfiglioli_spectrum.pdf>
 Package pdftex.def Info: pictures/example_bonfiglioli_spectrum.pdf  used on inp
-ut line 150.
+ut line 149.
 (pdftex.def)             Requested size: 483.69687pt x 156.4458pt.
-
-LaTeX Warning: Reference `' on page 51 undefined on input line 158.
-
-<example-image-b.pdf, id=1148, 321.2pt x 240.9pt>
-File: example-image-b.pdf Graphic file (type pdf)
-<use example-image-b.pdf>
-Package pdftex.def Info: example-image-b.pdf  used on input line 161.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<pictures/bonfiglioli_architectures.pdf, id=1167, 264.2673pt x 198.9834pt>
+File: pictures/bonfiglioli_architectures.pdf Graphic file (type pdf)
+<use pictures/bonfiglioli_architectures.pdf>
+Package pdftex.def Info: pictures/bonfiglioli_architectures.pdf  used on input 
+line 160.
+(pdftex.def)             Requested size: 483.69687pt x 364.22713pt.
 
 Underfull \vbox (badness 7613) has occurred while \output is active []
 
@@ -1334,36 +1304,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[52 <./pictures/example_bonfiglioli_spectrum.pdf> </usr/share/texlive/texmf-dis
-t/tex/latex/mwe/example-image-b.pdf>]
-<pictures/bonfiglioli_onecycle_results.pdf, id=1172, 1186.23976pt x 289.08pt>
+[52 <./pictures/example_bonfiglioli_spectrum.pdf>]
+<pictures/bonfiglioli_onecycle_results.pdf, id=1189, 1186.23976pt x 289.08pt>
 File: pictures/bonfiglioli_onecycle_results.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_onecycle_results.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_onecycle_results.pdf  used on inp
-ut line 211.
+ut line 210.
 (pdftex.def)             Requested size: 483.69687pt x 117.87514pt.
-
-
-LaTeX Warning: Reference `' on page 53 undefined on input line 215.
-
-<pictures/bonfiglioli_onecycle_confmat.pdf, id=1175, 990.09903pt x 433.62pt>
+<pictures/bonfiglioli_onecycle_confmat.pdf, id=1193, 990.09903pt x 433.62pt>
 File: pictures/bonfiglioli_onecycle_confmat.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_onecycle_confmat.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_onecycle_confmat.pdf  used on inp
 ut line 234.
 (pdftex.def)             Requested size: 483.69687pt x 211.83386pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[53]
-Underfull \vbox (badness 1902) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1372,19 +1326,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[54 <./pictures/bonfiglioli_onecycle_results.pdf> <./pictures/bonfiglioli_onecy
-cle_confmat.pdf
+[53 <./pictures/bonfiglioli_architectures.pdf>]
 
-pdfTeX warning: /usr/bin/pdflatex (file ./pictures/bonfiglioli_onecycle_confmat
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<pictures/bonfiglioli_CAM_images.pdf, id=1204, 474.57298pt x 176.33879pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[54 <./pictures/bonfiglioli_onecycle_results.pdf>]
+<pictures/bonfiglioli_CAM_images.pdf, id=1237, 474.57298pt x 176.33879pt>
 File: pictures/bonfiglioli_CAM_images.pdf Graphic file (type pdf)
 <use pictures/bonfiglioli_CAM_images.pdf>
 Package pdftex.def Info: pictures/bonfiglioli_CAM_images.pdf  used on input lin
 e 253.
 (pdftex.def)             Requested size: 483.69687pt x 179.73132pt.
-<pictures/mendeley_setup.pdf, id=1207, 246.58524pt x 184.72212pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[55 <./pictures/bonfiglioli_onecycle_confmat.pdf>]
+<pictures/mendeley_setup.pdf, id=1253, 246.58524pt x 184.72212pt>
 File: pictures/mendeley_setup.pdf Graphic file (type pdf)
 <use pictures/mendeley_setup.pdf>
 Package pdftex.def Info: pictures/mendeley_setup.pdf  used on input line 267.
@@ -1398,60 +1366,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[55]
-
-LaTeX Warning: Reference `' on page 56 undefined on input line 281.
-
-<pictures/mendelay_speed_changes.pdf, id=1219, 1182.26973pt x 324.17073pt>
-File: pictures/mendelay_speed_changes.pdf Graphic file (type pdf)
-<use pictures/mendelay_speed_changes.pdf>
-Package pdftex.def Info: pictures/mendelay_speed_changes.pdf  used on input lin
-e 284.
-(pdftex.def)             Requested size: 483.69687pt x 132.62396pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [56 <./pictures/bonfiglioli_CAM_images.pdf> <./pictures/mendeley_setup.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./pictures/mendeley_setup.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-
-LaTeX Warning: Reference `' on page 57 undefined on input line 297.
-
-
-LaTeX Warning: Reference `' on page 57 undefined on input line 298.
-
-<pictures/mendeley_train_bad.pdf, id=1238, 1445.4pt x 289.08pt>
+<pictures/mendelay_speed_changes.pdf, id=1276, 1182.26973pt x 324.17073pt>
+File: pictures/mendelay_speed_changes.pdf Graphic file (type pdf)
+<use pictures/mendelay_speed_changes.pdf>
+Package pdftex.def Info: pictures/mendelay_speed_changes.pdf  used on input lin
+e 284.
+(pdftex.def)             Requested size: 483.69687pt x 132.62396pt.
+<pictures/mendeley_train_bad.pdf, id=1280, 1445.4pt x 289.08pt>
 File: pictures/mendeley_train_bad.pdf Graphic file (type pdf)
 <use pictures/mendeley_train_bad.pdf>
 Package pdftex.def Info: pictures/mendeley_train_bad.pdf  used on input line 30
 2.
 (pdftex.def)             Requested size: 483.69687pt x 96.73763pt.
-<pictures/mendeley_train_final.pdf, id=1239, 867.24pt x 722.7pt>
+<pictures/mendeley_train_final.pdf, id=1281, 867.24pt x 722.7pt>
 File: pictures/mendeley_train_final.pdf Graphic file (type pdf)
 <use pictures/mendeley_train_final.pdf>
 Package pdftex.def Info: pictures/mendeley_train_final.pdf  used on input line 
 311.
 (pdftex.def)             Requested size: 483.69687pt x 403.0882pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[57 <./pictures/mendelay_speed_changes.pdf> <./pictures/mendeley_train_bad.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./pictures/mendeley_train_bad.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1460,7 +1398,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[58 <./pictures/mendeley_train_final.pdf>]) (./chapters/domain_adaptation.tex
+[57 <./pictures/mendelay_speed_changes.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58 <./pictures/mendeley_train_bad.pdf> <./pictures/mendeley_train_final.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./pictures/mendeley_train_final.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+>]) (./chapters/domain_adaptation.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1482,14 +1433,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 6.
-<pictures/wdgrl_scheme.pdf, id=1373, 249.04242pt x 179.37413pt>
+[61]
+<pictures/wdgrl_scheme.pdf, id=1424, 249.04242pt x 179.37413pt>
 File: pictures/wdgrl_scheme.pdf Graphic file (type pdf)
 <use pictures/wdgrl_scheme.pdf>
-Package pdftex.def Info: pictures/wdgrl_scheme.pdf  used on input line 22.
-(pdftex.def)             Requested size: 249.0418pt x 179.37369pt.
-[61]
-
-LaTeX Warning: Reference `' on page 62 undefined on input line 45.
+Package pdftex.def Info: pictures/wdgrl_scheme.pdf  used on input line 42.
+(pdftex.def)             Requested size: 338.58632pt x 243.87715pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1499,12 +1448,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[62 <./pictures/wdgrl_scheme.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--90
-
- []
-
-) (./chapters/conclusions.tex
+[62]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1513,7 +1457,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[63]
+[63 <./pictures/wdgrl_scheme.pdf>]
+<pictures/wdgrl_results_456_binary.pdf, id=1448, 867.24pt x 361.35pt>
+File: pictures/wdgrl_results_456_binary.pdf Graphic file (type pdf)
+<use pictures/wdgrl_results_456_binary.pdf>
+Package pdftex.def Info: pictures/wdgrl_results_456_binary.pdf  used on input l
+ine 87.
+(pdftex.def)             Requested size: 483.69687pt x 201.5441pt.
+<pictures/wdgrl_results_10.pdf, id=1456, 867.24pt x 361.35pt>
+File: pictures/wdgrl_results_10.pdf Graphic file (type pdf)
+<use pictures/wdgrl_results_10.pdf>
+Package pdftex.def Info: pictures/wdgrl_results_10.pdf  used on input line 125.
+
+(pdftex.def)             Requested size: 483.69687pt x 201.5441pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1522,9 +1479,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[64
-
-]) [65] (./main.bbl
+[64]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1533,18 +1488,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[66
+[65 <./pictures/wdgrl_results_456_binary.pdf> <./pictures/wdgrl_results_10.pdf
 
-] [67]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[68])
+pdfTeX warning: /usr/bin/pdflatex (file ./pictures/wdgrl_results_10.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]) (./chapters/conclusions.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1553,7 +1501,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[69] (./chapters/appendix.tex
+[66]) [67
+
+] (./main.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1562,33 +1512,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[70
+[68
+
+] [69]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[70])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[71] (./chapters/appendix.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[72
 
 ]
 Appendix A.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 9.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
-[71]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 36.
-
-
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
@@ -1611,25 +1573,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[72]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 68.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-
-Overfull \hbox (11.55511pt too wide) in paragraph at lines 72--73
-[]\OT1/cmr/m/n/10.95 Let's start defin-ing the gra-di-ent vec-tor $\OMS/cmsy/m/
-n/10.95 r[] \OT1/cmr/m/n/10.95 = []$ for the vec-tor $\OT1/cmr/bx/n/10.95 z \OT
-1/cmr/m/n/10.95 = []$
+[74]
+Overfull \hbox (11.55511pt too wide) in paragraph at lines 70--72
+\OT1/cmr/m/n/10.95 Let's start defin-ing the gra-di-ent vec-tor $\OMS/cmsy/m/n/
+10.95 r[] \OT1/cmr/m/n/10.95 = []$ for the vec-tor $\OT1/cmr/bx/n/10.95 z \OT1/
+cmr/m/n/10.95 = []$
  []
 
 
@@ -1640,7 +1588,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[73]
+[75]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1649,34 +1597,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[74
+[76
 
 ]
 Appendix B.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-<pictures/cmplx_activations_1.pdf, id=1494, 1217.74945pt x 392.42609pt>
+<pictures/cmplx_activations_1.pdf, id=1668, 1217.74945pt x 392.42609pt>
 File: pictures/cmplx_activations_1.pdf Graphic file (type pdf)
 <use pictures/cmplx_activations_1.pdf>
 Package pdftex.def Info: pictures/cmplx_activations_1.pdf  used on input line 9
-7.
+6.
 (pdftex.def)             Requested size: 435.32422pt x 140.28526pt.
-<pictures/cmplx_activations_2.pdf, id=1495, 1217.74945pt x 401.09851pt>
+<pictures/cmplx_activations_2.pdf, id=1669, 1217.74945pt x 401.09851pt>
 File: pictures/cmplx_activations_2.pdf Graphic file (type pdf)
 <use pictures/cmplx_activations_2.pdf>
 Package pdftex.def Info: pictures/cmplx_activations_2.pdf  used on input line 1
-01.
+00.
 (pdftex.def)             Requested size: 435.32422pt x 143.3855pt.
-<pictures/cmplx_activations_3.pdf, id=1496, 1217.74945pt x 381.5856pt>
+<pictures/cmplx_activations_3.pdf, id=1670, 1217.74945pt x 381.5856pt>
 File: pictures/cmplx_activations_3.pdf Graphic file (type pdf)
 <use pictures/cmplx_activations_3.pdf>
 Package pdftex.def Info: pictures/cmplx_activations_3.pdf  used on input line 1
-05.
+04.
 (pdftex.def)             Requested size: 435.32422pt x 136.40999pt.
-) [75 <./pictures/cmplx_activations_1.pdf> <./pictures/cmplx_activations_2.pdf
+) [77 <./pictures/cmplx_activations_1.pdf> <./pictures/cmplx_activations_2.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./pictures/cmplx_activations_2.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
@@ -1689,19 +1637,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[76 <./pictures/cmplx_activations_3.pdf>] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
+[78 <./pictures/cmplx_activations_3.pdf>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C689AC7A4C417DA17A469AE650004FD8;3444.
+(rerunfilecheck)             Checksum: 06D09BB3C14AEB9B4FBD74DD78F450EB;3380.
  ) 
 Here is how much of TeX's memory you used:
- 13771 strings out of 479304
- 210721 string characters out of 5869780
- 568240 words of memory out of 5000000
- 30338 multiletter control sequences out of 15000+600000
- 420887 words of font info for 101 fonts, out of 8000000 for 9000
+ 13795 strings out of 479304
+ 211612 string characters out of 5869780
+ 567166 words of memory out of 5000000
+ 30355 multiletter control sequences out of 15000+600000
+ 421287 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,16n,103p,1647b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
@@ -1730,14 +1675,14 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (76 pages, 34931434 bytes).
+fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+rm1095.pfb>
+Output written on main.pdf (78 pages, 35171438 bytes).
 PDF statistics:
- 1674 PDF objects out of 1728 (max. 8388607)
- 1203 compressed objects within 13 object streams
- 255 named destinations out of 1000 (max. 500000)
- 554 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1847 PDF objects out of 2073 (max. 8388607)
+ 1260 compressed objects within 13 object streams
+ 260 named destinations out of 1000 (max. 500000)
+ 564 words of extra memory for PDF output out of 10000 (max. 10000000)
 

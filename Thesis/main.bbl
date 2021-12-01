@@ -1,19 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{trabelsi2018deep}
-C.~Trabelsi, O.~Bilaniuk, Y.~Zhang, D.~Serdyuk, S.~Subramanian, J.~F. Santos,
-  S.~Mehri, N.~Rostamzadeh, Y.~Bengio, and C.~J. Pal, ``Deep complex
-  networks.'' \url{https://arxiv.org/abs/1705.09792}, 2018.
-
-\bibitem{Messerschmitt_stationary_points}
-D.~G. Messerschmitt, ``Stationary points of a real-valued function of a complex
-  variable,'' Tech. Rep. UCB/EECS-2006-93, EECS Department, University of
-  California, Berkeley, Jun 2006.
-
-\bibitem{Hualiang_nonlinear}
-H.~Li and T.~Adali, ``Complex-valued adaptive signal processing using nonlinear
-  functions,'' {\em EURASIP J. Adv. Sig. Proc.}, vol.~2008, 12 2008.
-
 \bibitem{reichert2014neuronal}
 D.~P. Reichert and T.~Serre, ``Neuronal synchrony in complex-valued deep
   networks.'' \url{https://arxiv.org/abs/1312.6115}, 2014.
@@ -31,10 +17,19 @@ F.~Amin, M.~Amin, A.~Y.~H. Al~Nuaimi, and K.~Murase, ``Wirtinger calculus based
   gradient descent and levenberg-marquardt learning algorithms in
   complex-valued neural networks,'' vol.~7062, pp.~550--559, 11 2011.
 
+\bibitem{Hualiang_nonlinear}
+H.~Li and T.~Adali, ``Complex-valued adaptive signal processing using nonlinear
+  functions,'' {\em EURASIP J. Adv. Sig. Proc.}, vol.~2008, 12 2008.
+
 \bibitem{complex_mlp}
 T.~Kim and T.~Adali, ``Fully complex multi-layer perceptron network for
   nonlinear signal processing,'' {\em VLSI Signal Processing}, vol.~32,
   pp.~29--43, 08 2002.
+
+\bibitem{trabelsi2018deep}
+C.~Trabelsi, O.~Bilaniuk, Y.~Zhang, D.~Serdyuk, S.~Subramanian, J.~F. Santos,
+  S.~Mehri, N.~Rostamzadeh, Y.~Bengio, and C.~J. Pal, ``Deep complex
+  networks.'' \url{https://arxiv.org/abs/1705.09792}, 2018.
 
 \bibitem{scardapane2018complexvalued}
 S.~Scardapane, S.~V. Vaerenbergh, A.~Hussain, and A.~Uncini, ``Complex-valued
@@ -73,6 +68,11 @@ J.~A. Barrachina, C.~Ren, C.~Morisseau, G.~Vieillard, and J.-P. Ovarlez,
 R.~S. Elias M.~Stein, {\em Complex analysis Vol.2.}
 \newblock Princeton lectures in analysis 2, Princeton University Press, 2003.
 
+\bibitem{Messerschmitt_stationary_points}
+D.~G. Messerschmitt, ``Stationary points of a real-valued function of a complex
+  variable,'' Tech. Rep. UCB/EECS-2006-93, EECS Department, University of
+  California, Berkeley, Jun 2006.
+
 \bibitem{circularity_geometric_interpretation}
 E.~Ollila, ``On the circularity of a complex random variable,'' {\em IEEE
   Signal Processing Letters}, vol.~15, pp.~841--844, 2008.
@@ -110,6 +110,11 @@ S.~Lee, H.~yu, H.~Yang, I.~Song, J.~Choi, J.~Yang, G.~Lim, K.-S. Kim, B.~Choi,
   and J.~Kwon, ``A study on deep learning application of vibration data and
   visualization of defects for predictive maintenance of gravity acceleration
   equipment,'' {\em Applied Sciences}, vol.~11, p.~1564, 02 2021.
+
+\bibitem{piczak_cnn}
+K.~J. Piczak, ``Environmental sound classification with convolutional neural
+  networks,'' in {\em 2015 IEEE 25th International Workshop on Machine Learning
+  for Signal Processing (MLSP)}, pp.~1--6, 2015.
 
 \bibitem{network_in_network}
 M.~Lin, Q.~Chen, and S.~Yan, ``Network in network,'' 2014.
@@ -168,6 +173,6 @@ T.~Farris, Frank A.;~Needham, ``Visual complex analysis.,'' {\em American
   Mathematical Monthly vol. 105 iss. 6}, vol.~105, jun 1998.
 
 \bibitem{Schlomer_cplot_Plot_complex}
-N.~Schlömer, ``{cplot: Plot complex functions}.''
+N.~Schlömer, ``cplot: Plot complex functions.''
 
 \end{thebibliography}

@@ -139,7 +139,7 @@ class WDGRL:
         h_t, feat_state = self.get_network('feature_extractor').apply( feat_params, feat_state, rng_key, x_t, is_training)
 
         softmax_xent, _ = self.crossentropy_loss(disc_params, disc_state, h_s, y_s, rng_key, is_training=False)
-        wasserstein_distance, _ = self.wasserstein_distance_loss(critic_params, critic_state, h_s, h_t, rng_key, is_training=False)
+        wasserstein_distance, _ = self.wasserstein_distance_loss(critic_params, critic_state, h_s, h_t, rng_key, is_training=False, GAMMA=0.)
 
         return softmax_xent + LAMBDA*wasserstein_distance, feat_state
 
@@ -170,9 +170,7 @@ class WDGRL:
 
 
     @partial(jit, static_argnums=(0,6,))
-    def wasserstein_distance_loss(self, critic_params, critic_state, h_s, h_t, rng_key, is_training):
-
-        GAMMA = self.GAMMA
+    def wasserstein_distance_loss(self, critic_params, critic_state, h_s, h_t, rng_key, is_training, GAMMA):
 
         critic_s, critic_state = self.get_network('critic').apply( critic_params, critic_state, rng_key, h_s, is_training)
         critic_t, critic_state = self.get_network('critic').apply( critic_params, critic_state, rng_key, h_t, is_training)
@@ -208,9 +206,9 @@ class WDGRL:
 
 
     @partial(jit, static_argnums=(0,))
-    def update_critic(self, step, h_s, h_t, critic_params, critic_state, critic_opt_state, rng_key):
+    def update_critic(self, step, h_s, h_t, critic_params, critic_state, critic_opt_state, rng_key, GAMMA):
 
-        (loss, critic_state), grads = value_and_grad(self.wasserstein_distance_loss, has_aux=True)(critic_params, critic_state, h_s, h_t, rng_key, is_training=True)
+        (loss, critic_state), grads = value_and_grad(self.wasserstein_distance_loss, has_aux=True)(critic_params, critic_state, h_s, h_t, rng_key, is_training=True, GAMMA=GAMMA)
         grads = jax.tree_multimap(jnp.conjugate, grads)
 
         swap_sign = partial(jnp.multiply, x2=-1.)
@@ -283,7 +281,7 @@ class WDGRL:
                 for wd_step in range(wdgrl_iters):
                     
                     critic_cost, critic_opt_state, critic_params, critic_state = self.update_critic(wd_step, h_s, h_t, self.get_params('critic'),
-                                                                                                    self.get_net_state('critic'), self.get_opt_state('critic'), next(self.rng_seq))
+                                                                                                    self.get_net_state('critic'), self.get_opt_state('critic'), next(self.rng_seq), GAMMA=self.GAMMA)
                     self.update_net_state('critic', critic_state)
                     self.update_params('critic', critic_params)
                     self.update_opt_state('critic', critic_opt_state)

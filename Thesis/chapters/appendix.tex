@@ -6,10 +6,10 @@
 \label{app:cmplx_optim}
 
 
-\section{Complex Weights Initialization \cite{trabelsi2018deep}}
+\section{Complex Weights Initialization}
 \label{app:weight_init}
 
-For complex-valued deep learning traditional approaches of Glorot \cite{xavier_init} and He \cite{he2015delving}, are no more suitable to be used for weights initialization. So we need to re-derive, or at least adapt, those efficient methods also for the complex domain.\\
+For complex-valued deep learning traditional approaches of Glorot \cite{xavier_init} and He \cite{he2015delving}, are no more suitable to be used for weights initialization. So we need to re-derive, or at least adapt, those efficient methods also for the complex domain \cite{trabelsi2018deep}.\\
 Given a generic neural network layer, let's call $\vb{w}\in\mathds{C}$ its set of complex-valued weights, that we prefer written in polar form:
 \[ \vb{w} = \norm{\vb{w}}e^{i\theta} \]
 The variance of this set is defined as 
@@ -33,9 +33,9 @@ How can we determine $\sigma$?\\
 The magnitude of the complex parameters is then initialized using a Rayleigh distribution with an appropriate $\sigma$, while their phase (that never appeared in the equations) can be set uniformly in $[-\pi, \pi]$.
 
 
-\section{Stationary points of a real-valued function of a complex variable \cite{Messerschmitt_stationary_points}}
+\section{Stationary points of a real-valued function of a complex variable}
 
-Let $f(z):\mathds{C}\to\mathds{R}$ be a real-valued function of a complex variable $z$, and let's say that we want to find the extreme points of $f$ (i.e. the values of $z$ for which $f$ is maximum or minimum) exploiting the differential calculus.\\
+Let $f(z):\mathds{C}\to\mathds{R}$ be a real-valued function of a complex variable $z$, and let's say that we want to find the extreme points of $f$ (i.e. the values of $z$ for which $f$ is maximum or minimum) exploiting the differential calculus \cite{Messerschmitt_stationary_points}.\\
 As explained also in \ref{sec:cmplx_differentiability}, differentiability in the complex plane is a quite strong assumption, and there are many function for which the stationarity condition in a point $z_0$, 
 \[ \pdv{f}{z}\bigg|_{z=z_0} \]
 cannot even be computed, because the limit in \ref{def:cmplx_der} is not the same from any direction.\\
@@ -65,10 +65,9 @@ These results are easily extended to the case of vectors of complex variables. L
 \[ \nabla_{\vb{z}}g = \vb{0} \qquad \nabla_{\vb{\bar{z}}}g = \vb{0} \]
 or only the latter if $g$ is real-valued.
 
-\section{Steepest complex gradient descent \cite{Hualiang_nonlinear}}
+\section{Steepest complex gradient descent}
 
-Once derived necessary and sufficient conditions for a certain $z_0\in\mathds{C}$ to be a stationary point of a real-valued function $f(z):\mathds{C}\to\mathds{R}$, it is time to derive also the best optimization procedure. Using Wirtinger calculus we managed to overcome the strong requirements necessary to complex differentiability, but now we have twice the derivatives to compute ($\pdv*{f}{z}$ and $\pdv*{f}{\bar{z}}$). So, which direction should our gradient descent algorithm follow, in order to properly optimize $f$?\\
-
+Once derived necessary and sufficient conditions for a certain $z_0\in\mathds{C}$ to be a stationary point of a real-valued function $f(z):\mathds{C}\to\mathds{R}$, it is time to derive also the best optimization procedure. Using Wirtinger calculus we managed to overcome the strong requirements necessary to complex differentiability, but now we have twice the derivatives to compute ($\pdv*{f}{z}$ and $\pdv*{f}{\bar{z}}$). So, which direction should our gradient descent algorithm follow, in order to properly optimize $f$ \cite{Hualiang_nonlinear}?\\
 Let's start defining the gradient vector $\nabla_{\vb{z}} = \left[\pdv*{z_1}, \pdv*{z_2},\dots,\pdv*{z_n}\right]$ for the vector $\vb{z}=\left[z_1, z_2, \dots, z_n\right]$ with $z_k = z_{k,Re} + iz_{k,Im}$ in order to write the first order Taylor series expansion for a function $g(\vb{z}, \vb{\bar{z}}):\mathds{C}^n\times\mathds{C}^n\to\mathds{R}$,
 \[ \Delta g = \langle \Delta \vb{z}, \nabla_{\vb{\bar{z}}}g \rangle + \langle \Delta \vb{\bar{z}}, \nabla_{\vb{z}}g \rangle = 2\Re\left\{\langle \Delta \vb{z}, \nabla_{\vb{\bar{z}}}g \rangle\right\} \]
 where $\langle\cdot,\cdot\rangle$ is the canonical \textit{inner product} in $\mathds{C}^n$, and the last equality holds because $g$ is real-valued.\\

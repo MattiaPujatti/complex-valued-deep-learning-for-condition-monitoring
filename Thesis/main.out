@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section.2.2}{Complex Differentiability}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Other theorems}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.4}{Circularity}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.5}{Why not to prefer real-valued network with two channels?}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Why not to prefer real-valued networks with two channels?}{chapter.2}% 11
 \BOOKMARK [0][-]{chapter.3}{Extent}{part.1}% 12
 \BOOKMARK [1][-]{section.3.1}{Problems in the extent}{chapter.3}% 13
 \BOOKMARK [1][-]{section.3.2}{Complex Backpropagation}{chapter.3}% 14
@@ -40,7 +40,7 @@
 \BOOKMARK [1][-]{section.6.1}{Wasserstein Distance Guided Representation Learning}{chapter.6}% 40
 \BOOKMARK [1][-]{section.6.2}{Domain Adaptation of Bonfiglioli Data}{chapter.6}% 41
 \BOOKMARK [0][-]{appendix.A}{Mathematical Proofs}{part.2}% 42
-\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization trabelsi2018deep}{appendix.A}% 43
-\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable Messerschmittstationarypoints}{appendix.A}% 44
-\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent Hualiangnonlinear}{appendix.A}% 45
+\BOOKMARK [1][-]{section.A.1}{Complex Weights Initialization}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.2}{Stationary points of a real-valued function of a complex variable}{appendix.A}% 44
+\BOOKMARK [1][-]{section.A.3}{Steepest complex gradient descent}{appendix.A}% 45
 \BOOKMARK [0][-]{appendix.B}{Activation Functions in the Complex Domain}{part.2}% 46

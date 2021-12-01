@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 01:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,39 +667,45 @@ put line 11.
 LaTeX Warning: Citation `ganin2016domainadversarial' on page 1 undefined on inp
 ut line 11.
 
-<..//pictures/wdgrl_scheme.pdf, id=16, 249.04242pt x 179.37413pt>
-File: ..//pictures/wdgrl_scheme.pdf Graphic file (type pdf)
-<use ..//pictures/wdgrl_scheme.pdf>
-Package pdftex.def Info: ..//pictures/wdgrl_scheme.pdf  used on input line 22.
-(pdftex.def)             Requested size: 249.0418pt x 179.37369pt.
 
-LaTeX Warning: Reference `sec:mendeley_analysis' on page 1 undefined on input l
-ine 31.
+LaTeX Warning: Citation `shen2018wasserstein' on page 1 undefined on input line
+ 20.
 
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 35
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
+1.
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 45.
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<..//pictures/wdgrl_scheme.pdf, id=26, 249.04242pt x 179.37413pt>
+File: ..//pictures/wdgrl_scheme.pdf Graphic file (type pdf)
+<use ..//pictures/wdgrl_scheme.pdf>
+Package pdftex.def Info: ..//pictures/wdgrl_scheme.pdf  used on input line 42.
+(pdftex.def)             Requested size: 338.58632pt x 243.87715pt.
+
+
+LaTeX Warning: Reference `sec:mendeley_analysis' on page 2 undefined on input l
+ine 51.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -709,10 +715,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[2 <..//pictures/wdgrl_scheme.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--90
+[2]
 
- []
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 3 undefined on
+ input line 65.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -722,7 +728,75 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[3] (./domain_adaptation.aux)
+[3 <..//pictures/wdgrl_scheme.pdf>]
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 79.
+
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 79.
+
+<..//pictures/wdgrl_results_456_binary.pdf, id=57, 867.24pt x 361.35pt>
+File: ..//pictures/wdgrl_results_456_binary.pdf Graphic file (type pdf)
+<use ..//pictures/wdgrl_results_456_binary.pdf>
+Package pdftex.def Info: ..//pictures/wdgrl_results_456_binary.pdf  used on inp
+ut line 87.
+(pdftex.def)             Requested size: 483.69687pt x 201.5441pt.
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 101.
+
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 101.
+
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 120.
+
+
+LaTeX Warning: Reference `fig:bonfiglioli_architectures' on page 4 undefined on
+ input line 120.
+
+<..//pictures/wdgrl_results_10.pdf, id=61, 867.24pt x 361.35pt>
+File: ..//pictures/wdgrl_results_10.pdf Graphic file (type pdf)
+<use ..//pictures/wdgrl_results_10.pdf>
+Package pdftex.def Info: ..//pictures/wdgrl_results_10.pdf  used on input line 
+125.
+(pdftex.def)             Requested size: 483.69687pt x 201.5441pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5 <..//pictures/wdgrl_results_456_binary.pdf> <..//pictures/wdgrl_results_10.p
+df
+
+pdfTeX warning: /usr/bin/pdflatex (file ..//pictures/wdgrl_results_10.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6] (./domain_adaptation.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -730,25 +804,32 @@ Package rerunfilecheck Info: File `domain_adaptation.out' has not changed.
 (rerunfilecheck)             Checksum: 51169DCA43BBC94A4BCDB8318DF03576;232.
  ) 
 Here is how much of TeX's memory you used:
- 13005 strings out of 479304
- 193403 string characters out of 5869780
- 548411 words of memory out of 5000000
- 29914 multiletter control sequences out of 15000+600000
- 411690 words of font info for 58 fonts, out of 8000000 for 9000
+ 13058 strings out of 479304
+ 194566 string characters out of 5869780
+ 551079 words of memory out of 5000000
+ 29951 multiletter control sequences out of 15000+600000
+ 414768 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,120p,976b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 116i,11n,120p,1118b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095
-.pfb>
-Output written on domain_adaptation.pdf (3 pages, 452927 bytes).
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1095.pfb>
+Output written on domain_adaptation.pdf (6 pages, 559643 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 40 words of extra memory for PDF output out of 10000 (max. 10000000)
 

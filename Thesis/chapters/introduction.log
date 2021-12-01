@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  29 NOV 2021 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.6.3)  30 NOV 2021 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -777,7 +777,7 @@ Here is how much of TeX's memory you used:
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on introduction.pdf (3 pages, 52674 bytes).
+Output written on introduction.pdf (3 pages, 52657 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream

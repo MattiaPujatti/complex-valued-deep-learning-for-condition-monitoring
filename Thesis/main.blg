@@ -7,48 +7,47 @@ Warning--entry type for "schlomer_nico_2021_5636188" isn't style-file defined
 --line 243 of file bibliography.bib
 Warning--entry type for "Schlomer_cplot_Plot_complex" isn't style-file defined
 --line 410 of file bibliography.bib
-Warning--I didn't find a database entry for ""
 Warning--empty booktitle in amin_wirtinger
 Warning--empty journal in Dramsch_seismic
-You've used 37 entries,
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            693 strings with 11249 characters,
-and the built_in function-call counts, 7530 in all, are:
-= -- 649
-> -- 423
+            697 strings with 11402 characters,
+and the built_in function-call counts, 7772 in all, are:
+= -- 671
+> -- 427
 < -- 1
-+ -- 157
-- -- 120
-* -- 534
-:= -- 1152
-add.period$ -- 40
-call.type$ -- 37
-change.case$ -- 34
++ -- 159
+- -- 121
+* -- 547
+:= -- 1183
+add.period$ -- 41
+call.type$ -- 38
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 327
-empty$ -- 732
-format.name$ -- 120
-if$ -- 1811
+cite$ -- 40
+duplicate$ -- 344
+empty$ -- 763
+format.name$ -- 121
+if$ -- 1875
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 21
-newline$ -- 118
-num.names$ -- 37
-pop$ -- 153
+int.to.str$ -- 38
+missing$ -- 22
+newline$ -- 121
+num.names$ -- 38
+pop$ -- 160
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 244
+skip$ -- 253
 stack$ -- 0
-substring$ -- 214
-swap$ -- 105
+substring$ -- 226
+swap$ -- 110
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 55
-width$ -- 39
-write$ -- 327
-(There were 5 warnings)
+while$ -- 58
+width$ -- 40
+write$ -- 336
+(There were 4 warnings)
