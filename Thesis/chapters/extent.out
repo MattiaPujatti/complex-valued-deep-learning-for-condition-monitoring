@@ -1,8 +1,0 @@
-\BOOKMARK [0][-]{chapter.1}{Extent}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Problems in the extent}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Complex Backpropagation}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{Steepest Complex Gradient Descent}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Backpropagation with a Real-valued Loss}{section.1.2}% 5
-\BOOKMARK [1][-]{section.1.3}{Re-definition of the main neural network layers}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Complex-Valued Activation Functions}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.5}{JAX Implementation}{chapter.1}% 8
