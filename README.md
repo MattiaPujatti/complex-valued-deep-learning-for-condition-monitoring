@@ -25,7 +25,7 @@ Unfortunately, Bonfiglioli S.P.A. didn't allow us to make public the results obt
 ### Main Results achieved
 
 * As recently found by [Barrachina et al.](https://arxiv.org/abs/2009.08340v2), complex-valued neural networks seems to provide better classification accuracies, with respect to equivalent real valued models, when trying to distinguish among two complex distributions that differ only by internal correlations among their real and imaginary parts. This correlation is quantified by a complex variable known as circularity coefficient.
-<img src="circularity_results.png" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="center" width=350 />
+<img src="circularity_results.png" alt="ESC-50 clip preview" title="ESC-50 clip preview" align="center" width=1000 />
 
 * The domain adaptation algorithm known as [`Wasserstein Distance Guided Representation Learning (WDGRL)`](https://arxiv.org/abs/1707.01217) can be extended, with good performances, also in the complex domain. That's because the metric used (the [Wasserstein distance](https://en.wikipedia.org/wiki/Wasserstein_metric)) can be extended also in C.
 
