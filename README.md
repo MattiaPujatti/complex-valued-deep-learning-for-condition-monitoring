@@ -26,7 +26,7 @@ Unfortunately, Bonfiglioli S.P.A. didn't allow us to make public the results obt
 
 
 
-* The domain adaptation algorithm known as [`Wasserstein Distance Guided Representation Learning (WDGRL)`](https://arxiv.org/abs/1707.01217) can be extended, with good performances, also in the complex domain. That's because the metric used (the [Wasserstein distance](https://en.wikipedia.org/wiki/Wasserstein_metric)) can be extended also in $\mathds{C}$.
+* The domain adaptation algorithm known as [`Wasserstein Distance Guided Representation Learning (WDGRL)`](https://arxiv.org/abs/1707.01217) can be extended, with good performances, also in the complex domain. That's because the metric used (the [Wasserstein distance](https://en.wikipedia.org/wiki/Wasserstein_metric)) can be extended also in $`\mathds{C}`$.
 
 ### JAX
 
