@@ -22,19 +22,21 @@ In particular:
 
 Unfortunately, Bonfiglioli S.P.A. didn't allow us to make public the results obtained using their data, and so we had to censor a few important sections in this thesis. For those parts, you can only trust our words.
 
-### Results achieved
+### Main Results achieved
 
-* 
+
+
+* The domain adaptation algorithm known as [`Wasserstein Distance Guided Representation Learning (WDGRL)`](https://arxiv.org/abs/1707.01217) can be extended, with good performances, also in the complex domain. That's because the metric used (the [Wasserstein distance](https://en.wikipedia.org/wiki/Wasserstein_metric)) can be extended also in $\mathds{C}$.
 
 ### JAX
 
 
 ### Repository Content
 
-- [`thesis_censored`](`thesis_censored.pdf`): 
-- [`papers`](`papers`):
-- [`Notebook_Analysis`](`Notebook_Analysis`):
-- [`complex_nn`](`complex_nn`):
+- [`thesis_censored`](thesis_censored.pdf): 
+- [`papers`](papers):
+- [`Notebook_Analysis`](Notebook_Analysis):
+- [`complex_nn`](complex_nn):
 
 
 ### Acknowledgement
