@@ -29,7 +29,7 @@ At the author's knowledge, at least at the beginning of the work, Haiku was the 
 
 ### Repository Content
 
-- [`thesis_censored`](thesis_censored.pdf): 
+- [`thesis_censored`](thesis_censored.pdf): Thesis work (with some censored parts, see [Important Clarification](#Important Clarification))
 - [`papers`](papers):
 - [`Notebook_Analysis`](Notebook_Analysis):
 - [`complex_nn`](complex_nn):
