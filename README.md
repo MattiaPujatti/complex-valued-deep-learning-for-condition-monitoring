@@ -1,13 +1,14 @@
 ## Complex-Valued Deep Learning for Condition Monitoring
 
-Brief introduction.
-
+Nowadays, we still lack of a complete and working complex-valued deep learning framework. Even tho it has be proven to work in several areas, mainly because of mathematical and computational reasons it is still poorly used by researchers. In view of my final dissertation for the Master Degree in Physics of Data at the University of Padua, I'm proposing a possible extent of existing machine learning structures to the complex domain, based on many previous works that I'm reorganizing and reformulating in a more rigorous way, addressing and analyzing also the main problems encountered during this formulation. Furthermore, I will stress such framework over a real world problem like Condition Monitoring in Industrial application, effectively proving its efficiency and the advantages brought over equivalent real-valued approaches. In the end, we will examine an area poorly considered by researchers in the years, that is transfer learning (in particular domain adaptation) for complex-vlaued models.
 
 
 ### Main Results achieved
 
 * As recently found by [Barrachina et al.](https://arxiv.org/abs/2009.08340v2), complex-valued neural networks seems to provide better classification accuracies, with respect to equivalent real valued models, when trying to distinguish among two complex distributions that differ only by internal correlations among their real and imaginary parts. This correlation is quantified by a complex variable known as circularity coefficient.
 <img src="circularity_results.png" alt="Circularity Classification Performances" title="Circularity Classification Performances" align="center" width=1000 />
+
+* Confirmed by many other works in this sense, complex-valued neural networks seems to be more robust to overfitting, at least with respect to equivalent real-valued models, especially in "bad conditions" (small training set, bad regularization, few parameters).
 
 * The domain adaptation algorithm known as [`Wasserstein Distance Guided Representation Learning (WDGRL)`](https://arxiv.org/abs/1707.01217) can be extended, with good performances, also in the complex domain. That's because the metric used (the [Wasserstein distance](https://en.wikipedia.org/wiki/Wasserstein_metric)) can be extended also in C.
 
