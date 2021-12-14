@@ -30,9 +30,13 @@ At the author's knowledge, at least at the beginning of the work, Haiku was the 
 ### Repository Content
 
 - [`thesis_censored`](thesis_censored.pdf): Thesis work (with some censored parts, see [Important Clarification](#Important-Clarification))
-- [`Notebook_Analysis`](Notebook_Analysis): Some Jupyter Notebooks realized to perform, in an ordered way, our analysis.
-    * [`Complex_gradient_descent`](Notebook_Analysis/Complex_gradient_descent.ipynb) -> complex gradient descent algorithm implemented in JAX and check of the steepest direction;
-- [`complex_nn`](complex_nn):
+- [`Notebook_Analysis`](Notebooks_Analysis): Some Jupyter Notebooks realized to perform, in an ordered way, our analysis.
+    * [`Complex_gradient_descent`](Notebooks_Analysis/Complex_gradient_descent.ipynb) -> complex gradient descent algorithm implemented in JAX and check of the steepest direction;
+    * [`Complex_Valued_Deep_Learning`](Notebooks_Analysis/Complex_Valued_Deep_Learning.ipynb) -> complex-valued classification problem of the PhaseMNIST dataset;
+    * [`Complex_Valued_Activation_Functions`](Notebooks_Analysis/Complex_Valued_Activation_Functions.ipynb) -> implementation and analysis of several complex-valued activation functions;
+    * [`Circularity_Measures`](Notebooks_Analysis/Circularity_Measures.ipynb) -> studies on the impact of the circularity property in complex-valued classification problems;
+    * [`Bearing_vibration_data_classification`](Notebooks_Analysis/Bearing_vibration_data_classification.ipynb) -> complex-valued classification problem over the Mendelay dataset (vibration signals collected in non-stationary conditions).
+- [`complex_nn`](complex_nn): our own library (based on JAX) for high-level complex-valued deep learning.
 
 
 ### Abstract
