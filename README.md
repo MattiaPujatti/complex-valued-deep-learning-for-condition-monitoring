@@ -30,8 +30,8 @@ At the author's knowledge, at least at the beginning of the work, Haiku was the 
 ### Repository Content
 
 - [`thesis_censored`](thesis_censored.pdf): Thesis work (with some censored parts, see [Important Clarification](#Important-Clarification))
-- [`papers`](papers):
-- [`Notebook_Analysis`](Notebook_Analysis):
+- [`Notebook_Analysis`](Notebook_Analysis): Some Jupyter Notebooks realized to perform, in an ordered way, our analysis.
+    * [`Complex_gradient_descent`](Notebook_Analysis/Complex_gradient_descent.ipynb) -> complex gradient descent algorithm implemented in JAX and check of the steepest direction;
 - [`complex_nn`](complex_nn):
 
 
