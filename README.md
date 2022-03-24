@@ -58,7 +58,7 @@ In particular:
 
 ### Important Clarification
 
-Unfortunately, Bonfiglioli S.P.A. didn't allow us to make public the results obtained using their data, and so we had to censor a few important sections in this thesis. For those parts, you can only trust our words.
+Unfortunately, some of the results and datasets we have used are covered by confidentiality restrictions related to industrial projects, and so they had to be omitted. For this reasons, some important sections in this thesis have been censored: for those parts, you can only trust our words.
 
 
 ### Acknowledgement
